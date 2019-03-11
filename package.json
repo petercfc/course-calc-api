@@ -1,0 +1,31 @@
+{
+  "name": "example",
+  "version": "0.0.0",
+  "license": "MIT",
+  "scripts": {
+    "start": "ts-node-dev --no-notify --respawn --transpileOnly ./src",
+    "build": "tsc"
+  },
+  "dependencies": {
+    "graphql": "14.1.1",
+    "graphql-yoga": "1.17.4",
+    "nexus": "0.11.2",
+    "nexus-prisma": "0.3.3",
+    "prisma-client-lib": "1.28.3"
+  },
+  "devDependencies": {
+    "@types/graphql": "14.0.7",
+    "@types/node": "10.12.30",
+    "nexus-prisma-generate": "0.3.3",
+    "ts-node": "8.0.3",
+    "ts-node-dev": "1.0.0-pre.32",
+    "typescript": "3.3.3333"
+  },
+  "prettier": {
+    "singleQuote": true,
+    "bracketSpacing": true,
+    "printWidth": 80,
+    "trailingComma": "all",
+    "semi": false
+  }
+}
