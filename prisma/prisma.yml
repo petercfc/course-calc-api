@@ -9,4 +9,4 @@ generate:
   - generator: typescript-client
     output: ../src/generated/prisma-client/
 
-endpoint: https://eu1.prisma.sh/flavian/plugin/dev
+endpoint: https://us1.prisma.sh/peter-a05fc7/course-calc-api/dev
