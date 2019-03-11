@@ -2,11 +2,23 @@
   // Please don't change this file manually but run `prisma generate` to update it.
   // For more information, please read the docs: https://www.prisma.io/docs/prisma-client/
 
-export const typeDefs = /* GraphQL */ `type AggregatePost {
+export const typeDefs = /* GraphQL */ `type AggregateCourse {
   count: Int!
 }
 
-type AggregateUser {
+type AggregateDegree {
+  count: Int!
+}
+
+type AggregateDepartment {
+  count: Int!
+}
+
+type AggregateStudent {
+  count: Int!
+}
+
+type AggregateSubject {
   count: Int!
 }
 
@@ -14,23 +26,602 @@ type BatchPayload {
   count: Long!
 }
 
-scalar DateTime
+type Course {
+  id: ID!
+  name: String!
+  number: String!
+  level: Int!
+  credits: Int!
+  subject: Subject
+  degree: Degree
+  department: Department
+  prerequisite: Course
+}
+
+type CourseConnection {
+  pageInfo: PageInfo!
+  edges: [CourseEdge]!
+  aggregate: AggregateCourse!
+}
+
+input CourseCreateInput {
+  name: String!
+  number: String!
+  level: Int!
+  credits: Int!
+  subject: SubjectCreateOneInput
+  degree: DegreeCreateOneInput
+  department: DepartmentCreateOneInput
+  prerequisite: CourseCreateOneInput
+}
+
+input CourseCreateManyInput {
+  create: [CourseCreateInput!]
+  connect: [CourseWhereUniqueInput!]
+}
+
+input CourseCreateOneInput {
+  create: CourseCreateInput
+  connect: CourseWhereUniqueInput
+}
+
+type CourseEdge {
+  node: Course!
+  cursor: String!
+}
+
+enum CourseOrderByInput {
+  id_ASC
+  id_DESC
+  name_ASC
+  name_DESC
+  number_ASC
+  number_DESC
+  level_ASC
+  level_DESC
+  credits_ASC
+  credits_DESC
+  createdAt_ASC
+  createdAt_DESC
+  updatedAt_ASC
+  updatedAt_DESC
+}
+
+type CoursePreviousValues {
+  id: ID!
+  name: String!
+  number: String!
+  level: Int!
+  credits: Int!
+}
+
+input CourseScalarWhereInput {
+  id: ID
+  id_not: ID
+  id_in: [ID!]
+  id_not_in: [ID!]
+  id_lt: ID
+  id_lte: ID
+  id_gt: ID
+  id_gte: ID
+  id_contains: ID
+  id_not_contains: ID
+  id_starts_with: ID
+  id_not_starts_with: ID
+  id_ends_with: ID
+  id_not_ends_with: ID
+  name: String
+  name_not: String
+  name_in: [String!]
+  name_not_in: [String!]
+  name_lt: String
+  name_lte: String
+  name_gt: String
+  name_gte: String
+  name_contains: String
+  name_not_contains: String
+  name_starts_with: String
+  name_not_starts_with: String
+  name_ends_with: String
+  name_not_ends_with: String
+  number: String
+  number_not: String
+  number_in: [String!]
+  number_not_in: [String!]
+  number_lt: String
+  number_lte: String
+  number_gt: String
+  number_gte: String
+  number_contains: String
+  number_not_contains: String
+  number_starts_with: String
+  number_not_starts_with: String
+  number_ends_with: String
+  number_not_ends_with: String
+  level: Int
+  level_not: Int
+  level_in: [Int!]
+  level_not_in: [Int!]
+  level_lt: Int
+  level_lte: Int
+  level_gt: Int
+  level_gte: Int
+  credits: Int
+  credits_not: Int
+  credits_in: [Int!]
+  credits_not_in: [Int!]
+  credits_lt: Int
+  credits_lte: Int
+  credits_gt: Int
+  credits_gte: Int
+  AND: [CourseScalarWhereInput!]
+  OR: [CourseScalarWhereInput!]
+  NOT: [CourseScalarWhereInput!]
+}
+
+type CourseSubscriptionPayload {
+  mutation: MutationType!
+  node: Course
+  updatedFields: [String!]
+  previousValues: CoursePreviousValues
+}
+
+input CourseSubscriptionWhereInput {
+  mutation_in: [MutationType!]
+  updatedFields_contains: String
+  updatedFields_contains_every: [String!]
+  updatedFields_contains_some: [String!]
+  node: CourseWhereInput
+  AND: [CourseSubscriptionWhereInput!]
+  OR: [CourseSubscriptionWhereInput!]
+  NOT: [CourseSubscriptionWhereInput!]
+}
+
+input CourseUpdateDataInput {
+  name: String
+  number: String
+  level: Int
+  credits: Int
+  subject: SubjectUpdateOneInput
+  degree: DegreeUpdateOneInput
+  department: DepartmentUpdateOneInput
+  prerequisite: CourseUpdateOneInput
+}
+
+input CourseUpdateInput {
+  name: String
+  number: String
+  level: Int
+  credits: Int
+  subject: SubjectUpdateOneInput
+  degree: DegreeUpdateOneInput
+  department: DepartmentUpdateOneInput
+  prerequisite: CourseUpdateOneInput
+}
+
+input CourseUpdateManyDataInput {
+  name: String
+  number: String
+  level: Int
+  credits: Int
+}
+
+input CourseUpdateManyInput {
+  create: [CourseCreateInput!]
+  update: [CourseUpdateWithWhereUniqueNestedInput!]
+  upsert: [CourseUpsertWithWhereUniqueNestedInput!]
+  delete: [CourseWhereUniqueInput!]
+  connect: [CourseWhereUniqueInput!]
+  set: [CourseWhereUniqueInput!]
+  disconnect: [CourseWhereUniqueInput!]
+  deleteMany: [CourseScalarWhereInput!]
+  updateMany: [CourseUpdateManyWithWhereNestedInput!]
+}
+
+input CourseUpdateManyMutationInput {
+  name: String
+  number: String
+  level: Int
+  credits: Int
+}
+
+input CourseUpdateManyWithWhereNestedInput {
+  where: CourseScalarWhereInput!
+  data: CourseUpdateManyDataInput!
+}
+
+input CourseUpdateOneInput {
+  create: CourseCreateInput
+  update: CourseUpdateDataInput
+  upsert: CourseUpsertNestedInput
+  delete: Boolean
+  disconnect: Boolean
+  connect: CourseWhereUniqueInput
+}
+
+input CourseUpdateWithWhereUniqueNestedInput {
+  where: CourseWhereUniqueInput!
+  data: CourseUpdateDataInput!
+}
+
+input CourseUpsertNestedInput {
+  update: CourseUpdateDataInput!
+  create: CourseCreateInput!
+}
+
+input CourseUpsertWithWhereUniqueNestedInput {
+  where: CourseWhereUniqueInput!
+  update: CourseUpdateDataInput!
+  create: CourseCreateInput!
+}
+
+input CourseWhereInput {
+  id: ID
+  id_not: ID
+  id_in: [ID!]
+  id_not_in: [ID!]
+  id_lt: ID
+  id_lte: ID
+  id_gt: ID
+  id_gte: ID
+  id_contains: ID
+  id_not_contains: ID
+  id_starts_with: ID
+  id_not_starts_with: ID
+  id_ends_with: ID
+  id_not_ends_with: ID
+  name: String
+  name_not: String
+  name_in: [String!]
+  name_not_in: [String!]
+  name_lt: String
+  name_lte: String
+  name_gt: String
+  name_gte: String
+  name_contains: String
+  name_not_contains: String
+  name_starts_with: String
+  name_not_starts_with: String
+  name_ends_with: String
+  name_not_ends_with: String
+  number: String
+  number_not: String
+  number_in: [String!]
+  number_not_in: [String!]
+  number_lt: String
+  number_lte: String
+  number_gt: String
+  number_gte: String
+  number_contains: String
+  number_not_contains: String
+  number_starts_with: String
+  number_not_starts_with: String
+  number_ends_with: String
+  number_not_ends_with: String
+  level: Int
+  level_not: Int
+  level_in: [Int!]
+  level_not_in: [Int!]
+  level_lt: Int
+  level_lte: Int
+  level_gt: Int
+  level_gte: Int
+  credits: Int
+  credits_not: Int
+  credits_in: [Int!]
+  credits_not_in: [Int!]
+  credits_lt: Int
+  credits_lte: Int
+  credits_gt: Int
+  credits_gte: Int
+  subject: SubjectWhereInput
+  degree: DegreeWhereInput
+  department: DepartmentWhereInput
+  prerequisite: CourseWhereInput
+  AND: [CourseWhereInput!]
+  OR: [CourseWhereInput!]
+  NOT: [CourseWhereInput!]
+}
+
+input CourseWhereUniqueInput {
+  id: ID
+}
+
+type Degree {
+  id: ID!
+  name: String!
+  requiredCredits: Int!
+}
+
+type DegreeConnection {
+  pageInfo: PageInfo!
+  edges: [DegreeEdge]!
+  aggregate: AggregateDegree!
+}
+
+input DegreeCreateInput {
+  name: String!
+  requiredCredits: Int!
+}
+
+input DegreeCreateOneInput {
+  create: DegreeCreateInput
+  connect: DegreeWhereUniqueInput
+}
+
+type DegreeEdge {
+  node: Degree!
+  cursor: String!
+}
+
+enum DegreeOrderByInput {
+  id_ASC
+  id_DESC
+  name_ASC
+  name_DESC
+  requiredCredits_ASC
+  requiredCredits_DESC
+  createdAt_ASC
+  createdAt_DESC
+  updatedAt_ASC
+  updatedAt_DESC
+}
+
+type DegreePreviousValues {
+  id: ID!
+  name: String!
+  requiredCredits: Int!
+}
+
+type DegreeSubscriptionPayload {
+  mutation: MutationType!
+  node: Degree
+  updatedFields: [String!]
+  previousValues: DegreePreviousValues
+}
+
+input DegreeSubscriptionWhereInput {
+  mutation_in: [MutationType!]
+  updatedFields_contains: String
+  updatedFields_contains_every: [String!]
+  updatedFields_contains_some: [String!]
+  node: DegreeWhereInput
+  AND: [DegreeSubscriptionWhereInput!]
+  OR: [DegreeSubscriptionWhereInput!]
+  NOT: [DegreeSubscriptionWhereInput!]
+}
+
+input DegreeUpdateDataInput {
+  name: String
+  requiredCredits: Int
+}
+
+input DegreeUpdateInput {
+  name: String
+  requiredCredits: Int
+}
+
+input DegreeUpdateManyMutationInput {
+  name: String
+  requiredCredits: Int
+}
+
+input DegreeUpdateOneInput {
+  create: DegreeCreateInput
+  update: DegreeUpdateDataInput
+  upsert: DegreeUpsertNestedInput
+  delete: Boolean
+  disconnect: Boolean
+  connect: DegreeWhereUniqueInput
+}
+
+input DegreeUpsertNestedInput {
+  update: DegreeUpdateDataInput!
+  create: DegreeCreateInput!
+}
+
+input DegreeWhereInput {
+  id: ID
+  id_not: ID
+  id_in: [ID!]
+  id_not_in: [ID!]
+  id_lt: ID
+  id_lte: ID
+  id_gt: ID
+  id_gte: ID
+  id_contains: ID
+  id_not_contains: ID
+  id_starts_with: ID
+  id_not_starts_with: ID
+  id_ends_with: ID
+  id_not_ends_with: ID
+  name: String
+  name_not: String
+  name_in: [String!]
+  name_not_in: [String!]
+  name_lt: String
+  name_lte: String
+  name_gt: String
+  name_gte: String
+  name_contains: String
+  name_not_contains: String
+  name_starts_with: String
+  name_not_starts_with: String
+  name_ends_with: String
+  name_not_ends_with: String
+  requiredCredits: Int
+  requiredCredits_not: Int
+  requiredCredits_in: [Int!]
+  requiredCredits_not_in: [Int!]
+  requiredCredits_lt: Int
+  requiredCredits_lte: Int
+  requiredCredits_gt: Int
+  requiredCredits_gte: Int
+  AND: [DegreeWhereInput!]
+  OR: [DegreeWhereInput!]
+  NOT: [DegreeWhereInput!]
+}
+
+input DegreeWhereUniqueInput {
+  id: ID
+}
+
+type Department {
+  id: ID!
+  name: String!
+}
+
+type DepartmentConnection {
+  pageInfo: PageInfo!
+  edges: [DepartmentEdge]!
+  aggregate: AggregateDepartment!
+}
+
+input DepartmentCreateInput {
+  name: String!
+}
+
+input DepartmentCreateOneInput {
+  create: DepartmentCreateInput
+  connect: DepartmentWhereUniqueInput
+}
+
+type DepartmentEdge {
+  node: Department!
+  cursor: String!
+}
+
+enum DepartmentOrderByInput {
+  id_ASC
+  id_DESC
+  name_ASC
+  name_DESC
+  createdAt_ASC
+  createdAt_DESC
+  updatedAt_ASC
+  updatedAt_DESC
+}
+
+type DepartmentPreviousValues {
+  id: ID!
+  name: String!
+}
+
+type DepartmentSubscriptionPayload {
+  mutation: MutationType!
+  node: Department
+  updatedFields: [String!]
+  previousValues: DepartmentPreviousValues
+}
+
+input DepartmentSubscriptionWhereInput {
+  mutation_in: [MutationType!]
+  updatedFields_contains: String
+  updatedFields_contains_every: [String!]
+  updatedFields_contains_some: [String!]
+  node: DepartmentWhereInput
+  AND: [DepartmentSubscriptionWhereInput!]
+  OR: [DepartmentSubscriptionWhereInput!]
+  NOT: [DepartmentSubscriptionWhereInput!]
+}
+
+input DepartmentUpdateDataInput {
+  name: String
+}
+
+input DepartmentUpdateInput {
+  name: String
+}
+
+input DepartmentUpdateManyMutationInput {
+  name: String
+}
+
+input DepartmentUpdateOneInput {
+  create: DepartmentCreateInput
+  update: DepartmentUpdateDataInput
+  upsert: DepartmentUpsertNestedInput
+  delete: Boolean
+  disconnect: Boolean
+  connect: DepartmentWhereUniqueInput
+}
+
+input DepartmentUpsertNestedInput {
+  update: DepartmentUpdateDataInput!
+  create: DepartmentCreateInput!
+}
+
+input DepartmentWhereInput {
+  id: ID
+  id_not: ID
+  id_in: [ID!]
+  id_not_in: [ID!]
+  id_lt: ID
+  id_lte: ID
+  id_gt: ID
+  id_gte: ID
+  id_contains: ID
+  id_not_contains: ID
+  id_starts_with: ID
+  id_not_starts_with: ID
+  id_ends_with: ID
+  id_not_ends_with: ID
+  name: String
+  name_not: String
+  name_in: [String!]
+  name_not_in: [String!]
+  name_lt: String
+  name_lte: String
+  name_gt: String
+  name_gte: String
+  name_contains: String
+  name_not_contains: String
+  name_starts_with: String
+  name_not_starts_with: String
+  name_ends_with: String
+  name_not_ends_with: String
+  AND: [DepartmentWhereInput!]
+  OR: [DepartmentWhereInput!]
+  NOT: [DepartmentWhereInput!]
+}
+
+input DepartmentWhereUniqueInput {
+  id: ID
+}
 
 scalar Long
 
 type Mutation {
-  createPost(data: PostCreateInput!): Post!
-  updatePost(data: PostUpdateInput!, where: PostWhereUniqueInput!): Post
-  updateManyPosts(data: PostUpdateManyMutationInput!, where: PostWhereInput): BatchPayload!
-  upsertPost(where: PostWhereUniqueInput!, create: PostCreateInput!, update: PostUpdateInput!): Post!
-  deletePost(where: PostWhereUniqueInput!): Post
-  deleteManyPosts(where: PostWhereInput): BatchPayload!
-  createUser(data: UserCreateInput!): User!
-  updateUser(data: UserUpdateInput!, where: UserWhereUniqueInput!): User
-  updateManyUsers(data: UserUpdateManyMutationInput!, where: UserWhereInput): BatchPayload!
-  upsertUser(where: UserWhereUniqueInput!, create: UserCreateInput!, update: UserUpdateInput!): User!
-  deleteUser(where: UserWhereUniqueInput!): User
-  deleteManyUsers(where: UserWhereInput): BatchPayload!
+  createCourse(data: CourseCreateInput!): Course!
+  updateCourse(data: CourseUpdateInput!, where: CourseWhereUniqueInput!): Course
+  updateManyCourses(data: CourseUpdateManyMutationInput!, where: CourseWhereInput): BatchPayload!
+  upsertCourse(where: CourseWhereUniqueInput!, create: CourseCreateInput!, update: CourseUpdateInput!): Course!
+  deleteCourse(where: CourseWhereUniqueInput!): Course
+  deleteManyCourses(where: CourseWhereInput): BatchPayload!
+  createDegree(data: DegreeCreateInput!): Degree!
+  updateDegree(data: DegreeUpdateInput!, where: DegreeWhereUniqueInput!): Degree
+  updateManyDegrees(data: DegreeUpdateManyMutationInput!, where: DegreeWhereInput): BatchPayload!
+  upsertDegree(where: DegreeWhereUniqueInput!, create: DegreeCreateInput!, update: DegreeUpdateInput!): Degree!
+  deleteDegree(where: DegreeWhereUniqueInput!): Degree
+  deleteManyDegrees(where: DegreeWhereInput): BatchPayload!
+  createDepartment(data: DepartmentCreateInput!): Department!
+  updateDepartment(data: DepartmentUpdateInput!, where: DepartmentWhereUniqueInput!): Department
+  updateManyDepartments(data: DepartmentUpdateManyMutationInput!, where: DepartmentWhereInput): BatchPayload!
+  upsertDepartment(where: DepartmentWhereUniqueInput!, create: DepartmentCreateInput!, update: DepartmentUpdateInput!): Department!
+  deleteDepartment(where: DepartmentWhereUniqueInput!): Department
+  deleteManyDepartments(where: DepartmentWhereInput): BatchPayload!
+  createStudent(data: StudentCreateInput!): Student!
+  updateStudent(data: StudentUpdateInput!, where: StudentWhereUniqueInput!): Student
+  updateManyStudents(data: StudentUpdateManyMutationInput!, where: StudentWhereInput): BatchPayload!
+  upsertStudent(where: StudentWhereUniqueInput!, create: StudentCreateInput!, update: StudentUpdateInput!): Student!
+  deleteStudent(where: StudentWhereUniqueInput!): Student
+  deleteManyStudents(where: StudentWhereInput): BatchPayload!
+  createSubject(data: SubjectCreateInput!): Subject!
+  updateSubject(data: SubjectUpdateInput!, where: SubjectWhereUniqueInput!): Subject
+  updateManySubjects(data: SubjectUpdateManyMutationInput!, where: SubjectWhereInput): BatchPayload!
+  upsertSubject(where: SubjectWhereUniqueInput!, create: SubjectCreateInput!, update: SubjectUpdateInput!): Subject!
+  deleteSubject(where: SubjectWhereUniqueInput!): Subject
+  deleteManySubjects(where: SubjectWhereInput): BatchPayload!
 }
 
 enum MutationType {
@@ -50,331 +641,52 @@ type PageInfo {
   endCursor: String
 }
 
-type Post {
-  id: ID!
-  createdAt: DateTime!
-  updatedAt: DateTime!
-  published: Boolean!
-  title: String!
-  content: String
-  author: User!
-}
-
-type PostConnection {
-  pageInfo: PageInfo!
-  edges: [PostEdge]!
-  aggregate: AggregatePost!
-}
-
-input PostCreateInput {
-  published: Boolean
-  title: String!
-  content: String
-  author: UserCreateOneWithoutPostsInput!
-}
-
-input PostCreateManyWithoutAuthorInput {
-  create: [PostCreateWithoutAuthorInput!]
-  connect: [PostWhereUniqueInput!]
-}
-
-input PostCreateWithoutAuthorInput {
-  published: Boolean
-  title: String!
-  content: String
-}
-
-type PostEdge {
-  node: Post!
-  cursor: String!
-}
-
-enum PostOrderByInput {
-  id_ASC
-  id_DESC
-  createdAt_ASC
-  createdAt_DESC
-  updatedAt_ASC
-  updatedAt_DESC
-  published_ASC
-  published_DESC
-  title_ASC
-  title_DESC
-  content_ASC
-  content_DESC
-}
-
-type PostPreviousValues {
-  id: ID!
-  createdAt: DateTime!
-  updatedAt: DateTime!
-  published: Boolean!
-  title: String!
-  content: String
-}
-
-input PostScalarWhereInput {
-  id: ID
-  id_not: ID
-  id_in: [ID!]
-  id_not_in: [ID!]
-  id_lt: ID
-  id_lte: ID
-  id_gt: ID
-  id_gte: ID
-  id_contains: ID
-  id_not_contains: ID
-  id_starts_with: ID
-  id_not_starts_with: ID
-  id_ends_with: ID
-  id_not_ends_with: ID
-  createdAt: DateTime
-  createdAt_not: DateTime
-  createdAt_in: [DateTime!]
-  createdAt_not_in: [DateTime!]
-  createdAt_lt: DateTime
-  createdAt_lte: DateTime
-  createdAt_gt: DateTime
-  createdAt_gte: DateTime
-  updatedAt: DateTime
-  updatedAt_not: DateTime
-  updatedAt_in: [DateTime!]
-  updatedAt_not_in: [DateTime!]
-  updatedAt_lt: DateTime
-  updatedAt_lte: DateTime
-  updatedAt_gt: DateTime
-  updatedAt_gte: DateTime
-  published: Boolean
-  published_not: Boolean
-  title: String
-  title_not: String
-  title_in: [String!]
-  title_not_in: [String!]
-  title_lt: String
-  title_lte: String
-  title_gt: String
-  title_gte: String
-  title_contains: String
-  title_not_contains: String
-  title_starts_with: String
-  title_not_starts_with: String
-  title_ends_with: String
-  title_not_ends_with: String
-  content: String
-  content_not: String
-  content_in: [String!]
-  content_not_in: [String!]
-  content_lt: String
-  content_lte: String
-  content_gt: String
-  content_gte: String
-  content_contains: String
-  content_not_contains: String
-  content_starts_with: String
-  content_not_starts_with: String
-  content_ends_with: String
-  content_not_ends_with: String
-  AND: [PostScalarWhereInput!]
-  OR: [PostScalarWhereInput!]
-  NOT: [PostScalarWhereInput!]
-}
-
-type PostSubscriptionPayload {
-  mutation: MutationType!
-  node: Post
-  updatedFields: [String!]
-  previousValues: PostPreviousValues
-}
-
-input PostSubscriptionWhereInput {
-  mutation_in: [MutationType!]
-  updatedFields_contains: String
-  updatedFields_contains_every: [String!]
-  updatedFields_contains_some: [String!]
-  node: PostWhereInput
-  AND: [PostSubscriptionWhereInput!]
-  OR: [PostSubscriptionWhereInput!]
-  NOT: [PostSubscriptionWhereInput!]
-}
-
-input PostUpdateInput {
-  published: Boolean
-  title: String
-  content: String
-  author: UserUpdateOneRequiredWithoutPostsInput
-}
-
-input PostUpdateManyDataInput {
-  published: Boolean
-  title: String
-  content: String
-}
-
-input PostUpdateManyMutationInput {
-  published: Boolean
-  title: String
-  content: String
-}
-
-input PostUpdateManyWithoutAuthorInput {
-  create: [PostCreateWithoutAuthorInput!]
-  delete: [PostWhereUniqueInput!]
-  connect: [PostWhereUniqueInput!]
-  set: [PostWhereUniqueInput!]
-  disconnect: [PostWhereUniqueInput!]
-  update: [PostUpdateWithWhereUniqueWithoutAuthorInput!]
-  upsert: [PostUpsertWithWhereUniqueWithoutAuthorInput!]
-  deleteMany: [PostScalarWhereInput!]
-  updateMany: [PostUpdateManyWithWhereNestedInput!]
-}
-
-input PostUpdateManyWithWhereNestedInput {
-  where: PostScalarWhereInput!
-  data: PostUpdateManyDataInput!
-}
-
-input PostUpdateWithoutAuthorDataInput {
-  published: Boolean
-  title: String
-  content: String
-}
-
-input PostUpdateWithWhereUniqueWithoutAuthorInput {
-  where: PostWhereUniqueInput!
-  data: PostUpdateWithoutAuthorDataInput!
-}
-
-input PostUpsertWithWhereUniqueWithoutAuthorInput {
-  where: PostWhereUniqueInput!
-  update: PostUpdateWithoutAuthorDataInput!
-  create: PostCreateWithoutAuthorInput!
-}
-
-input PostWhereInput {
-  id: ID
-  id_not: ID
-  id_in: [ID!]
-  id_not_in: [ID!]
-  id_lt: ID
-  id_lte: ID
-  id_gt: ID
-  id_gte: ID
-  id_contains: ID
-  id_not_contains: ID
-  id_starts_with: ID
-  id_not_starts_with: ID
-  id_ends_with: ID
-  id_not_ends_with: ID
-  createdAt: DateTime
-  createdAt_not: DateTime
-  createdAt_in: [DateTime!]
-  createdAt_not_in: [DateTime!]
-  createdAt_lt: DateTime
-  createdAt_lte: DateTime
-  createdAt_gt: DateTime
-  createdAt_gte: DateTime
-  updatedAt: DateTime
-  updatedAt_not: DateTime
-  updatedAt_in: [DateTime!]
-  updatedAt_not_in: [DateTime!]
-  updatedAt_lt: DateTime
-  updatedAt_lte: DateTime
-  updatedAt_gt: DateTime
-  updatedAt_gte: DateTime
-  published: Boolean
-  published_not: Boolean
-  title: String
-  title_not: String
-  title_in: [String!]
-  title_not_in: [String!]
-  title_lt: String
-  title_lte: String
-  title_gt: String
-  title_gte: String
-  title_contains: String
-  title_not_contains: String
-  title_starts_with: String
-  title_not_starts_with: String
-  title_ends_with: String
-  title_not_ends_with: String
-  content: String
-  content_not: String
-  content_in: [String!]
-  content_not_in: [String!]
-  content_lt: String
-  content_lte: String
-  content_gt: String
-  content_gte: String
-  content_contains: String
-  content_not_contains: String
-  content_starts_with: String
-  content_not_starts_with: String
-  content_ends_with: String
-  content_not_ends_with: String
-  author: UserWhereInput
-  AND: [PostWhereInput!]
-  OR: [PostWhereInput!]
-  NOT: [PostWhereInput!]
-}
-
-input PostWhereUniqueInput {
-  id: ID
-}
-
 type Query {
-  post(where: PostWhereUniqueInput!): Post
-  posts(where: PostWhereInput, orderBy: PostOrderByInput, skip: Int, after: String, before: String, first: Int, last: Int): [Post]!
-  postsConnection(where: PostWhereInput, orderBy: PostOrderByInput, skip: Int, after: String, before: String, first: Int, last: Int): PostConnection!
-  user(where: UserWhereUniqueInput!): User
-  users(where: UserWhereInput, orderBy: UserOrderByInput, skip: Int, after: String, before: String, first: Int, last: Int): [User]!
-  usersConnection(where: UserWhereInput, orderBy: UserOrderByInput, skip: Int, after: String, before: String, first: Int, last: Int): UserConnection!
+  course(where: CourseWhereUniqueInput!): Course
+  courses(where: CourseWhereInput, orderBy: CourseOrderByInput, skip: Int, after: String, before: String, first: Int, last: Int): [Course]!
+  coursesConnection(where: CourseWhereInput, orderBy: CourseOrderByInput, skip: Int, after: String, before: String, first: Int, last: Int): CourseConnection!
+  degree(where: DegreeWhereUniqueInput!): Degree
+  degrees(where: DegreeWhereInput, orderBy: DegreeOrderByInput, skip: Int, after: String, before: String, first: Int, last: Int): [Degree]!
+  degreesConnection(where: DegreeWhereInput, orderBy: DegreeOrderByInput, skip: Int, after: String, before: String, first: Int, last: Int): DegreeConnection!
+  department(where: DepartmentWhereUniqueInput!): Department
+  departments(where: DepartmentWhereInput, orderBy: DepartmentOrderByInput, skip: Int, after: String, before: String, first: Int, last: Int): [Department]!
+  departmentsConnection(where: DepartmentWhereInput, orderBy: DepartmentOrderByInput, skip: Int, after: String, before: String, first: Int, last: Int): DepartmentConnection!
+  student(where: StudentWhereUniqueInput!): Student
+  students(where: StudentWhereInput, orderBy: StudentOrderByInput, skip: Int, after: String, before: String, first: Int, last: Int): [Student]!
+  studentsConnection(where: StudentWhereInput, orderBy: StudentOrderByInput, skip: Int, after: String, before: String, first: Int, last: Int): StudentConnection!
+  subject(where: SubjectWhereUniqueInput!): Subject
+  subjects(where: SubjectWhereInput, orderBy: SubjectOrderByInput, skip: Int, after: String, before: String, first: Int, last: Int): [Subject]!
+  subjectsConnection(where: SubjectWhereInput, orderBy: SubjectOrderByInput, skip: Int, after: String, before: String, first: Int, last: Int): SubjectConnection!
   node(id: ID!): Node
 }
 
-type Subscription {
-  post(where: PostSubscriptionWhereInput): PostSubscriptionPayload
-  user(where: UserSubscriptionWhereInput): UserSubscriptionPayload
-}
-
-type User {
+type Student {
   id: ID!
-  email: String!
   name: String
-  posts(where: PostWhereInput, orderBy: PostOrderByInput, skip: Int, after: String, before: String, first: Int, last: Int): [Post!]
+  coursesPassed(where: CourseWhereInput, orderBy: CourseOrderByInput, skip: Int, after: String, before: String, first: Int, last: Int): [Course!]
+  enrolledDegree: Degree
 }
 
-type UserConnection {
+type StudentConnection {
   pageInfo: PageInfo!
-  edges: [UserEdge]!
-  aggregate: AggregateUser!
+  edges: [StudentEdge]!
+  aggregate: AggregateStudent!
 }
 
-input UserCreateInput {
-  email: String!
+input StudentCreateInput {
   name: String
-  posts: PostCreateManyWithoutAuthorInput
+  coursesPassed: CourseCreateManyInput
+  enrolledDegree: DegreeCreateOneInput
 }
 
-input UserCreateOneWithoutPostsInput {
-  create: UserCreateWithoutPostsInput
-  connect: UserWhereUniqueInput
-}
-
-input UserCreateWithoutPostsInput {
-  email: String!
-  name: String
-}
-
-type UserEdge {
-  node: User!
+type StudentEdge {
+  node: Student!
   cursor: String!
 }
 
-enum UserOrderByInput {
+enum StudentOrderByInput {
   id_ASC
   id_DESC
-  email_ASC
-  email_DESC
   name_ASC
   name_DESC
   createdAt_ASC
@@ -383,59 +695,40 @@ enum UserOrderByInput {
   updatedAt_DESC
 }
 
-type UserPreviousValues {
+type StudentPreviousValues {
   id: ID!
-  email: String!
   name: String
 }
 
-type UserSubscriptionPayload {
+type StudentSubscriptionPayload {
   mutation: MutationType!
-  node: User
+  node: Student
   updatedFields: [String!]
-  previousValues: UserPreviousValues
+  previousValues: StudentPreviousValues
 }
 
-input UserSubscriptionWhereInput {
+input StudentSubscriptionWhereInput {
   mutation_in: [MutationType!]
   updatedFields_contains: String
   updatedFields_contains_every: [String!]
   updatedFields_contains_some: [String!]
-  node: UserWhereInput
-  AND: [UserSubscriptionWhereInput!]
-  OR: [UserSubscriptionWhereInput!]
-  NOT: [UserSubscriptionWhereInput!]
+  node: StudentWhereInput
+  AND: [StudentSubscriptionWhereInput!]
+  OR: [StudentSubscriptionWhereInput!]
+  NOT: [StudentSubscriptionWhereInput!]
 }
 
-input UserUpdateInput {
-  email: String
+input StudentUpdateInput {
   name: String
-  posts: PostUpdateManyWithoutAuthorInput
+  coursesPassed: CourseUpdateManyInput
+  enrolledDegree: DegreeUpdateOneInput
 }
 
-input UserUpdateManyMutationInput {
-  email: String
-  name: String
-}
-
-input UserUpdateOneRequiredWithoutPostsInput {
-  create: UserCreateWithoutPostsInput
-  update: UserUpdateWithoutPostsDataInput
-  upsert: UserUpsertWithoutPostsInput
-  connect: UserWhereUniqueInput
-}
-
-input UserUpdateWithoutPostsDataInput {
-  email: String
+input StudentUpdateManyMutationInput {
   name: String
 }
 
-input UserUpsertWithoutPostsInput {
-  update: UserUpdateWithoutPostsDataInput!
-  create: UserCreateWithoutPostsInput!
-}
-
-input UserWhereInput {
+input StudentWhereInput {
   id: ID
   id_not: ID
   id_in: [ID!]
@@ -450,20 +743,6 @@ input UserWhereInput {
   id_not_starts_with: ID
   id_ends_with: ID
   id_not_ends_with: ID
-  email: String
-  email_not: String
-  email_in: [String!]
-  email_not_in: [String!]
-  email_lt: String
-  email_lte: String
-  email_gt: String
-  email_gte: String
-  email_contains: String
-  email_not_contains: String
-  email_starts_with: String
-  email_not_starts_with: String
-  email_ends_with: String
-  email_not_ends_with: String
   name: String
   name_not: String
   name_in: [String!]
@@ -478,16 +757,147 @@ input UserWhereInput {
   name_not_starts_with: String
   name_ends_with: String
   name_not_ends_with: String
-  posts_every: PostWhereInput
-  posts_some: PostWhereInput
-  posts_none: PostWhereInput
-  AND: [UserWhereInput!]
-  OR: [UserWhereInput!]
-  NOT: [UserWhereInput!]
+  coursesPassed_every: CourseWhereInput
+  coursesPassed_some: CourseWhereInput
+  coursesPassed_none: CourseWhereInput
+  enrolledDegree: DegreeWhereInput
+  AND: [StudentWhereInput!]
+  OR: [StudentWhereInput!]
+  NOT: [StudentWhereInput!]
 }
 
-input UserWhereUniqueInput {
+input StudentWhereUniqueInput {
   id: ID
-  email: String
+}
+
+type Subject {
+  id: ID!
+  name: String!
+}
+
+type SubjectConnection {
+  pageInfo: PageInfo!
+  edges: [SubjectEdge]!
+  aggregate: AggregateSubject!
+}
+
+input SubjectCreateInput {
+  name: String!
+}
+
+input SubjectCreateOneInput {
+  create: SubjectCreateInput
+  connect: SubjectWhereUniqueInput
+}
+
+type SubjectEdge {
+  node: Subject!
+  cursor: String!
+}
+
+enum SubjectOrderByInput {
+  id_ASC
+  id_DESC
+  name_ASC
+  name_DESC
+  createdAt_ASC
+  createdAt_DESC
+  updatedAt_ASC
+  updatedAt_DESC
+}
+
+type SubjectPreviousValues {
+  id: ID!
+  name: String!
+}
+
+type SubjectSubscriptionPayload {
+  mutation: MutationType!
+  node: Subject
+  updatedFields: [String!]
+  previousValues: SubjectPreviousValues
+}
+
+input SubjectSubscriptionWhereInput {
+  mutation_in: [MutationType!]
+  updatedFields_contains: String
+  updatedFields_contains_every: [String!]
+  updatedFields_contains_some: [String!]
+  node: SubjectWhereInput
+  AND: [SubjectSubscriptionWhereInput!]
+  OR: [SubjectSubscriptionWhereInput!]
+  NOT: [SubjectSubscriptionWhereInput!]
+}
+
+input SubjectUpdateDataInput {
+  name: String
+}
+
+input SubjectUpdateInput {
+  name: String
+}
+
+input SubjectUpdateManyMutationInput {
+  name: String
+}
+
+input SubjectUpdateOneInput {
+  create: SubjectCreateInput
+  update: SubjectUpdateDataInput
+  upsert: SubjectUpsertNestedInput
+  delete: Boolean
+  disconnect: Boolean
+  connect: SubjectWhereUniqueInput
+}
+
+input SubjectUpsertNestedInput {
+  update: SubjectUpdateDataInput!
+  create: SubjectCreateInput!
+}
+
+input SubjectWhereInput {
+  id: ID
+  id_not: ID
+  id_in: [ID!]
+  id_not_in: [ID!]
+  id_lt: ID
+  id_lte: ID
+  id_gt: ID
+  id_gte: ID
+  id_contains: ID
+  id_not_contains: ID
+  id_starts_with: ID
+  id_not_starts_with: ID
+  id_ends_with: ID
+  id_not_ends_with: ID
+  name: String
+  name_not: String
+  name_in: [String!]
+  name_not_in: [String!]
+  name_lt: String
+  name_lte: String
+  name_gt: String
+  name_gte: String
+  name_contains: String
+  name_not_contains: String
+  name_starts_with: String
+  name_not_starts_with: String
+  name_ends_with: String
+  name_not_ends_with: String
+  AND: [SubjectWhereInput!]
+  OR: [SubjectWhereInput!]
+  NOT: [SubjectWhereInput!]
+}
+
+input SubjectWhereUniqueInput {
+  id: ID
+}
+
+type Subscription {
+  course(where: CourseSubscriptionWhereInput): CourseSubscriptionPayload
+  degree(where: DegreeSubscriptionWhereInput): DegreeSubscriptionPayload
+  department(where: DepartmentSubscriptionWhereInput): DepartmentSubscriptionPayload
+  student(where: StudentSubscriptionWhereInput): StudentSubscriptionPayload
+  subject(where: SubjectSubscriptionWhereInput): SubjectSubscriptionPayload
 }
 `

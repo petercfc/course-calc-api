@@ -8,6 +8,7 @@ import * as allTypes from './resolvers'
  * Finally, we construct our schema (whose starting query type is the query
  * type we defined above) and export it.
  */
+
 export const schema = makePrismaSchema({
   types: allTypes,
 
@@ -24,15 +25,5 @@ export const schema = makePrismaSchema({
   nonNullDefaults: {
     input: true,
     output: true,
-  },
-
-  typegenAutoConfig: {
-    sources: [
-      {
-        source: path.join(__dirname, './context.ts'),
-        alias: 'ctx',
-      },
-    ],
-    contextType: 'ctx.Context',
   },
 })

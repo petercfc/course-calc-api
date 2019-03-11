@@ -11,31 +11,34 @@ declare global {
 }
 
 export interface NexusGenInputs {
-  PostWhereInput: { // input type
-    AND?: NexusGenInputs['PostWhereInput'][] | null; // [PostWhereInput!]
-    author?: NexusGenInputs['UserWhereInput'] | null; // UserWhereInput
-    content?: string | null; // String
-    content_contains?: string | null; // String
-    content_ends_with?: string | null; // String
-    content_gt?: string | null; // String
-    content_gte?: string | null; // String
-    content_in?: string[] | null; // [String!]
-    content_lt?: string | null; // String
-    content_lte?: string | null; // String
-    content_not?: string | null; // String
-    content_not_contains?: string | null; // String
-    content_not_ends_with?: string | null; // String
-    content_not_in?: string[] | null; // [String!]
-    content_not_starts_with?: string | null; // String
-    content_starts_with?: string | null; // String
-    createdAt?: any | null; // DateTime
-    createdAt_gt?: any | null; // DateTime
-    createdAt_gte?: any | null; // DateTime
-    createdAt_in?: any[] | null; // [DateTime!]
-    createdAt_lt?: any | null; // DateTime
-    createdAt_lte?: any | null; // DateTime
-    createdAt_not?: any | null; // DateTime
-    createdAt_not_in?: any[] | null; // [DateTime!]
+  CourseCreateInput: { // input type
+    credits: number; // Int!
+    degree?: NexusGenInputs['DegreeCreateOneInput'] | null; // DegreeCreateOneInput
+    department?: NexusGenInputs['DepartmentCreateOneInput'] | null; // DepartmentCreateOneInput
+    level: number; // Int!
+    name: string; // String!
+    number: string; // String!
+    prerequisite?: NexusGenInputs['CourseCreateOneInput'] | null; // CourseCreateOneInput
+    subject?: NexusGenInputs['SubjectCreateOneInput'] | null; // SubjectCreateOneInput
+  }
+  CourseCreateManyInput: { // input type
+    connect?: NexusGenInputs['CourseWhereUniqueInput'][] | null; // [CourseWhereUniqueInput!]
+    create?: NexusGenInputs['CourseCreateInput'][] | null; // [CourseCreateInput!]
+  }
+  CourseCreateOneInput: { // input type
+    connect?: NexusGenInputs['CourseWhereUniqueInput'] | null; // CourseWhereUniqueInput
+    create?: NexusGenInputs['CourseCreateInput'] | null; // CourseCreateInput
+  }
+  CourseScalarWhereInput: { // input type
+    AND?: NexusGenInputs['CourseScalarWhereInput'][] | null; // [CourseScalarWhereInput!]
+    credits?: number | null; // Int
+    credits_gt?: number | null; // Int
+    credits_gte?: number | null; // Int
+    credits_in?: number[] | null; // [Int!]
+    credits_lt?: number | null; // Int
+    credits_lte?: number | null; // Int
+    credits_not?: number | null; // Int
+    credits_not_in?: number[] | null; // [Int!]
     id?: string | null; // ID
     id_contains?: string | null; // ID
     id_ends_with?: string | null; // ID
@@ -50,49 +53,217 @@ export interface NexusGenInputs {
     id_not_in?: string[] | null; // [ID!]
     id_not_starts_with?: string | null; // ID
     id_starts_with?: string | null; // ID
-    NOT?: NexusGenInputs['PostWhereInput'][] | null; // [PostWhereInput!]
-    OR?: NexusGenInputs['PostWhereInput'][] | null; // [PostWhereInput!]
-    published?: boolean | null; // Boolean
-    published_not?: boolean | null; // Boolean
-    title?: string | null; // String
-    title_contains?: string | null; // String
-    title_ends_with?: string | null; // String
-    title_gt?: string | null; // String
-    title_gte?: string | null; // String
-    title_in?: string[] | null; // [String!]
-    title_lt?: string | null; // String
-    title_lte?: string | null; // String
-    title_not?: string | null; // String
-    title_not_contains?: string | null; // String
-    title_not_ends_with?: string | null; // String
-    title_not_in?: string[] | null; // [String!]
-    title_not_starts_with?: string | null; // String
-    title_starts_with?: string | null; // String
-    updatedAt?: any | null; // DateTime
-    updatedAt_gt?: any | null; // DateTime
-    updatedAt_gte?: any | null; // DateTime
-    updatedAt_in?: any[] | null; // [DateTime!]
-    updatedAt_lt?: any | null; // DateTime
-    updatedAt_lte?: any | null; // DateTime
-    updatedAt_not?: any | null; // DateTime
-    updatedAt_not_in?: any[] | null; // [DateTime!]
+    level?: number | null; // Int
+    level_gt?: number | null; // Int
+    level_gte?: number | null; // Int
+    level_in?: number[] | null; // [Int!]
+    level_lt?: number | null; // Int
+    level_lte?: number | null; // Int
+    level_not?: number | null; // Int
+    level_not_in?: number[] | null; // [Int!]
+    name?: string | null; // String
+    name_contains?: string | null; // String
+    name_ends_with?: string | null; // String
+    name_gt?: string | null; // String
+    name_gte?: string | null; // String
+    name_in?: string[] | null; // [String!]
+    name_lt?: string | null; // String
+    name_lte?: string | null; // String
+    name_not?: string | null; // String
+    name_not_contains?: string | null; // String
+    name_not_ends_with?: string | null; // String
+    name_not_in?: string[] | null; // [String!]
+    name_not_starts_with?: string | null; // String
+    name_starts_with?: string | null; // String
+    NOT?: NexusGenInputs['CourseScalarWhereInput'][] | null; // [CourseScalarWhereInput!]
+    number?: string | null; // String
+    number_contains?: string | null; // String
+    number_ends_with?: string | null; // String
+    number_gt?: string | null; // String
+    number_gte?: string | null; // String
+    number_in?: string[] | null; // [String!]
+    number_lt?: string | null; // String
+    number_lte?: string | null; // String
+    number_not?: string | null; // String
+    number_not_contains?: string | null; // String
+    number_not_ends_with?: string | null; // String
+    number_not_in?: string[] | null; // [String!]
+    number_not_starts_with?: string | null; // String
+    number_starts_with?: string | null; // String
+    OR?: NexusGenInputs['CourseScalarWhereInput'][] | null; // [CourseScalarWhereInput!]
   }
-  UserWhereInput: { // input type
-    AND?: NexusGenInputs['UserWhereInput'][] | null; // [UserWhereInput!]
-    email?: string | null; // String
-    email_contains?: string | null; // String
-    email_ends_with?: string | null; // String
-    email_gt?: string | null; // String
-    email_gte?: string | null; // String
-    email_in?: string[] | null; // [String!]
-    email_lt?: string | null; // String
-    email_lte?: string | null; // String
-    email_not?: string | null; // String
-    email_not_contains?: string | null; // String
-    email_not_ends_with?: string | null; // String
-    email_not_in?: string[] | null; // [String!]
-    email_not_starts_with?: string | null; // String
-    email_starts_with?: string | null; // String
+  CourseUpdateDataInput: { // input type
+    credits?: number | null; // Int
+    degree?: NexusGenInputs['DegreeUpdateOneInput'] | null; // DegreeUpdateOneInput
+    department?: NexusGenInputs['DepartmentUpdateOneInput'] | null; // DepartmentUpdateOneInput
+    level?: number | null; // Int
+    name?: string | null; // String
+    number?: string | null; // String
+    prerequisite?: NexusGenInputs['CourseUpdateOneInput'] | null; // CourseUpdateOneInput
+    subject?: NexusGenInputs['SubjectUpdateOneInput'] | null; // SubjectUpdateOneInput
+  }
+  CourseUpdateInput: { // input type
+    credits?: number | null; // Int
+    degree?: NexusGenInputs['DegreeUpdateOneInput'] | null; // DegreeUpdateOneInput
+    department?: NexusGenInputs['DepartmentUpdateOneInput'] | null; // DepartmentUpdateOneInput
+    level?: number | null; // Int
+    name?: string | null; // String
+    number?: string | null; // String
+    prerequisite?: NexusGenInputs['CourseUpdateOneInput'] | null; // CourseUpdateOneInput
+    subject?: NexusGenInputs['SubjectUpdateOneInput'] | null; // SubjectUpdateOneInput
+  }
+  CourseUpdateManyDataInput: { // input type
+    credits?: number | null; // Int
+    level?: number | null; // Int
+    name?: string | null; // String
+    number?: string | null; // String
+  }
+  CourseUpdateManyInput: { // input type
+    connect?: NexusGenInputs['CourseWhereUniqueInput'][] | null; // [CourseWhereUniqueInput!]
+    create?: NexusGenInputs['CourseCreateInput'][] | null; // [CourseCreateInput!]
+    delete?: NexusGenInputs['CourseWhereUniqueInput'][] | null; // [CourseWhereUniqueInput!]
+    deleteMany?: NexusGenInputs['CourseScalarWhereInput'][] | null; // [CourseScalarWhereInput!]
+    disconnect?: NexusGenInputs['CourseWhereUniqueInput'][] | null; // [CourseWhereUniqueInput!]
+    set?: NexusGenInputs['CourseWhereUniqueInput'][] | null; // [CourseWhereUniqueInput!]
+    update?: NexusGenInputs['CourseUpdateWithWhereUniqueNestedInput'][] | null; // [CourseUpdateWithWhereUniqueNestedInput!]
+    updateMany?: NexusGenInputs['CourseUpdateManyWithWhereNestedInput'][] | null; // [CourseUpdateManyWithWhereNestedInput!]
+    upsert?: NexusGenInputs['CourseUpsertWithWhereUniqueNestedInput'][] | null; // [CourseUpsertWithWhereUniqueNestedInput!]
+  }
+  CourseUpdateManyMutationInput: { // input type
+    credits?: number | null; // Int
+    level?: number | null; // Int
+    name?: string | null; // String
+    number?: string | null; // String
+  }
+  CourseUpdateManyWithWhereNestedInput: { // input type
+    data: NexusGenInputs['CourseUpdateManyDataInput']; // CourseUpdateManyDataInput!
+    where: NexusGenInputs['CourseScalarWhereInput']; // CourseScalarWhereInput!
+  }
+  CourseUpdateOneInput: { // input type
+    connect?: NexusGenInputs['CourseWhereUniqueInput'] | null; // CourseWhereUniqueInput
+    create?: NexusGenInputs['CourseCreateInput'] | null; // CourseCreateInput
+    delete?: boolean | null; // Boolean
+    disconnect?: boolean | null; // Boolean
+    update?: NexusGenInputs['CourseUpdateDataInput'] | null; // CourseUpdateDataInput
+    upsert?: NexusGenInputs['CourseUpsertNestedInput'] | null; // CourseUpsertNestedInput
+  }
+  CourseUpdateWithWhereUniqueNestedInput: { // input type
+    data: NexusGenInputs['CourseUpdateDataInput']; // CourseUpdateDataInput!
+    where: NexusGenInputs['CourseWhereUniqueInput']; // CourseWhereUniqueInput!
+  }
+  CourseUpsertNestedInput: { // input type
+    create: NexusGenInputs['CourseCreateInput']; // CourseCreateInput!
+    update: NexusGenInputs['CourseUpdateDataInput']; // CourseUpdateDataInput!
+  }
+  CourseUpsertWithWhereUniqueNestedInput: { // input type
+    create: NexusGenInputs['CourseCreateInput']; // CourseCreateInput!
+    update: NexusGenInputs['CourseUpdateDataInput']; // CourseUpdateDataInput!
+    where: NexusGenInputs['CourseWhereUniqueInput']; // CourseWhereUniqueInput!
+  }
+  CourseWhereInput: { // input type
+    AND?: NexusGenInputs['CourseWhereInput'][] | null; // [CourseWhereInput!]
+    credits?: number | null; // Int
+    credits_gt?: number | null; // Int
+    credits_gte?: number | null; // Int
+    credits_in?: number[] | null; // [Int!]
+    credits_lt?: number | null; // Int
+    credits_lte?: number | null; // Int
+    credits_not?: number | null; // Int
+    credits_not_in?: number[] | null; // [Int!]
+    degree?: NexusGenInputs['DegreeWhereInput'] | null; // DegreeWhereInput
+    department?: NexusGenInputs['DepartmentWhereInput'] | null; // DepartmentWhereInput
+    id?: string | null; // ID
+    id_contains?: string | null; // ID
+    id_ends_with?: string | null; // ID
+    id_gt?: string | null; // ID
+    id_gte?: string | null; // ID
+    id_in?: string[] | null; // [ID!]
+    id_lt?: string | null; // ID
+    id_lte?: string | null; // ID
+    id_not?: string | null; // ID
+    id_not_contains?: string | null; // ID
+    id_not_ends_with?: string | null; // ID
+    id_not_in?: string[] | null; // [ID!]
+    id_not_starts_with?: string | null; // ID
+    id_starts_with?: string | null; // ID
+    level?: number | null; // Int
+    level_gt?: number | null; // Int
+    level_gte?: number | null; // Int
+    level_in?: number[] | null; // [Int!]
+    level_lt?: number | null; // Int
+    level_lte?: number | null; // Int
+    level_not?: number | null; // Int
+    level_not_in?: number[] | null; // [Int!]
+    name?: string | null; // String
+    name_contains?: string | null; // String
+    name_ends_with?: string | null; // String
+    name_gt?: string | null; // String
+    name_gte?: string | null; // String
+    name_in?: string[] | null; // [String!]
+    name_lt?: string | null; // String
+    name_lte?: string | null; // String
+    name_not?: string | null; // String
+    name_not_contains?: string | null; // String
+    name_not_ends_with?: string | null; // String
+    name_not_in?: string[] | null; // [String!]
+    name_not_starts_with?: string | null; // String
+    name_starts_with?: string | null; // String
+    NOT?: NexusGenInputs['CourseWhereInput'][] | null; // [CourseWhereInput!]
+    number?: string | null; // String
+    number_contains?: string | null; // String
+    number_ends_with?: string | null; // String
+    number_gt?: string | null; // String
+    number_gte?: string | null; // String
+    number_in?: string[] | null; // [String!]
+    number_lt?: string | null; // String
+    number_lte?: string | null; // String
+    number_not?: string | null; // String
+    number_not_contains?: string | null; // String
+    number_not_ends_with?: string | null; // String
+    number_not_in?: string[] | null; // [String!]
+    number_not_starts_with?: string | null; // String
+    number_starts_with?: string | null; // String
+    OR?: NexusGenInputs['CourseWhereInput'][] | null; // [CourseWhereInput!]
+    prerequisite?: NexusGenInputs['CourseWhereInput'] | null; // CourseWhereInput
+    subject?: NexusGenInputs['SubjectWhereInput'] | null; // SubjectWhereInput
+  }
+  CourseWhereUniqueInput: { // input type
+    id?: string | null; // ID
+  }
+  DegreeCreateInput: { // input type
+    name: string; // String!
+    requiredCredits: number; // Int!
+  }
+  DegreeCreateOneInput: { // input type
+    connect?: NexusGenInputs['DegreeWhereUniqueInput'] | null; // DegreeWhereUniqueInput
+    create?: NexusGenInputs['DegreeCreateInput'] | null; // DegreeCreateInput
+  }
+  DegreeUpdateDataInput: { // input type
+    name?: string | null; // String
+    requiredCredits?: number | null; // Int
+  }
+  DegreeUpdateInput: { // input type
+    name?: string | null; // String
+    requiredCredits?: number | null; // Int
+  }
+  DegreeUpdateManyMutationInput: { // input type
+    name?: string | null; // String
+    requiredCredits?: number | null; // Int
+  }
+  DegreeUpdateOneInput: { // input type
+    connect?: NexusGenInputs['DegreeWhereUniqueInput'] | null; // DegreeWhereUniqueInput
+    create?: NexusGenInputs['DegreeCreateInput'] | null; // DegreeCreateInput
+    delete?: boolean | null; // Boolean
+    disconnect?: boolean | null; // Boolean
+    update?: NexusGenInputs['DegreeUpdateDataInput'] | null; // DegreeUpdateDataInput
+    upsert?: NexusGenInputs['DegreeUpsertNestedInput'] | null; // DegreeUpsertNestedInput
+  }
+  DegreeUpsertNestedInput: { // input type
+    create: NexusGenInputs['DegreeCreateInput']; // DegreeCreateInput!
+    update: NexusGenInputs['DegreeUpdateDataInput']; // DegreeUpdateDataInput!
+  }
+  DegreeWhereInput: { // input type
+    AND?: NexusGenInputs['DegreeWhereInput'][] | null; // [DegreeWhereInput!]
     id?: string | null; // ID
     id_contains?: string | null; // ID
     id_ends_with?: string | null; // ID
@@ -121,108 +292,746 @@ export interface NexusGenInputs {
     name_not_in?: string[] | null; // [String!]
     name_not_starts_with?: string | null; // String
     name_starts_with?: string | null; // String
-    NOT?: NexusGenInputs['UserWhereInput'][] | null; // [UserWhereInput!]
-    OR?: NexusGenInputs['UserWhereInput'][] | null; // [UserWhereInput!]
-    posts_every?: NexusGenInputs['PostWhereInput'] | null; // PostWhereInput
-    posts_none?: NexusGenInputs['PostWhereInput'] | null; // PostWhereInput
-    posts_some?: NexusGenInputs['PostWhereInput'] | null; // PostWhereInput
+    NOT?: NexusGenInputs['DegreeWhereInput'][] | null; // [DegreeWhereInput!]
+    OR?: NexusGenInputs['DegreeWhereInput'][] | null; // [DegreeWhereInput!]
+    requiredCredits?: number | null; // Int
+    requiredCredits_gt?: number | null; // Int
+    requiredCredits_gte?: number | null; // Int
+    requiredCredits_in?: number[] | null; // [Int!]
+    requiredCredits_lt?: number | null; // Int
+    requiredCredits_lte?: number | null; // Int
+    requiredCredits_not?: number | null; // Int
+    requiredCredits_not_in?: number[] | null; // [Int!]
+  }
+  DegreeWhereUniqueInput: { // input type
+    id?: string | null; // ID
+  }
+  DepartmentCreateInput: { // input type
+    name: string; // String!
+  }
+  DepartmentCreateOneInput: { // input type
+    connect?: NexusGenInputs['DepartmentWhereUniqueInput'] | null; // DepartmentWhereUniqueInput
+    create?: NexusGenInputs['DepartmentCreateInput'] | null; // DepartmentCreateInput
+  }
+  DepartmentUpdateDataInput: { // input type
+    name?: string | null; // String
+  }
+  DepartmentUpdateInput: { // input type
+    name?: string | null; // String
+  }
+  DepartmentUpdateManyMutationInput: { // input type
+    name?: string | null; // String
+  }
+  DepartmentUpdateOneInput: { // input type
+    connect?: NexusGenInputs['DepartmentWhereUniqueInput'] | null; // DepartmentWhereUniqueInput
+    create?: NexusGenInputs['DepartmentCreateInput'] | null; // DepartmentCreateInput
+    delete?: boolean | null; // Boolean
+    disconnect?: boolean | null; // Boolean
+    update?: NexusGenInputs['DepartmentUpdateDataInput'] | null; // DepartmentUpdateDataInput
+    upsert?: NexusGenInputs['DepartmentUpsertNestedInput'] | null; // DepartmentUpsertNestedInput
+  }
+  DepartmentUpsertNestedInput: { // input type
+    create: NexusGenInputs['DepartmentCreateInput']; // DepartmentCreateInput!
+    update: NexusGenInputs['DepartmentUpdateDataInput']; // DepartmentUpdateDataInput!
+  }
+  DepartmentWhereInput: { // input type
+    AND?: NexusGenInputs['DepartmentWhereInput'][] | null; // [DepartmentWhereInput!]
+    id?: string | null; // ID
+    id_contains?: string | null; // ID
+    id_ends_with?: string | null; // ID
+    id_gt?: string | null; // ID
+    id_gte?: string | null; // ID
+    id_in?: string[] | null; // [ID!]
+    id_lt?: string | null; // ID
+    id_lte?: string | null; // ID
+    id_not?: string | null; // ID
+    id_not_contains?: string | null; // ID
+    id_not_ends_with?: string | null; // ID
+    id_not_in?: string[] | null; // [ID!]
+    id_not_starts_with?: string | null; // ID
+    id_starts_with?: string | null; // ID
+    name?: string | null; // String
+    name_contains?: string | null; // String
+    name_ends_with?: string | null; // String
+    name_gt?: string | null; // String
+    name_gte?: string | null; // String
+    name_in?: string[] | null; // [String!]
+    name_lt?: string | null; // String
+    name_lte?: string | null; // String
+    name_not?: string | null; // String
+    name_not_contains?: string | null; // String
+    name_not_ends_with?: string | null; // String
+    name_not_in?: string[] | null; // [String!]
+    name_not_starts_with?: string | null; // String
+    name_starts_with?: string | null; // String
+    NOT?: NexusGenInputs['DepartmentWhereInput'][] | null; // [DepartmentWhereInput!]
+    OR?: NexusGenInputs['DepartmentWhereInput'][] | null; // [DepartmentWhereInput!]
+  }
+  DepartmentWhereUniqueInput: { // input type
+    id?: string | null; // ID
+  }
+  StudentCreateInput: { // input type
+    coursesPassed?: NexusGenInputs['CourseCreateManyInput'] | null; // CourseCreateManyInput
+    enrolledDegree?: NexusGenInputs['DegreeCreateOneInput'] | null; // DegreeCreateOneInput
+    name?: string | null; // String
+  }
+  StudentUpdateInput: { // input type
+    coursesPassed?: NexusGenInputs['CourseUpdateManyInput'] | null; // CourseUpdateManyInput
+    enrolledDegree?: NexusGenInputs['DegreeUpdateOneInput'] | null; // DegreeUpdateOneInput
+    name?: string | null; // String
+  }
+  StudentUpdateManyMutationInput: { // input type
+    name?: string | null; // String
+  }
+  StudentWhereInput: { // input type
+    AND?: NexusGenInputs['StudentWhereInput'][] | null; // [StudentWhereInput!]
+    coursesPassed_every?: NexusGenInputs['CourseWhereInput'] | null; // CourseWhereInput
+    coursesPassed_none?: NexusGenInputs['CourseWhereInput'] | null; // CourseWhereInput
+    coursesPassed_some?: NexusGenInputs['CourseWhereInput'] | null; // CourseWhereInput
+    enrolledDegree?: NexusGenInputs['DegreeWhereInput'] | null; // DegreeWhereInput
+    id?: string | null; // ID
+    id_contains?: string | null; // ID
+    id_ends_with?: string | null; // ID
+    id_gt?: string | null; // ID
+    id_gte?: string | null; // ID
+    id_in?: string[] | null; // [ID!]
+    id_lt?: string | null; // ID
+    id_lte?: string | null; // ID
+    id_not?: string | null; // ID
+    id_not_contains?: string | null; // ID
+    id_not_ends_with?: string | null; // ID
+    id_not_in?: string[] | null; // [ID!]
+    id_not_starts_with?: string | null; // ID
+    id_starts_with?: string | null; // ID
+    name?: string | null; // String
+    name_contains?: string | null; // String
+    name_ends_with?: string | null; // String
+    name_gt?: string | null; // String
+    name_gte?: string | null; // String
+    name_in?: string[] | null; // [String!]
+    name_lt?: string | null; // String
+    name_lte?: string | null; // String
+    name_not?: string | null; // String
+    name_not_contains?: string | null; // String
+    name_not_ends_with?: string | null; // String
+    name_not_in?: string[] | null; // [String!]
+    name_not_starts_with?: string | null; // String
+    name_starts_with?: string | null; // String
+    NOT?: NexusGenInputs['StudentWhereInput'][] | null; // [StudentWhereInput!]
+    OR?: NexusGenInputs['StudentWhereInput'][] | null; // [StudentWhereInput!]
+  }
+  StudentWhereUniqueInput: { // input type
+    id?: string | null; // ID
+  }
+  SubjectCreateInput: { // input type
+    name: string; // String!
+  }
+  SubjectCreateOneInput: { // input type
+    connect?: NexusGenInputs['SubjectWhereUniqueInput'] | null; // SubjectWhereUniqueInput
+    create?: NexusGenInputs['SubjectCreateInput'] | null; // SubjectCreateInput
+  }
+  SubjectUpdateDataInput: { // input type
+    name?: string | null; // String
+  }
+  SubjectUpdateInput: { // input type
+    name?: string | null; // String
+  }
+  SubjectUpdateManyMutationInput: { // input type
+    name?: string | null; // String
+  }
+  SubjectUpdateOneInput: { // input type
+    connect?: NexusGenInputs['SubjectWhereUniqueInput'] | null; // SubjectWhereUniqueInput
+    create?: NexusGenInputs['SubjectCreateInput'] | null; // SubjectCreateInput
+    delete?: boolean | null; // Boolean
+    disconnect?: boolean | null; // Boolean
+    update?: NexusGenInputs['SubjectUpdateDataInput'] | null; // SubjectUpdateDataInput
+    upsert?: NexusGenInputs['SubjectUpsertNestedInput'] | null; // SubjectUpsertNestedInput
+  }
+  SubjectUpsertNestedInput: { // input type
+    create: NexusGenInputs['SubjectCreateInput']; // SubjectCreateInput!
+    update: NexusGenInputs['SubjectUpdateDataInput']; // SubjectUpdateDataInput!
+  }
+  SubjectWhereInput: { // input type
+    AND?: NexusGenInputs['SubjectWhereInput'][] | null; // [SubjectWhereInput!]
+    id?: string | null; // ID
+    id_contains?: string | null; // ID
+    id_ends_with?: string | null; // ID
+    id_gt?: string | null; // ID
+    id_gte?: string | null; // ID
+    id_in?: string[] | null; // [ID!]
+    id_lt?: string | null; // ID
+    id_lte?: string | null; // ID
+    id_not?: string | null; // ID
+    id_not_contains?: string | null; // ID
+    id_not_ends_with?: string | null; // ID
+    id_not_in?: string[] | null; // [ID!]
+    id_not_starts_with?: string | null; // ID
+    id_starts_with?: string | null; // ID
+    name?: string | null; // String
+    name_contains?: string | null; // String
+    name_ends_with?: string | null; // String
+    name_gt?: string | null; // String
+    name_gte?: string | null; // String
+    name_in?: string[] | null; // [String!]
+    name_lt?: string | null; // String
+    name_lte?: string | null; // String
+    name_not?: string | null; // String
+    name_not_contains?: string | null; // String
+    name_not_ends_with?: string | null; // String
+    name_not_in?: string[] | null; // [String!]
+    name_not_starts_with?: string | null; // String
+    name_starts_with?: string | null; // String
+    NOT?: NexusGenInputs['SubjectWhereInput'][] | null; // [SubjectWhereInput!]
+    OR?: NexusGenInputs['SubjectWhereInput'][] | null; // [SubjectWhereInput!]
+  }
+  SubjectWhereUniqueInput: { // input type
+    id?: string | null; // ID
   }
 }
 
 export interface NexusGenEnums {
-  PostOrderByInput: "content_ASC" | "content_DESC" | "createdAt_ASC" | "createdAt_DESC" | "id_ASC" | "id_DESC" | "published_ASC" | "published_DESC" | "title_ASC" | "title_DESC" | "updatedAt_ASC" | "updatedAt_DESC"
+  CourseOrderByInput: "createdAt_ASC" | "createdAt_DESC" | "credits_ASC" | "credits_DESC" | "id_ASC" | "id_DESC" | "level_ASC" | "level_DESC" | "name_ASC" | "name_DESC" | "number_ASC" | "number_DESC" | "updatedAt_ASC" | "updatedAt_DESC"
+  DegreeOrderByInput: "createdAt_ASC" | "createdAt_DESC" | "id_ASC" | "id_DESC" | "name_ASC" | "name_DESC" | "requiredCredits_ASC" | "requiredCredits_DESC" | "updatedAt_ASC" | "updatedAt_DESC"
+  DepartmentOrderByInput: "createdAt_ASC" | "createdAt_DESC" | "id_ASC" | "id_DESC" | "name_ASC" | "name_DESC" | "updatedAt_ASC" | "updatedAt_DESC"
+  StudentOrderByInput: "createdAt_ASC" | "createdAt_DESC" | "id_ASC" | "id_DESC" | "name_ASC" | "name_DESC" | "updatedAt_ASC" | "updatedAt_DESC"
+  SubjectOrderByInput: "createdAt_ASC" | "createdAt_DESC" | "id_ASC" | "id_DESC" | "name_ASC" | "name_DESC" | "updatedAt_ASC" | "updatedAt_DESC"
 }
 
 export interface NexusGenRootTypes {
-  Mutation: {};
-  Post: { // root type
-    content?: string | null; // String
-    createdAt: any; // DateTime!
+  AggregateCourse: { // root type
+    count: number; // Int!
+  }
+  AggregateDegree: { // root type
+    count: number; // Int!
+  }
+  AggregateDepartment: { // root type
+    count: number; // Int!
+  }
+  AggregateStudent: { // root type
+    count: number; // Int!
+  }
+  AggregateSubject: { // root type
+    count: number; // Int!
+  }
+  BatchPayload: { // root type
+    count: any; // Long!
+  }
+  Course: { // root type
+    credits: number; // Int!
     id: string; // ID!
-    published: boolean; // Boolean!
-    title: string; // String!
-    updatedAt: any; // DateTime!
+    level: number; // Int!
+    name: string; // String!
+    number: string; // String!
+  }
+  CourseConnection: { // root type
+    edges: NexusGenRootTypes['CourseEdge'][]; // [CourseEdge!]!
+    pageInfo: NexusGenRootTypes['PageInfo']; // PageInfo!
+  }
+  CourseEdge: { // root type
+    cursor: string; // String!
+    node: NexusGenRootTypes['Course']; // Course!
+  }
+  Degree: { // root type
+    id: string; // ID!
+    name: string; // String!
+    requiredCredits: number; // Int!
+  }
+  DegreeConnection: { // root type
+    edges: NexusGenRootTypes['DegreeEdge'][]; // [DegreeEdge!]!
+    pageInfo: NexusGenRootTypes['PageInfo']; // PageInfo!
+  }
+  DegreeEdge: { // root type
+    cursor: string; // String!
+    node: NexusGenRootTypes['Degree']; // Degree!
+  }
+  Department: { // root type
+    id: string; // ID!
+    name: string; // String!
+  }
+  DepartmentConnection: { // root type
+    edges: NexusGenRootTypes['DepartmentEdge'][]; // [DepartmentEdge!]!
+    pageInfo: NexusGenRootTypes['PageInfo']; // PageInfo!
+  }
+  DepartmentEdge: { // root type
+    cursor: string; // String!
+    node: NexusGenRootTypes['Department']; // Department!
+  }
+  Mutation: {};
+  PageInfo: { // root type
+    endCursor?: string | null; // String
+    hasNextPage: boolean; // Boolean!
+    hasPreviousPage: boolean; // Boolean!
+    startCursor?: string | null; // String
   }
   Query: {};
-  User: { // root type
-    email: string; // String!
+  Student: { // root type
     id: string; // ID!
     name?: string | null; // String
+  }
+  StudentConnection: { // root type
+    edges: NexusGenRootTypes['StudentEdge'][]; // [StudentEdge!]!
+    pageInfo: NexusGenRootTypes['PageInfo']; // PageInfo!
+  }
+  StudentEdge: { // root type
+    cursor: string; // String!
+    node: NexusGenRootTypes['Student']; // Student!
+  }
+  Subject: { // root type
+    id: string; // ID!
+    name: string; // String!
+  }
+  SubjectConnection: { // root type
+    edges: NexusGenRootTypes['SubjectEdge'][]; // [SubjectEdge!]!
+    pageInfo: NexusGenRootTypes['PageInfo']; // PageInfo!
+  }
+  SubjectEdge: { // root type
+    cursor: string; // String!
+    node: NexusGenRootTypes['Subject']; // Subject!
   }
   String: string;
   Int: number;
   Float: number;
   Boolean: boolean;
   ID: string;
-  DateTime: any;
+  Long: any;
 }
 
 export interface NexusGenAllTypes extends NexusGenRootTypes {
-  PostWhereInput: NexusGenInputs['PostWhereInput'];
-  UserWhereInput: NexusGenInputs['UserWhereInput'];
-  PostOrderByInput: NexusGenEnums['PostOrderByInput'];
+  CourseCreateInput: NexusGenInputs['CourseCreateInput'];
+  CourseCreateManyInput: NexusGenInputs['CourseCreateManyInput'];
+  CourseCreateOneInput: NexusGenInputs['CourseCreateOneInput'];
+  CourseScalarWhereInput: NexusGenInputs['CourseScalarWhereInput'];
+  CourseUpdateDataInput: NexusGenInputs['CourseUpdateDataInput'];
+  CourseUpdateInput: NexusGenInputs['CourseUpdateInput'];
+  CourseUpdateManyDataInput: NexusGenInputs['CourseUpdateManyDataInput'];
+  CourseUpdateManyInput: NexusGenInputs['CourseUpdateManyInput'];
+  CourseUpdateManyMutationInput: NexusGenInputs['CourseUpdateManyMutationInput'];
+  CourseUpdateManyWithWhereNestedInput: NexusGenInputs['CourseUpdateManyWithWhereNestedInput'];
+  CourseUpdateOneInput: NexusGenInputs['CourseUpdateOneInput'];
+  CourseUpdateWithWhereUniqueNestedInput: NexusGenInputs['CourseUpdateWithWhereUniqueNestedInput'];
+  CourseUpsertNestedInput: NexusGenInputs['CourseUpsertNestedInput'];
+  CourseUpsertWithWhereUniqueNestedInput: NexusGenInputs['CourseUpsertWithWhereUniqueNestedInput'];
+  CourseWhereInput: NexusGenInputs['CourseWhereInput'];
+  CourseWhereUniqueInput: NexusGenInputs['CourseWhereUniqueInput'];
+  DegreeCreateInput: NexusGenInputs['DegreeCreateInput'];
+  DegreeCreateOneInput: NexusGenInputs['DegreeCreateOneInput'];
+  DegreeUpdateDataInput: NexusGenInputs['DegreeUpdateDataInput'];
+  DegreeUpdateInput: NexusGenInputs['DegreeUpdateInput'];
+  DegreeUpdateManyMutationInput: NexusGenInputs['DegreeUpdateManyMutationInput'];
+  DegreeUpdateOneInput: NexusGenInputs['DegreeUpdateOneInput'];
+  DegreeUpsertNestedInput: NexusGenInputs['DegreeUpsertNestedInput'];
+  DegreeWhereInput: NexusGenInputs['DegreeWhereInput'];
+  DegreeWhereUniqueInput: NexusGenInputs['DegreeWhereUniqueInput'];
+  DepartmentCreateInput: NexusGenInputs['DepartmentCreateInput'];
+  DepartmentCreateOneInput: NexusGenInputs['DepartmentCreateOneInput'];
+  DepartmentUpdateDataInput: NexusGenInputs['DepartmentUpdateDataInput'];
+  DepartmentUpdateInput: NexusGenInputs['DepartmentUpdateInput'];
+  DepartmentUpdateManyMutationInput: NexusGenInputs['DepartmentUpdateManyMutationInput'];
+  DepartmentUpdateOneInput: NexusGenInputs['DepartmentUpdateOneInput'];
+  DepartmentUpsertNestedInput: NexusGenInputs['DepartmentUpsertNestedInput'];
+  DepartmentWhereInput: NexusGenInputs['DepartmentWhereInput'];
+  DepartmentWhereUniqueInput: NexusGenInputs['DepartmentWhereUniqueInput'];
+  StudentCreateInput: NexusGenInputs['StudentCreateInput'];
+  StudentUpdateInput: NexusGenInputs['StudentUpdateInput'];
+  StudentUpdateManyMutationInput: NexusGenInputs['StudentUpdateManyMutationInput'];
+  StudentWhereInput: NexusGenInputs['StudentWhereInput'];
+  StudentWhereUniqueInput: NexusGenInputs['StudentWhereUniqueInput'];
+  SubjectCreateInput: NexusGenInputs['SubjectCreateInput'];
+  SubjectCreateOneInput: NexusGenInputs['SubjectCreateOneInput'];
+  SubjectUpdateDataInput: NexusGenInputs['SubjectUpdateDataInput'];
+  SubjectUpdateInput: NexusGenInputs['SubjectUpdateInput'];
+  SubjectUpdateManyMutationInput: NexusGenInputs['SubjectUpdateManyMutationInput'];
+  SubjectUpdateOneInput: NexusGenInputs['SubjectUpdateOneInput'];
+  SubjectUpsertNestedInput: NexusGenInputs['SubjectUpsertNestedInput'];
+  SubjectWhereInput: NexusGenInputs['SubjectWhereInput'];
+  SubjectWhereUniqueInput: NexusGenInputs['SubjectWhereUniqueInput'];
+  CourseOrderByInput: NexusGenEnums['CourseOrderByInput'];
+  DegreeOrderByInput: NexusGenEnums['DegreeOrderByInput'];
+  DepartmentOrderByInput: NexusGenEnums['DepartmentOrderByInput'];
+  StudentOrderByInput: NexusGenEnums['StudentOrderByInput'];
+  SubjectOrderByInput: NexusGenEnums['SubjectOrderByInput'];
 }
 
 export interface NexusGenFieldTypes {
-  Mutation: { // field return type
-    createDraft: NexusGenRootTypes['Post']; // Post!
-    deletePost: NexusGenRootTypes['Post'] | null; // Post
-    publish: NexusGenRootTypes['Post']; // Post!
-    signupUser: NexusGenRootTypes['User']; // User!
+  AggregateCourse: { // field return type
+    count: number; // Int!
   }
-  Post: { // field return type
-    author: NexusGenRootTypes['User']; // User!
-    content: string | null; // String
-    createdAt: any; // DateTime!
+  AggregateDegree: { // field return type
+    count: number; // Int!
+  }
+  AggregateDepartment: { // field return type
+    count: number; // Int!
+  }
+  AggregateStudent: { // field return type
+    count: number; // Int!
+  }
+  AggregateSubject: { // field return type
+    count: number; // Int!
+  }
+  BatchPayload: { // field return type
+    count: any; // Long!
+  }
+  Course: { // field return type
+    credits: number; // Int!
+    degree: NexusGenRootTypes['Degree'] | null; // Degree
+    department: NexusGenRootTypes['Department'] | null; // Department
     id: string; // ID!
-    published: boolean; // Boolean!
-    title: string; // String!
-    updatedAt: any; // DateTime!
+    level: number; // Int!
+    name: string; // String!
+    number: string; // String!
+    prerequisite: NexusGenRootTypes['Course'] | null; // Course
+    subject: NexusGenRootTypes['Subject'] | null; // Subject
+  }
+  CourseConnection: { // field return type
+    aggregate: NexusGenRootTypes['AggregateCourse']; // AggregateCourse!
+    edges: NexusGenRootTypes['CourseEdge'][]; // [CourseEdge!]!
+    pageInfo: NexusGenRootTypes['PageInfo']; // PageInfo!
+  }
+  CourseEdge: { // field return type
+    cursor: string; // String!
+    node: NexusGenRootTypes['Course']; // Course!
+  }
+  Degree: { // field return type
+    id: string; // ID!
+    name: string; // String!
+    requiredCredits: number; // Int!
+  }
+  DegreeConnection: { // field return type
+    aggregate: NexusGenRootTypes['AggregateDegree']; // AggregateDegree!
+    edges: NexusGenRootTypes['DegreeEdge'][]; // [DegreeEdge!]!
+    pageInfo: NexusGenRootTypes['PageInfo']; // PageInfo!
+  }
+  DegreeEdge: { // field return type
+    cursor: string; // String!
+    node: NexusGenRootTypes['Degree']; // Degree!
+  }
+  Department: { // field return type
+    id: string; // ID!
+    name: string; // String!
+  }
+  DepartmentConnection: { // field return type
+    aggregate: NexusGenRootTypes['AggregateDepartment']; // AggregateDepartment!
+    edges: NexusGenRootTypes['DepartmentEdge'][]; // [DepartmentEdge!]!
+    pageInfo: NexusGenRootTypes['PageInfo']; // PageInfo!
+  }
+  DepartmentEdge: { // field return type
+    cursor: string; // String!
+    node: NexusGenRootTypes['Department']; // Department!
+  }
+  Mutation: { // field return type
+    createCourse: NexusGenRootTypes['Course']; // Course!
+    createDegree: NexusGenRootTypes['Degree']; // Degree!
+    createDepartment: NexusGenRootTypes['Department']; // Department!
+    createStudent: NexusGenRootTypes['Student']; // Student!
+    createSubject: NexusGenRootTypes['Subject']; // Subject!
+    deleteCourse: NexusGenRootTypes['Course'] | null; // Course
+    deleteDegree: NexusGenRootTypes['Degree'] | null; // Degree
+    deleteDepartment: NexusGenRootTypes['Department'] | null; // Department
+    deleteManyCourses: NexusGenRootTypes['BatchPayload']; // BatchPayload!
+    deleteManyDegrees: NexusGenRootTypes['BatchPayload']; // BatchPayload!
+    deleteManyDepartments: NexusGenRootTypes['BatchPayload']; // BatchPayload!
+    deleteManyStudents: NexusGenRootTypes['BatchPayload']; // BatchPayload!
+    deleteManySubjects: NexusGenRootTypes['BatchPayload']; // BatchPayload!
+    deleteStudent: NexusGenRootTypes['Student'] | null; // Student
+    deleteSubject: NexusGenRootTypes['Subject'] | null; // Subject
+    updateCourse: NexusGenRootTypes['Course'] | null; // Course
+    updateDegree: NexusGenRootTypes['Degree'] | null; // Degree
+    updateDepartment: NexusGenRootTypes['Department'] | null; // Department
+    updateManyCourses: NexusGenRootTypes['BatchPayload']; // BatchPayload!
+    updateManyDegrees: NexusGenRootTypes['BatchPayload']; // BatchPayload!
+    updateManyDepartments: NexusGenRootTypes['BatchPayload']; // BatchPayload!
+    updateManyStudents: NexusGenRootTypes['BatchPayload']; // BatchPayload!
+    updateManySubjects: NexusGenRootTypes['BatchPayload']; // BatchPayload!
+    updateStudent: NexusGenRootTypes['Student'] | null; // Student
+    updateSubject: NexusGenRootTypes['Subject'] | null; // Subject
+    upsertCourse: NexusGenRootTypes['Course']; // Course!
+    upsertDegree: NexusGenRootTypes['Degree']; // Degree!
+    upsertDepartment: NexusGenRootTypes['Department']; // Department!
+    upsertStudent: NexusGenRootTypes['Student']; // Student!
+    upsertSubject: NexusGenRootTypes['Subject']; // Subject!
+  }
+  PageInfo: { // field return type
+    endCursor: string | null; // String
+    hasNextPage: boolean; // Boolean!
+    hasPreviousPage: boolean; // Boolean!
+    startCursor: string | null; // String
   }
   Query: { // field return type
-    feed: NexusGenRootTypes['Post'][]; // [Post!]!
-    filterPosts: NexusGenRootTypes['Post'][]; // [Post!]!
+    course: NexusGenRootTypes['Course'] | null; // Course
+    courses: NexusGenRootTypes['Course'][]; // [Course!]!
+    coursesConnection: NexusGenRootTypes['CourseConnection']; // CourseConnection!
+    degree: NexusGenRootTypes['Degree'] | null; // Degree
+    degrees: NexusGenRootTypes['Degree'][]; // [Degree!]!
+    degreesConnection: NexusGenRootTypes['DegreeConnection']; // DegreeConnection!
+    department: NexusGenRootTypes['Department'] | null; // Department
+    departments: NexusGenRootTypes['Department'][]; // [Department!]!
+    departmentsConnection: NexusGenRootTypes['DepartmentConnection']; // DepartmentConnection!
+    student: NexusGenRootTypes['Student'] | null; // Student
+    students: NexusGenRootTypes['Student'][]; // [Student!]!
+    studentsConnection: NexusGenRootTypes['StudentConnection']; // StudentConnection!
+    subject: NexusGenRootTypes['Subject'] | null; // Subject
+    subjects: NexusGenRootTypes['Subject'][]; // [Subject!]!
+    subjectsConnection: NexusGenRootTypes['SubjectConnection']; // SubjectConnection!
   }
-  User: { // field return type
-    email: string; // String!
+  Student: { // field return type
+    coursesPassed: NexusGenRootTypes['Course'][] | null; // [Course!]
+    enrolledDegree: NexusGenRootTypes['Degree'] | null; // Degree
     id: string; // ID!
     name: string | null; // String
-    posts: NexusGenRootTypes['Post'][] | null; // [Post!]
+  }
+  StudentConnection: { // field return type
+    aggregate: NexusGenRootTypes['AggregateStudent']; // AggregateStudent!
+    edges: NexusGenRootTypes['StudentEdge'][]; // [StudentEdge!]!
+    pageInfo: NexusGenRootTypes['PageInfo']; // PageInfo!
+  }
+  StudentEdge: { // field return type
+    cursor: string; // String!
+    node: NexusGenRootTypes['Student']; // Student!
+  }
+  Subject: { // field return type
+    id: string; // ID!
+    name: string; // String!
+  }
+  SubjectConnection: { // field return type
+    aggregate: NexusGenRootTypes['AggregateSubject']; // AggregateSubject!
+    edges: NexusGenRootTypes['SubjectEdge'][]; // [SubjectEdge!]!
+    pageInfo: NexusGenRootTypes['PageInfo']; // PageInfo!
+  }
+  SubjectEdge: { // field return type
+    cursor: string; // String!
+    node: NexusGenRootTypes['Subject']; // Subject!
   }
 }
 
 export interface NexusGenArgTypes {
   Mutation: {
-    createDraft: { // args
-      authorEmail: string; // String!
-      content: string; // String!
-      title: string; // String!
+    createCourse: { // args
+      data: NexusGenInputs['CourseCreateInput']; // CourseCreateInput!
     }
-    deletePost: { // args
-      id: string; // ID!
+    createDegree: { // args
+      data: NexusGenInputs['DegreeCreateInput']; // DegreeCreateInput!
     }
-    publish: { // args
-      id: string; // ID!
+    createDepartment: { // args
+      data: NexusGenInputs['DepartmentCreateInput']; // DepartmentCreateInput!
     }
-    signupUser: { // args
-      email: string; // String!
-      name: string; // String!
+    createStudent: { // args
+      data: NexusGenInputs['StudentCreateInput']; // StudentCreateInput!
+    }
+    createSubject: { // args
+      data: NexusGenInputs['SubjectCreateInput']; // SubjectCreateInput!
+    }
+    deleteCourse: { // args
+      where: NexusGenInputs['CourseWhereUniqueInput']; // CourseWhereUniqueInput!
+    }
+    deleteDegree: { // args
+      where: NexusGenInputs['DegreeWhereUniqueInput']; // DegreeWhereUniqueInput!
+    }
+    deleteDepartment: { // args
+      where: NexusGenInputs['DepartmentWhereUniqueInput']; // DepartmentWhereUniqueInput!
+    }
+    deleteManyCourses: { // args
+      where?: NexusGenInputs['CourseWhereInput'] | null; // CourseWhereInput
+    }
+    deleteManyDegrees: { // args
+      where?: NexusGenInputs['DegreeWhereInput'] | null; // DegreeWhereInput
+    }
+    deleteManyDepartments: { // args
+      where?: NexusGenInputs['DepartmentWhereInput'] | null; // DepartmentWhereInput
+    }
+    deleteManyStudents: { // args
+      where?: NexusGenInputs['StudentWhereInput'] | null; // StudentWhereInput
+    }
+    deleteManySubjects: { // args
+      where?: NexusGenInputs['SubjectWhereInput'] | null; // SubjectWhereInput
+    }
+    deleteStudent: { // args
+      where: NexusGenInputs['StudentWhereUniqueInput']; // StudentWhereUniqueInput!
+    }
+    deleteSubject: { // args
+      where: NexusGenInputs['SubjectWhereUniqueInput']; // SubjectWhereUniqueInput!
+    }
+    updateCourse: { // args
+      data: NexusGenInputs['CourseUpdateInput']; // CourseUpdateInput!
+      where: NexusGenInputs['CourseWhereUniqueInput']; // CourseWhereUniqueInput!
+    }
+    updateDegree: { // args
+      data: NexusGenInputs['DegreeUpdateInput']; // DegreeUpdateInput!
+      where: NexusGenInputs['DegreeWhereUniqueInput']; // DegreeWhereUniqueInput!
+    }
+    updateDepartment: { // args
+      data: NexusGenInputs['DepartmentUpdateInput']; // DepartmentUpdateInput!
+      where: NexusGenInputs['DepartmentWhereUniqueInput']; // DepartmentWhereUniqueInput!
+    }
+    updateManyCourses: { // args
+      data: NexusGenInputs['CourseUpdateManyMutationInput']; // CourseUpdateManyMutationInput!
+      where?: NexusGenInputs['CourseWhereInput'] | null; // CourseWhereInput
+    }
+    updateManyDegrees: { // args
+      data: NexusGenInputs['DegreeUpdateManyMutationInput']; // DegreeUpdateManyMutationInput!
+      where?: NexusGenInputs['DegreeWhereInput'] | null; // DegreeWhereInput
+    }
+    updateManyDepartments: { // args
+      data: NexusGenInputs['DepartmentUpdateManyMutationInput']; // DepartmentUpdateManyMutationInput!
+      where?: NexusGenInputs['DepartmentWhereInput'] | null; // DepartmentWhereInput
+    }
+    updateManyStudents: { // args
+      data: NexusGenInputs['StudentUpdateManyMutationInput']; // StudentUpdateManyMutationInput!
+      where?: NexusGenInputs['StudentWhereInput'] | null; // StudentWhereInput
+    }
+    updateManySubjects: { // args
+      data: NexusGenInputs['SubjectUpdateManyMutationInput']; // SubjectUpdateManyMutationInput!
+      where?: NexusGenInputs['SubjectWhereInput'] | null; // SubjectWhereInput
+    }
+    updateStudent: { // args
+      data: NexusGenInputs['StudentUpdateInput']; // StudentUpdateInput!
+      where: NexusGenInputs['StudentWhereUniqueInput']; // StudentWhereUniqueInput!
+    }
+    updateSubject: { // args
+      data: NexusGenInputs['SubjectUpdateInput']; // SubjectUpdateInput!
+      where: NexusGenInputs['SubjectWhereUniqueInput']; // SubjectWhereUniqueInput!
+    }
+    upsertCourse: { // args
+      create: NexusGenInputs['CourseCreateInput']; // CourseCreateInput!
+      update: NexusGenInputs['CourseUpdateInput']; // CourseUpdateInput!
+      where: NexusGenInputs['CourseWhereUniqueInput']; // CourseWhereUniqueInput!
+    }
+    upsertDegree: { // args
+      create: NexusGenInputs['DegreeCreateInput']; // DegreeCreateInput!
+      update: NexusGenInputs['DegreeUpdateInput']; // DegreeUpdateInput!
+      where: NexusGenInputs['DegreeWhereUniqueInput']; // DegreeWhereUniqueInput!
+    }
+    upsertDepartment: { // args
+      create: NexusGenInputs['DepartmentCreateInput']; // DepartmentCreateInput!
+      update: NexusGenInputs['DepartmentUpdateInput']; // DepartmentUpdateInput!
+      where: NexusGenInputs['DepartmentWhereUniqueInput']; // DepartmentWhereUniqueInput!
+    }
+    upsertStudent: { // args
+      create: NexusGenInputs['StudentCreateInput']; // StudentCreateInput!
+      update: NexusGenInputs['StudentUpdateInput']; // StudentUpdateInput!
+      where: NexusGenInputs['StudentWhereUniqueInput']; // StudentWhereUniqueInput!
+    }
+    upsertSubject: { // args
+      create: NexusGenInputs['SubjectCreateInput']; // SubjectCreateInput!
+      update: NexusGenInputs['SubjectUpdateInput']; // SubjectUpdateInput!
+      where: NexusGenInputs['SubjectWhereUniqueInput']; // SubjectWhereUniqueInput!
     }
   }
   Query: {
-    filterPosts: { // args
-      searchString: string; // String!
+    course: { // args
+      where: NexusGenInputs['CourseWhereUniqueInput']; // CourseWhereUniqueInput!
     }
-  }
-  User: {
-    posts: { // args
+    courses: { // args
       after?: string | null; // String
       before?: string | null; // String
       first?: number | null; // Int
       last?: number | null; // Int
-      orderBy?: NexusGenEnums['PostOrderByInput'] | null; // PostOrderByInput
+      orderBy?: NexusGenEnums['CourseOrderByInput'] | null; // CourseOrderByInput
       skip?: number | null; // Int
-      where?: NexusGenInputs['PostWhereInput'] | null; // PostWhereInput
+      where?: NexusGenInputs['CourseWhereInput'] | null; // CourseWhereInput
+    }
+    coursesConnection: { // args
+      after?: string | null; // String
+      before?: string | null; // String
+      first?: number | null; // Int
+      last?: number | null; // Int
+      orderBy?: NexusGenEnums['CourseOrderByInput'] | null; // CourseOrderByInput
+      skip?: number | null; // Int
+      where?: NexusGenInputs['CourseWhereInput'] | null; // CourseWhereInput
+    }
+    degree: { // args
+      where: NexusGenInputs['DegreeWhereUniqueInput']; // DegreeWhereUniqueInput!
+    }
+    degrees: { // args
+      after?: string | null; // String
+      before?: string | null; // String
+      first?: number | null; // Int
+      last?: number | null; // Int
+      orderBy?: NexusGenEnums['DegreeOrderByInput'] | null; // DegreeOrderByInput
+      skip?: number | null; // Int
+      where?: NexusGenInputs['DegreeWhereInput'] | null; // DegreeWhereInput
+    }
+    degreesConnection: { // args
+      after?: string | null; // String
+      before?: string | null; // String
+      first?: number | null; // Int
+      last?: number | null; // Int
+      orderBy?: NexusGenEnums['DegreeOrderByInput'] | null; // DegreeOrderByInput
+      skip?: number | null; // Int
+      where?: NexusGenInputs['DegreeWhereInput'] | null; // DegreeWhereInput
+    }
+    department: { // args
+      where: NexusGenInputs['DepartmentWhereUniqueInput']; // DepartmentWhereUniqueInput!
+    }
+    departments: { // args
+      after?: string | null; // String
+      before?: string | null; // String
+      first?: number | null; // Int
+      last?: number | null; // Int
+      orderBy?: NexusGenEnums['DepartmentOrderByInput'] | null; // DepartmentOrderByInput
+      skip?: number | null; // Int
+      where?: NexusGenInputs['DepartmentWhereInput'] | null; // DepartmentWhereInput
+    }
+    departmentsConnection: { // args
+      after?: string | null; // String
+      before?: string | null; // String
+      first?: number | null; // Int
+      last?: number | null; // Int
+      orderBy?: NexusGenEnums['DepartmentOrderByInput'] | null; // DepartmentOrderByInput
+      skip?: number | null; // Int
+      where?: NexusGenInputs['DepartmentWhereInput'] | null; // DepartmentWhereInput
+    }
+    student: { // args
+      where: NexusGenInputs['StudentWhereUniqueInput']; // StudentWhereUniqueInput!
+    }
+    students: { // args
+      after?: string | null; // String
+      before?: string | null; // String
+      first?: number | null; // Int
+      last?: number | null; // Int
+      orderBy?: NexusGenEnums['StudentOrderByInput'] | null; // StudentOrderByInput
+      skip?: number | null; // Int
+      where?: NexusGenInputs['StudentWhereInput'] | null; // StudentWhereInput
+    }
+    studentsConnection: { // args
+      after?: string | null; // String
+      before?: string | null; // String
+      first?: number | null; // Int
+      last?: number | null; // Int
+      orderBy?: NexusGenEnums['StudentOrderByInput'] | null; // StudentOrderByInput
+      skip?: number | null; // Int
+      where?: NexusGenInputs['StudentWhereInput'] | null; // StudentWhereInput
+    }
+    subject: { // args
+      where: NexusGenInputs['SubjectWhereUniqueInput']; // SubjectWhereUniqueInput!
+    }
+    subjects: { // args
+      after?: string | null; // String
+      before?: string | null; // String
+      first?: number | null; // Int
+      last?: number | null; // Int
+      orderBy?: NexusGenEnums['SubjectOrderByInput'] | null; // SubjectOrderByInput
+      skip?: number | null; // Int
+      where?: NexusGenInputs['SubjectWhereInput'] | null; // SubjectWhereInput
+    }
+    subjectsConnection: { // args
+      after?: string | null; // String
+      before?: string | null; // String
+      first?: number | null; // Int
+      last?: number | null; // Int
+      orderBy?: NexusGenEnums['SubjectOrderByInput'] | null; // SubjectOrderByInput
+      skip?: number | null; // Int
+      where?: NexusGenInputs['SubjectWhereInput'] | null; // SubjectWhereInput
+    }
+  }
+  Student: {
+    coursesPassed: { // args
+      after?: string | null; // String
+      before?: string | null; // String
+      first?: number | null; // Int
+      last?: number | null; // Int
+      orderBy?: NexusGenEnums['CourseOrderByInput'] | null; // CourseOrderByInput
+      skip?: number | null; // Int
+      where?: NexusGenInputs['CourseWhereInput'] | null; // CourseWhereInput
     }
   }
 }
@@ -232,20 +1041,20 @@ export interface NexusGenAbstractResolveReturnTypes {
 
 export interface NexusGenInheritedFields {}
 
-export type NexusGenObjectNames = "Mutation" | "Post" | "Query" | "User";
+export type NexusGenObjectNames = "AggregateCourse" | "AggregateDegree" | "AggregateDepartment" | "AggregateStudent" | "AggregateSubject" | "BatchPayload" | "Course" | "CourseConnection" | "CourseEdge" | "Degree" | "DegreeConnection" | "DegreeEdge" | "Department" | "DepartmentConnection" | "DepartmentEdge" | "Mutation" | "PageInfo" | "Query" | "Student" | "StudentConnection" | "StudentEdge" | "Subject" | "SubjectConnection" | "SubjectEdge";
 
-export type NexusGenInputNames = "PostWhereInput" | "UserWhereInput";
+export type NexusGenInputNames = "CourseCreateInput" | "CourseCreateManyInput" | "CourseCreateOneInput" | "CourseScalarWhereInput" | "CourseUpdateDataInput" | "CourseUpdateInput" | "CourseUpdateManyDataInput" | "CourseUpdateManyInput" | "CourseUpdateManyMutationInput" | "CourseUpdateManyWithWhereNestedInput" | "CourseUpdateOneInput" | "CourseUpdateWithWhereUniqueNestedInput" | "CourseUpsertNestedInput" | "CourseUpsertWithWhereUniqueNestedInput" | "CourseWhereInput" | "CourseWhereUniqueInput" | "DegreeCreateInput" | "DegreeCreateOneInput" | "DegreeUpdateDataInput" | "DegreeUpdateInput" | "DegreeUpdateManyMutationInput" | "DegreeUpdateOneInput" | "DegreeUpsertNestedInput" | "DegreeWhereInput" | "DegreeWhereUniqueInput" | "DepartmentCreateInput" | "DepartmentCreateOneInput" | "DepartmentUpdateDataInput" | "DepartmentUpdateInput" | "DepartmentUpdateManyMutationInput" | "DepartmentUpdateOneInput" | "DepartmentUpsertNestedInput" | "DepartmentWhereInput" | "DepartmentWhereUniqueInput" | "StudentCreateInput" | "StudentUpdateInput" | "StudentUpdateManyMutationInput" | "StudentWhereInput" | "StudentWhereUniqueInput" | "SubjectCreateInput" | "SubjectCreateOneInput" | "SubjectUpdateDataInput" | "SubjectUpdateInput" | "SubjectUpdateManyMutationInput" | "SubjectUpdateOneInput" | "SubjectUpsertNestedInput" | "SubjectWhereInput" | "SubjectWhereUniqueInput";
 
-export type NexusGenEnumNames = "PostOrderByInput";
+export type NexusGenEnumNames = "CourseOrderByInput" | "DegreeOrderByInput" | "DepartmentOrderByInput" | "StudentOrderByInput" | "SubjectOrderByInput";
 
 export type NexusGenInterfaceNames = never;
 
-export type NexusGenScalarNames = "Boolean" | "DateTime" | "Float" | "ID" | "Int" | "String";
+export type NexusGenScalarNames = "Boolean" | "Float" | "ID" | "Int" | "Long" | "String";
 
 export type NexusGenUnionNames = never;
 
 export interface NexusGenTypes {
-  context: ctx.Context;
+  context: any;
   inputTypes: NexusGenInputs;
   rootTypes: NexusGenRootTypes;
   argTypes: NexusGenArgTypes;

@@ -22,15 +22,6 @@ exports.schema = nexus_prisma_1.makePrismaSchema({
     nonNullDefaults: {
         input: true,
         output: true
-    },
-    typegenAutoConfig: {
-        sources: [
-            {
-                source: path.join(__dirname, './context.ts'),
-                alias: 'ctx'
-            },
-        ],
-        contextType: 'ctx.Context'
     }
 });
 //# sourceMappingURL=schema.js.map

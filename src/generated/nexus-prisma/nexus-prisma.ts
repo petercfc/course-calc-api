@@ -15,76 +15,142 @@ export interface NexusPrismaTypes {
   objectTypes: {
     fields: {
       Query: QueryObject
-      User: UserObject
-      Post: PostObject
-      UserConnection: UserConnectionObject
+      Student: StudentObject
+      Course: CourseObject
+      Subject: SubjectObject
+      Degree: DegreeObject
+      Department: DepartmentObject
+      StudentConnection: StudentConnectionObject
       PageInfo: PageInfoObject
-      UserEdge: UserEdgeObject
-      AggregateUser: AggregateUserObject
-      PostConnection: PostConnectionObject
-      PostEdge: PostEdgeObject
-      AggregatePost: AggregatePostObject
+      StudentEdge: StudentEdgeObject
+      AggregateStudent: AggregateStudentObject
+      SubjectConnection: SubjectConnectionObject
+      SubjectEdge: SubjectEdgeObject
+      AggregateSubject: AggregateSubjectObject
+      DegreeConnection: DegreeConnectionObject
+      DegreeEdge: DegreeEdgeObject
+      AggregateDegree: AggregateDegreeObject
+      DepartmentConnection: DepartmentConnectionObject
+      DepartmentEdge: DepartmentEdgeObject
+      AggregateDepartment: AggregateDepartmentObject
+      CourseConnection: CourseConnectionObject
+      CourseEdge: CourseEdgeObject
+      AggregateCourse: AggregateCourseObject
       Mutation: MutationObject
       BatchPayload: BatchPayloadObject
       Subscription: SubscriptionObject
-      UserSubscriptionPayload: UserSubscriptionPayloadObject
-      UserPreviousValues: UserPreviousValuesObject
-      PostSubscriptionPayload: PostSubscriptionPayloadObject
-      PostPreviousValues: PostPreviousValuesObject
+      StudentSubscriptionPayload: StudentSubscriptionPayloadObject
+      StudentPreviousValues: StudentPreviousValuesObject
+      SubjectSubscriptionPayload: SubjectSubscriptionPayloadObject
+      SubjectPreviousValues: SubjectPreviousValuesObject
+      DegreeSubscriptionPayload: DegreeSubscriptionPayloadObject
+      DegreePreviousValues: DegreePreviousValuesObject
+      DepartmentSubscriptionPayload: DepartmentSubscriptionPayloadObject
+      DepartmentPreviousValues: DepartmentPreviousValuesObject
+      CourseSubscriptionPayload: CourseSubscriptionPayloadObject
+      CoursePreviousValues: CoursePreviousValuesObject
     }
     fieldsDetails: {
       Query: QueryFieldDetails
-      User: UserFieldDetails
-      Post: PostFieldDetails
-      UserConnection: UserConnectionFieldDetails
+      Student: StudentFieldDetails
+      Course: CourseFieldDetails
+      Subject: SubjectFieldDetails
+      Degree: DegreeFieldDetails
+      Department: DepartmentFieldDetails
+      StudentConnection: StudentConnectionFieldDetails
       PageInfo: PageInfoFieldDetails
-      UserEdge: UserEdgeFieldDetails
-      AggregateUser: AggregateUserFieldDetails
-      PostConnection: PostConnectionFieldDetails
-      PostEdge: PostEdgeFieldDetails
-      AggregatePost: AggregatePostFieldDetails
+      StudentEdge: StudentEdgeFieldDetails
+      AggregateStudent: AggregateStudentFieldDetails
+      SubjectConnection: SubjectConnectionFieldDetails
+      SubjectEdge: SubjectEdgeFieldDetails
+      AggregateSubject: AggregateSubjectFieldDetails
+      DegreeConnection: DegreeConnectionFieldDetails
+      DegreeEdge: DegreeEdgeFieldDetails
+      AggregateDegree: AggregateDegreeFieldDetails
+      DepartmentConnection: DepartmentConnectionFieldDetails
+      DepartmentEdge: DepartmentEdgeFieldDetails
+      AggregateDepartment: AggregateDepartmentFieldDetails
+      CourseConnection: CourseConnectionFieldDetails
+      CourseEdge: CourseEdgeFieldDetails
+      AggregateCourse: AggregateCourseFieldDetails
       Mutation: MutationFieldDetails
       BatchPayload: BatchPayloadFieldDetails
       Subscription: SubscriptionFieldDetails
-      UserSubscriptionPayload: UserSubscriptionPayloadFieldDetails
-      UserPreviousValues: UserPreviousValuesFieldDetails
-      PostSubscriptionPayload: PostSubscriptionPayloadFieldDetails
-      PostPreviousValues: PostPreviousValuesFieldDetails
+      StudentSubscriptionPayload: StudentSubscriptionPayloadFieldDetails
+      StudentPreviousValues: StudentPreviousValuesFieldDetails
+      SubjectSubscriptionPayload: SubjectSubscriptionPayloadFieldDetails
+      SubjectPreviousValues: SubjectPreviousValuesFieldDetails
+      DegreeSubscriptionPayload: DegreeSubscriptionPayloadFieldDetails
+      DegreePreviousValues: DegreePreviousValuesFieldDetails
+      DepartmentSubscriptionPayload: DepartmentSubscriptionPayloadFieldDetails
+      DepartmentPreviousValues: DepartmentPreviousValuesFieldDetails
+      CourseSubscriptionPayload: CourseSubscriptionPayloadFieldDetails
+      CoursePreviousValues: CoursePreviousValuesFieldDetails
     }
   }
   inputTypes: {
     fields: {
-      UserWhereUniqueInput: UserWhereUniqueInputInputObject
-      PostWhereInput: PostWhereInputInputObject
-      UserWhereInput: UserWhereInputInputObject
-      PostWhereUniqueInput: PostWhereUniqueInputInputObject
-      UserCreateInput: UserCreateInputInputObject
-      PostCreateManyWithoutAuthorInput: PostCreateManyWithoutAuthorInputInputObject
-      PostCreateWithoutAuthorInput: PostCreateWithoutAuthorInputInputObject
-      UserUpdateInput: UserUpdateInputInputObject
-      PostUpdateManyWithoutAuthorInput: PostUpdateManyWithoutAuthorInputInputObject
-      PostUpdateWithWhereUniqueWithoutAuthorInput: PostUpdateWithWhereUniqueWithoutAuthorInputInputObject
-      PostUpdateWithoutAuthorDataInput: PostUpdateWithoutAuthorDataInputInputObject
-      PostUpsertWithWhereUniqueWithoutAuthorInput: PostUpsertWithWhereUniqueWithoutAuthorInputInputObject
-      PostScalarWhereInput: PostScalarWhereInputInputObject
-      PostUpdateManyWithWhereNestedInput: PostUpdateManyWithWhereNestedInputInputObject
-      PostUpdateManyDataInput: PostUpdateManyDataInputInputObject
-      UserUpdateManyMutationInput: UserUpdateManyMutationInputInputObject
-      PostCreateInput: PostCreateInputInputObject
-      UserCreateOneWithoutPostsInput: UserCreateOneWithoutPostsInputInputObject
-      UserCreateWithoutPostsInput: UserCreateWithoutPostsInputInputObject
-      PostUpdateInput: PostUpdateInputInputObject
-      UserUpdateOneRequiredWithoutPostsInput: UserUpdateOneRequiredWithoutPostsInputInputObject
-      UserUpdateWithoutPostsDataInput: UserUpdateWithoutPostsDataInputInputObject
-      UserUpsertWithoutPostsInput: UserUpsertWithoutPostsInputInputObject
-      PostUpdateManyMutationInput: PostUpdateManyMutationInputInputObject
-      UserSubscriptionWhereInput: UserSubscriptionWhereInputInputObject
-      PostSubscriptionWhereInput: PostSubscriptionWhereInputInputObject
+      StudentWhereUniqueInput: StudentWhereUniqueInputInputObject
+      CourseWhereInput: CourseWhereInputInputObject
+      SubjectWhereInput: SubjectWhereInputInputObject
+      DegreeWhereInput: DegreeWhereInputInputObject
+      DepartmentWhereInput: DepartmentWhereInputInputObject
+      StudentWhereInput: StudentWhereInputInputObject
+      SubjectWhereUniqueInput: SubjectWhereUniqueInputInputObject
+      DegreeWhereUniqueInput: DegreeWhereUniqueInputInputObject
+      DepartmentWhereUniqueInput: DepartmentWhereUniqueInputInputObject
+      CourseWhereUniqueInput: CourseWhereUniqueInputInputObject
+      StudentCreateInput: StudentCreateInputInputObject
+      CourseCreateManyInput: CourseCreateManyInputInputObject
+      CourseCreateInput: CourseCreateInputInputObject
+      SubjectCreateOneInput: SubjectCreateOneInputInputObject
+      SubjectCreateInput: SubjectCreateInputInputObject
+      DegreeCreateOneInput: DegreeCreateOneInputInputObject
+      DegreeCreateInput: DegreeCreateInputInputObject
+      DepartmentCreateOneInput: DepartmentCreateOneInputInputObject
+      DepartmentCreateInput: DepartmentCreateInputInputObject
+      CourseCreateOneInput: CourseCreateOneInputInputObject
+      StudentUpdateInput: StudentUpdateInputInputObject
+      CourseUpdateManyInput: CourseUpdateManyInputInputObject
+      CourseUpdateWithWhereUniqueNestedInput: CourseUpdateWithWhereUniqueNestedInputInputObject
+      CourseUpdateDataInput: CourseUpdateDataInputInputObject
+      SubjectUpdateOneInput: SubjectUpdateOneInputInputObject
+      SubjectUpdateDataInput: SubjectUpdateDataInputInputObject
+      SubjectUpsertNestedInput: SubjectUpsertNestedInputInputObject
+      DegreeUpdateOneInput: DegreeUpdateOneInputInputObject
+      DegreeUpdateDataInput: DegreeUpdateDataInputInputObject
+      DegreeUpsertNestedInput: DegreeUpsertNestedInputInputObject
+      DepartmentUpdateOneInput: DepartmentUpdateOneInputInputObject
+      DepartmentUpdateDataInput: DepartmentUpdateDataInputInputObject
+      DepartmentUpsertNestedInput: DepartmentUpsertNestedInputInputObject
+      CourseUpdateOneInput: CourseUpdateOneInputInputObject
+      CourseUpsertNestedInput: CourseUpsertNestedInputInputObject
+      CourseUpsertWithWhereUniqueNestedInput: CourseUpsertWithWhereUniqueNestedInputInputObject
+      CourseScalarWhereInput: CourseScalarWhereInputInputObject
+      CourseUpdateManyWithWhereNestedInput: CourseUpdateManyWithWhereNestedInputInputObject
+      CourseUpdateManyDataInput: CourseUpdateManyDataInputInputObject
+      StudentUpdateManyMutationInput: StudentUpdateManyMutationInputInputObject
+      SubjectUpdateInput: SubjectUpdateInputInputObject
+      SubjectUpdateManyMutationInput: SubjectUpdateManyMutationInputInputObject
+      DegreeUpdateInput: DegreeUpdateInputInputObject
+      DegreeUpdateManyMutationInput: DegreeUpdateManyMutationInputInputObject
+      DepartmentUpdateInput: DepartmentUpdateInputInputObject
+      DepartmentUpdateManyMutationInput: DepartmentUpdateManyMutationInputInputObject
+      CourseUpdateInput: CourseUpdateInputInputObject
+      CourseUpdateManyMutationInput: CourseUpdateManyMutationInputInputObject
+      StudentSubscriptionWhereInput: StudentSubscriptionWhereInputInputObject
+      SubjectSubscriptionWhereInput: SubjectSubscriptionWhereInputInputObject
+      DegreeSubscriptionWhereInput: DegreeSubscriptionWhereInputInputObject
+      DepartmentSubscriptionWhereInput: DepartmentSubscriptionWhereInputInputObject
+      CourseSubscriptionWhereInput: CourseSubscriptionWhereInputInputObject
     }
   }
   enumTypes: {
-    PostOrderByInput: PostOrderByInputValues,
-    UserOrderByInput: UserOrderByInputValues,
+    CourseOrderByInput: CourseOrderByInputValues,
+    StudentOrderByInput: StudentOrderByInputValues,
+    SubjectOrderByInput: SubjectOrderByInputValues,
+    DegreeOrderByInput: DegreeOrderByInputValues,
+    DepartmentOrderByInput: DepartmentOrderByInputValues,
     MutationType: MutationTypeValues,
   }
 }
@@ -93,33 +159,43 @@ export interface NexusPrismaTypes {
 
 type QueryObject =
   | QueryFields
-  | { name: 'user', args?: QueryUserArgs[] | false, alias?: string  } 
-  | { name: 'users', args?: QueryUsersArgs[] | false, alias?: string  } 
-  | { name: 'usersConnection', args?: QueryUsersConnectionArgs[] | false, alias?: string  } 
-  | { name: 'post', args?: QueryPostArgs[] | false, alias?: string  } 
-  | { name: 'posts', args?: QueryPostsArgs[] | false, alias?: string  } 
-  | { name: 'postsConnection', args?: QueryPostsConnectionArgs[] | false, alias?: string  } 
+  | { name: 'student', args?: QueryStudentArgs[] | false, alias?: string  } 
+  | { name: 'students', args?: QueryStudentsArgs[] | false, alias?: string  } 
+  | { name: 'studentsConnection', args?: QueryStudentsConnectionArgs[] | false, alias?: string  } 
+  | { name: 'subject', args?: QuerySubjectArgs[] | false, alias?: string  } 
+  | { name: 'subjects', args?: QuerySubjectsArgs[] | false, alias?: string  } 
+  | { name: 'subjectsConnection', args?: QuerySubjectsConnectionArgs[] | false, alias?: string  } 
+  | { name: 'degree', args?: QueryDegreeArgs[] | false, alias?: string  } 
+  | { name: 'degrees', args?: QueryDegreesArgs[] | false, alias?: string  } 
+  | { name: 'degreesConnection', args?: QueryDegreesConnectionArgs[] | false, alias?: string  } 
+  | { name: 'department', args?: QueryDepartmentArgs[] | false, alias?: string  } 
+  | { name: 'departments', args?: QueryDepartmentsArgs[] | false, alias?: string  } 
+  | { name: 'departmentsConnection', args?: QueryDepartmentsConnectionArgs[] | false, alias?: string  } 
+  | { name: 'course', args?: QueryCourseArgs[] | false, alias?: string  } 
+  | { name: 'courses', args?: QueryCoursesArgs[] | false, alias?: string  } 
+  | { name: 'coursesConnection', args?: QueryCoursesConnectionArgs[] | false, alias?: string  } 
 
 type QueryFields =
-  | 'user'
-  | 'users'
-  | 'usersConnection'
-  | 'post'
-  | 'posts'
-  | 'postsConnection'
+  | 'student'
+  | 'students'
+  | 'studentsConnection'
+  | 'subject'
+  | 'subjects'
+  | 'subjectsConnection'
+  | 'degree'
+  | 'degrees'
+  | 'degreesConnection'
+  | 'department'
+  | 'departments'
+  | 'departmentsConnection'
+  | 'course'
+  | 'courses'
+  | 'coursesConnection'
 
 
-type QueryUserArgs =
+type QueryStudentArgs =
   | 'where'
-type QueryUsersArgs =
-  | 'where'
-  | 'orderBy'
-  | 'skip'
-  | 'after'
-  | 'before'
-  | 'first'
-  | 'last'
-type QueryUsersConnectionArgs =
+type QueryStudentsArgs =
   | 'where'
   | 'orderBy'
   | 'skip'
@@ -127,9 +203,7 @@ type QueryUsersConnectionArgs =
   | 'before'
   | 'first'
   | 'last'
-type QueryPostArgs =
-  | 'where'
-type QueryPostsArgs =
+type QueryStudentsConnectionArgs =
   | 'where'
   | 'orderBy'
   | 'skip'
@@ -137,7 +211,71 @@ type QueryPostsArgs =
   | 'before'
   | 'first'
   | 'last'
-type QueryPostsConnectionArgs =
+type QuerySubjectArgs =
+  | 'where'
+type QuerySubjectsArgs =
+  | 'where'
+  | 'orderBy'
+  | 'skip'
+  | 'after'
+  | 'before'
+  | 'first'
+  | 'last'
+type QuerySubjectsConnectionArgs =
+  | 'where'
+  | 'orderBy'
+  | 'skip'
+  | 'after'
+  | 'before'
+  | 'first'
+  | 'last'
+type QueryDegreeArgs =
+  | 'where'
+type QueryDegreesArgs =
+  | 'where'
+  | 'orderBy'
+  | 'skip'
+  | 'after'
+  | 'before'
+  | 'first'
+  | 'last'
+type QueryDegreesConnectionArgs =
+  | 'where'
+  | 'orderBy'
+  | 'skip'
+  | 'after'
+  | 'before'
+  | 'first'
+  | 'last'
+type QueryDepartmentArgs =
+  | 'where'
+type QueryDepartmentsArgs =
+  | 'where'
+  | 'orderBy'
+  | 'skip'
+  | 'after'
+  | 'before'
+  | 'first'
+  | 'last'
+type QueryDepartmentsConnectionArgs =
+  | 'where'
+  | 'orderBy'
+  | 'skip'
+  | 'after'
+  | 'before'
+  | 'first'
+  | 'last'
+type QueryCourseArgs =
+  | 'where'
+type QueryCoursesArgs =
+  | 'where'
+  | 'orderBy'
+  | 'skip'
+  | 'after'
+  | 'before'
+  | 'first'
+  | 'last'
+type QueryCoursesConnectionArgs =
   | 'where'
   | 'orderBy'
   | 'skip'
@@ -148,104 +286,221 @@ type QueryPostsConnectionArgs =
   
 
 export interface QueryFieldDetails {
-  user: {
-    type: 'User'
-    args: Record<QueryUserArgs, core.NexusArgDef<string>>
+  student: {
+    type: 'Student'
+    args: Record<QueryStudentArgs, core.NexusArgDef<string>>
     description: string
     list: undefined
     nullable: true
     resolve: (
       root: core.RootValue<"Query">,
-      args: { where: UserWhereUniqueInput }  ,
+      args: { where: StudentWhereUniqueInput }  ,
       context: core.GetGen<"context">,
       info?: GraphQLResolveInfo
-    ) => Promise<prisma.User | null> | prisma.User | null
+    ) => Promise<prisma.Student | null> | prisma.Student | null
   }
-  users: {
-    type: 'User'
-    args: Record<QueryUsersArgs, core.NexusArgDef<string>>
+  students: {
+    type: 'Student'
+    args: Record<QueryStudentsArgs, core.NexusArgDef<string>>
     description: string
     list: true
     nullable: false
     resolve: (
       root: core.RootValue<"Query">,
-      args: { where?: UserWhereInput | null, orderBy?: prisma.UserOrderByInput | null, skip?: number | null, after?: string | null, before?: string | null, first?: number | null, last?: number | null }  ,
+      args: { where?: StudentWhereInput | null, orderBy?: prisma.StudentOrderByInput | null, skip?: number | null, after?: string | null, before?: string | null, first?: number | null, last?: number | null }  ,
       context: core.GetGen<"context">,
       info?: GraphQLResolveInfo
-    ) => Promise<prisma.User[]> | prisma.User[]
+    ) => Promise<prisma.Student[]> | prisma.Student[]
   }
-  usersConnection: {
-    type: 'UserConnection'
-    args: Record<QueryUsersConnectionArgs, core.NexusArgDef<string>>
+  studentsConnection: {
+    type: 'StudentConnection'
+    args: Record<QueryStudentsConnectionArgs, core.NexusArgDef<string>>
     description: string
     list: undefined
     nullable: false
     resolve: (
       root: core.RootValue<"Query">,
-      args: { where?: UserWhereInput | null, orderBy?: prisma.UserOrderByInput | null, skip?: number | null, after?: string | null, before?: string | null, first?: number | null, last?: number | null }  ,
+      args: { where?: StudentWhereInput | null, orderBy?: prisma.StudentOrderByInput | null, skip?: number | null, after?: string | null, before?: string | null, first?: number | null, last?: number | null }  ,
       context: core.GetGen<"context">,
       info?: GraphQLResolveInfo
-    ) => Promise<prisma.UserConnection> | prisma.UserConnection
+    ) => Promise<prisma.StudentConnection> | prisma.StudentConnection
   }
-  post: {
-    type: 'Post'
-    args: Record<QueryPostArgs, core.NexusArgDef<string>>
+  subject: {
+    type: 'Subject'
+    args: Record<QuerySubjectArgs, core.NexusArgDef<string>>
     description: string
     list: undefined
     nullable: true
     resolve: (
       root: core.RootValue<"Query">,
-      args: { where: PostWhereUniqueInput }  ,
+      args: { where: SubjectWhereUniqueInput }  ,
       context: core.GetGen<"context">,
       info?: GraphQLResolveInfo
-    ) => Promise<prisma.Post | null> | prisma.Post | null
+    ) => Promise<prisma.Subject | null> | prisma.Subject | null
   }
-  posts: {
-    type: 'Post'
-    args: Record<QueryPostsArgs, core.NexusArgDef<string>>
+  subjects: {
+    type: 'Subject'
+    args: Record<QuerySubjectsArgs, core.NexusArgDef<string>>
     description: string
     list: true
     nullable: false
     resolve: (
       root: core.RootValue<"Query">,
-      args: { where?: PostWhereInput | null, orderBy?: prisma.PostOrderByInput | null, skip?: number | null, after?: string | null, before?: string | null, first?: number | null, last?: number | null }  ,
+      args: { where?: SubjectWhereInput | null, orderBy?: prisma.SubjectOrderByInput | null, skip?: number | null, after?: string | null, before?: string | null, first?: number | null, last?: number | null }  ,
       context: core.GetGen<"context">,
       info?: GraphQLResolveInfo
-    ) => Promise<prisma.Post[]> | prisma.Post[]
+    ) => Promise<prisma.Subject[]> | prisma.Subject[]
   }
-  postsConnection: {
-    type: 'PostConnection'
-    args: Record<QueryPostsConnectionArgs, core.NexusArgDef<string>>
+  subjectsConnection: {
+    type: 'SubjectConnection'
+    args: Record<QuerySubjectsConnectionArgs, core.NexusArgDef<string>>
     description: string
     list: undefined
     nullable: false
     resolve: (
       root: core.RootValue<"Query">,
-      args: { where?: PostWhereInput | null, orderBy?: prisma.PostOrderByInput | null, skip?: number | null, after?: string | null, before?: string | null, first?: number | null, last?: number | null }  ,
+      args: { where?: SubjectWhereInput | null, orderBy?: prisma.SubjectOrderByInput | null, skip?: number | null, after?: string | null, before?: string | null, first?: number | null, last?: number | null }  ,
       context: core.GetGen<"context">,
       info?: GraphQLResolveInfo
-    ) => Promise<prisma.PostConnection> | prisma.PostConnection
+    ) => Promise<prisma.SubjectConnection> | prisma.SubjectConnection
+  }
+  degree: {
+    type: 'Degree'
+    args: Record<QueryDegreeArgs, core.NexusArgDef<string>>
+    description: string
+    list: undefined
+    nullable: true
+    resolve: (
+      root: core.RootValue<"Query">,
+      args: { where: DegreeWhereUniqueInput }  ,
+      context: core.GetGen<"context">,
+      info?: GraphQLResolveInfo
+    ) => Promise<prisma.Degree | null> | prisma.Degree | null
+  }
+  degrees: {
+    type: 'Degree'
+    args: Record<QueryDegreesArgs, core.NexusArgDef<string>>
+    description: string
+    list: true
+    nullable: false
+    resolve: (
+      root: core.RootValue<"Query">,
+      args: { where?: DegreeWhereInput | null, orderBy?: prisma.DegreeOrderByInput | null, skip?: number | null, after?: string | null, before?: string | null, first?: number | null, last?: number | null }  ,
+      context: core.GetGen<"context">,
+      info?: GraphQLResolveInfo
+    ) => Promise<prisma.Degree[]> | prisma.Degree[]
+  }
+  degreesConnection: {
+    type: 'DegreeConnection'
+    args: Record<QueryDegreesConnectionArgs, core.NexusArgDef<string>>
+    description: string
+    list: undefined
+    nullable: false
+    resolve: (
+      root: core.RootValue<"Query">,
+      args: { where?: DegreeWhereInput | null, orderBy?: prisma.DegreeOrderByInput | null, skip?: number | null, after?: string | null, before?: string | null, first?: number | null, last?: number | null }  ,
+      context: core.GetGen<"context">,
+      info?: GraphQLResolveInfo
+    ) => Promise<prisma.DegreeConnection> | prisma.DegreeConnection
+  }
+  department: {
+    type: 'Department'
+    args: Record<QueryDepartmentArgs, core.NexusArgDef<string>>
+    description: string
+    list: undefined
+    nullable: true
+    resolve: (
+      root: core.RootValue<"Query">,
+      args: { where: DepartmentWhereUniqueInput }  ,
+      context: core.GetGen<"context">,
+      info?: GraphQLResolveInfo
+    ) => Promise<prisma.Department | null> | prisma.Department | null
+  }
+  departments: {
+    type: 'Department'
+    args: Record<QueryDepartmentsArgs, core.NexusArgDef<string>>
+    description: string
+    list: true
+    nullable: false
+    resolve: (
+      root: core.RootValue<"Query">,
+      args: { where?: DepartmentWhereInput | null, orderBy?: prisma.DepartmentOrderByInput | null, skip?: number | null, after?: string | null, before?: string | null, first?: number | null, last?: number | null }  ,
+      context: core.GetGen<"context">,
+      info?: GraphQLResolveInfo
+    ) => Promise<prisma.Department[]> | prisma.Department[]
+  }
+  departmentsConnection: {
+    type: 'DepartmentConnection'
+    args: Record<QueryDepartmentsConnectionArgs, core.NexusArgDef<string>>
+    description: string
+    list: undefined
+    nullable: false
+    resolve: (
+      root: core.RootValue<"Query">,
+      args: { where?: DepartmentWhereInput | null, orderBy?: prisma.DepartmentOrderByInput | null, skip?: number | null, after?: string | null, before?: string | null, first?: number | null, last?: number | null }  ,
+      context: core.GetGen<"context">,
+      info?: GraphQLResolveInfo
+    ) => Promise<prisma.DepartmentConnection> | prisma.DepartmentConnection
+  }
+  course: {
+    type: 'Course'
+    args: Record<QueryCourseArgs, core.NexusArgDef<string>>
+    description: string
+    list: undefined
+    nullable: true
+    resolve: (
+      root: core.RootValue<"Query">,
+      args: { where: CourseWhereUniqueInput }  ,
+      context: core.GetGen<"context">,
+      info?: GraphQLResolveInfo
+    ) => Promise<prisma.Course | null> | prisma.Course | null
+  }
+  courses: {
+    type: 'Course'
+    args: Record<QueryCoursesArgs, core.NexusArgDef<string>>
+    description: string
+    list: true
+    nullable: false
+    resolve: (
+      root: core.RootValue<"Query">,
+      args: { where?: CourseWhereInput | null, orderBy?: prisma.CourseOrderByInput | null, skip?: number | null, after?: string | null, before?: string | null, first?: number | null, last?: number | null }  ,
+      context: core.GetGen<"context">,
+      info?: GraphQLResolveInfo
+    ) => Promise<prisma.Course[]> | prisma.Course[]
+  }
+  coursesConnection: {
+    type: 'CourseConnection'
+    args: Record<QueryCoursesConnectionArgs, core.NexusArgDef<string>>
+    description: string
+    list: undefined
+    nullable: false
+    resolve: (
+      root: core.RootValue<"Query">,
+      args: { where?: CourseWhereInput | null, orderBy?: prisma.CourseOrderByInput | null, skip?: number | null, after?: string | null, before?: string | null, first?: number | null, last?: number | null }  ,
+      context: core.GetGen<"context">,
+      info?: GraphQLResolveInfo
+    ) => Promise<prisma.CourseConnection> | prisma.CourseConnection
   }
 }
   
 
-// Types for User
+// Types for Student
 
-type UserObject =
-  | UserFields
+type StudentObject =
+  | StudentFields
   | { name: 'id', args?: [] | false, alias?: string  } 
-  | { name: 'email', args?: [] | false, alias?: string  } 
   | { name: 'name', args?: [] | false, alias?: string  } 
-  | { name: 'posts', args?: UserPostsArgs[] | false, alias?: string  } 
+  | { name: 'coursesPassed', args?: StudentCoursesPassedArgs[] | false, alias?: string  } 
+  | { name: 'enrolledDegree', args?: [] | false, alias?: string  } 
 
-type UserFields =
+type StudentFields =
   | 'id'
-  | 'email'
   | 'name'
-  | 'posts'
+  | 'coursesPassed'
+  | 'enrolledDegree'
 
 
-type UserPostsArgs =
+type StudentCoursesPassedArgs =
   | 'where'
   | 'orderBy'
   | 'skip'
@@ -255,17 +510,9 @@ type UserPostsArgs =
   | 'last'
   
 
-export interface UserFieldDetails {
+export interface StudentFieldDetails {
   id: {
     type: 'ID'
-    args: {}
-    description: string
-    list: undefined
-    nullable: false
-    resolve: undefined
-  }
-  email: {
-    type: 'String'
     args: {}
     description: string
     list: undefined
@@ -280,48 +527,65 @@ export interface UserFieldDetails {
     nullable: true
     resolve: undefined
   }
-  posts: {
-    type: 'Post'
-    args: Record<UserPostsArgs, core.NexusArgDef<string>>
+  coursesPassed: {
+    type: 'Course'
+    args: Record<StudentCoursesPassedArgs, core.NexusArgDef<string>>
     description: string
     list: true
     nullable: false
     resolve: (
-      root: core.RootValue<"User">,
-      args: { where?: PostWhereInput | null, orderBy?: prisma.PostOrderByInput | null, skip?: number | null, after?: string | null, before?: string | null, first?: number | null, last?: number | null }  ,
+      root: core.RootValue<"Student">,
+      args: { where?: CourseWhereInput | null, orderBy?: prisma.CourseOrderByInput | null, skip?: number | null, after?: string | null, before?: string | null, first?: number | null, last?: number | null }  ,
       context: core.GetGen<"context">,
       info?: GraphQLResolveInfo
-    ) => Promise<prisma.Post[]> | prisma.Post[]
+    ) => Promise<prisma.Course[]> | prisma.Course[]
+  }
+  enrolledDegree: {
+    type: 'Degree'
+    args: {}
+    description: string
+    list: undefined
+    nullable: true
+    resolve: (
+      root: core.RootValue<"Student">,
+      args: {  }  ,
+      context: core.GetGen<"context">,
+      info?: GraphQLResolveInfo
+    ) => Promise<prisma.Degree | null> | prisma.Degree | null
   }
 }
   
 
-// Types for Post
+// Types for Course
 
-type PostObject =
-  | PostFields
+type CourseObject =
+  | CourseFields
   | { name: 'id', args?: [] | false, alias?: string  } 
-  | { name: 'createdAt', args?: [] | false, alias?: string  } 
-  | { name: 'updatedAt', args?: [] | false, alias?: string  } 
-  | { name: 'published', args?: [] | false, alias?: string  } 
-  | { name: 'title', args?: [] | false, alias?: string  } 
-  | { name: 'content', args?: [] | false, alias?: string  } 
-  | { name: 'author', args?: [] | false, alias?: string  } 
+  | { name: 'name', args?: [] | false, alias?: string  } 
+  | { name: 'number', args?: [] | false, alias?: string  } 
+  | { name: 'level', args?: [] | false, alias?: string  } 
+  | { name: 'credits', args?: [] | false, alias?: string  } 
+  | { name: 'subject', args?: [] | false, alias?: string  } 
+  | { name: 'degree', args?: [] | false, alias?: string  } 
+  | { name: 'department', args?: [] | false, alias?: string  } 
+  | { name: 'prerequisite', args?: [] | false, alias?: string  } 
 
-type PostFields =
+type CourseFields =
   | 'id'
-  | 'createdAt'
-  | 'updatedAt'
-  | 'published'
-  | 'title'
-  | 'content'
-  | 'author'
+  | 'name'
+  | 'number'
+  | 'level'
+  | 'credits'
+  | 'subject'
+  | 'degree'
+  | 'department'
+  | 'prerequisite'
 
 
 
   
 
-export interface PostFieldDetails {
+export interface CourseFieldDetails {
   id: {
     type: 'ID'
     args: {}
@@ -330,31 +594,7 @@ export interface PostFieldDetails {
     nullable: false
     resolve: undefined
   }
-  createdAt: {
-    type: 'DateTime'
-    args: {}
-    description: string
-    list: undefined
-    nullable: false
-    resolve: undefined
-  }
-  updatedAt: {
-    type: 'DateTime'
-    args: {}
-    description: string
-    list: undefined
-    nullable: false
-    resolve: undefined
-  }
-  published: {
-    type: 'Boolean'
-    args: {}
-    description: string
-    list: undefined
-    nullable: false
-    resolve: undefined
-  }
-  title: {
+  name: {
     type: 'String'
     args: {}
     description: string
@@ -362,39 +602,209 @@ export interface PostFieldDetails {
     nullable: false
     resolve: undefined
   }
-  content: {
+  number: {
     type: 'String'
+    args: {}
+    description: string
+    list: undefined
+    nullable: false
+    resolve: undefined
+  }
+  level: {
+    type: 'Int'
+    args: {}
+    description: string
+    list: undefined
+    nullable: false
+    resolve: undefined
+  }
+  credits: {
+    type: 'Int'
+    args: {}
+    description: string
+    list: undefined
+    nullable: false
+    resolve: undefined
+  }
+  subject: {
+    type: 'Subject'
     args: {}
     description: string
     list: undefined
     nullable: true
-    resolve: undefined
-  }
-  author: {
-    type: 'User'
-    args: {}
-    description: string
-    list: undefined
-    nullable: false
     resolve: (
-      root: core.RootValue<"Post">,
+      root: core.RootValue<"Course">,
       args: {  }  ,
       context: core.GetGen<"context">,
       info?: GraphQLResolveInfo
-    ) => Promise<prisma.User> | prisma.User
+    ) => Promise<prisma.Subject | null> | prisma.Subject | null
+  }
+  degree: {
+    type: 'Degree'
+    args: {}
+    description: string
+    list: undefined
+    nullable: true
+    resolve: (
+      root: core.RootValue<"Course">,
+      args: {  }  ,
+      context: core.GetGen<"context">,
+      info?: GraphQLResolveInfo
+    ) => Promise<prisma.Degree | null> | prisma.Degree | null
+  }
+  department: {
+    type: 'Department'
+    args: {}
+    description: string
+    list: undefined
+    nullable: true
+    resolve: (
+      root: core.RootValue<"Course">,
+      args: {  }  ,
+      context: core.GetGen<"context">,
+      info?: GraphQLResolveInfo
+    ) => Promise<prisma.Department | null> | prisma.Department | null
+  }
+  prerequisite: {
+    type: 'Course'
+    args: {}
+    description: string
+    list: undefined
+    nullable: true
+    resolve: (
+      root: core.RootValue<"Course">,
+      args: {  }  ,
+      context: core.GetGen<"context">,
+      info?: GraphQLResolveInfo
+    ) => Promise<prisma.Course | null> | prisma.Course | null
   }
 }
   
 
-// Types for UserConnection
+// Types for Subject
 
-type UserConnectionObject =
-  | UserConnectionFields
+type SubjectObject =
+  | SubjectFields
+  | { name: 'id', args?: [] | false, alias?: string  } 
+  | { name: 'name', args?: [] | false, alias?: string  } 
+
+type SubjectFields =
+  | 'id'
+  | 'name'
+
+
+
+  
+
+export interface SubjectFieldDetails {
+  id: {
+    type: 'ID'
+    args: {}
+    description: string
+    list: undefined
+    nullable: false
+    resolve: undefined
+  }
+  name: {
+    type: 'String'
+    args: {}
+    description: string
+    list: undefined
+    nullable: false
+    resolve: undefined
+  }
+}
+  
+
+// Types for Degree
+
+type DegreeObject =
+  | DegreeFields
+  | { name: 'id', args?: [] | false, alias?: string  } 
+  | { name: 'name', args?: [] | false, alias?: string  } 
+  | { name: 'requiredCredits', args?: [] | false, alias?: string  } 
+
+type DegreeFields =
+  | 'id'
+  | 'name'
+  | 'requiredCredits'
+
+
+
+  
+
+export interface DegreeFieldDetails {
+  id: {
+    type: 'ID'
+    args: {}
+    description: string
+    list: undefined
+    nullable: false
+    resolve: undefined
+  }
+  name: {
+    type: 'String'
+    args: {}
+    description: string
+    list: undefined
+    nullable: false
+    resolve: undefined
+  }
+  requiredCredits: {
+    type: 'Int'
+    args: {}
+    description: string
+    list: undefined
+    nullable: false
+    resolve: undefined
+  }
+}
+  
+
+// Types for Department
+
+type DepartmentObject =
+  | DepartmentFields
+  | { name: 'id', args?: [] | false, alias?: string  } 
+  | { name: 'name', args?: [] | false, alias?: string  } 
+
+type DepartmentFields =
+  | 'id'
+  | 'name'
+
+
+
+  
+
+export interface DepartmentFieldDetails {
+  id: {
+    type: 'ID'
+    args: {}
+    description: string
+    list: undefined
+    nullable: false
+    resolve: undefined
+  }
+  name: {
+    type: 'String'
+    args: {}
+    description: string
+    list: undefined
+    nullable: false
+    resolve: undefined
+  }
+}
+  
+
+// Types for StudentConnection
+
+type StudentConnectionObject =
+  | StudentConnectionFields
   | { name: 'pageInfo', args?: [] | false, alias?: string  } 
   | { name: 'edges', args?: [] | false, alias?: string  } 
   | { name: 'aggregate', args?: [] | false, alias?: string  } 
 
-type UserConnectionFields =
+type StudentConnectionFields =
   | 'pageInfo'
   | 'edges'
   | 'aggregate'
@@ -403,7 +813,7 @@ type UserConnectionFields =
 
   
 
-export interface UserConnectionFieldDetails {
+export interface StudentConnectionFieldDetails {
   pageInfo: {
     type: 'PageInfo'
     args: {}
@@ -411,37 +821,37 @@ export interface UserConnectionFieldDetails {
     list: undefined
     nullable: false
     resolve: (
-      root: core.RootValue<"UserConnection">,
+      root: core.RootValue<"StudentConnection">,
       args: {  }  ,
       context: core.GetGen<"context">,
       info?: GraphQLResolveInfo
     ) => Promise<prisma.PageInfo> | prisma.PageInfo
   }
   edges: {
-    type: 'UserEdge'
+    type: 'StudentEdge'
     args: {}
     description: string
     list: true
     nullable: false
     resolve: (
-      root: core.RootValue<"UserConnection">,
+      root: core.RootValue<"StudentConnection">,
       args: {  }  ,
       context: core.GetGen<"context">,
       info?: GraphQLResolveInfo
-    ) => Promise<prisma.UserEdge[]> | prisma.UserEdge[]
+    ) => Promise<prisma.StudentEdge[]> | prisma.StudentEdge[]
   }
   aggregate: {
-    type: 'AggregateUser'
+    type: 'AggregateStudent'
     args: {}
     description: string
     list: undefined
     nullable: false
     resolve: (
-      root: core.RootValue<"UserConnection">,
+      root: core.RootValue<"StudentConnection">,
       args: {  }  ,
       context: core.GetGen<"context">,
       info?: GraphQLResolveInfo
-    ) => Promise<prisma.AggregateUser> | prisma.AggregateUser
+    ) => Promise<prisma.AggregateStudent> | prisma.AggregateStudent
   }
 }
   
@@ -501,14 +911,14 @@ export interface PageInfoFieldDetails {
 }
   
 
-// Types for UserEdge
+// Types for StudentEdge
 
-type UserEdgeObject =
-  | UserEdgeFields
+type StudentEdgeObject =
+  | StudentEdgeFields
   | { name: 'node', args?: [] | false, alias?: string  } 
   | { name: 'cursor', args?: [] | false, alias?: string  } 
 
-type UserEdgeFields =
+type StudentEdgeFields =
   | 'node'
   | 'cursor'
 
@@ -516,19 +926,19 @@ type UserEdgeFields =
 
   
 
-export interface UserEdgeFieldDetails {
+export interface StudentEdgeFieldDetails {
   node: {
-    type: 'User'
+    type: 'Student'
     args: {}
     description: string
     list: undefined
     nullable: false
     resolve: (
-      root: core.RootValue<"UserEdge">,
+      root: core.RootValue<"StudentEdge">,
       args: {  }  ,
       context: core.GetGen<"context">,
       info?: GraphQLResolveInfo
-    ) => Promise<prisma.User> | prisma.User
+    ) => Promise<prisma.Student> | prisma.Student
   }
   cursor: {
     type: 'String'
@@ -541,20 +951,20 @@ export interface UserEdgeFieldDetails {
 }
   
 
-// Types for AggregateUser
+// Types for AggregateStudent
 
-type AggregateUserObject =
-  | AggregateUserFields
+type AggregateStudentObject =
+  | AggregateStudentFields
   | { name: 'count', args?: [] | false, alias?: string  } 
 
-type AggregateUserFields =
+type AggregateStudentFields =
   | 'count'
 
 
 
   
 
-export interface AggregateUserFieldDetails {
+export interface AggregateStudentFieldDetails {
   count: {
     type: 'Int'
     args: {}
@@ -566,15 +976,15 @@ export interface AggregateUserFieldDetails {
 }
   
 
-// Types for PostConnection
+// Types for SubjectConnection
 
-type PostConnectionObject =
-  | PostConnectionFields
+type SubjectConnectionObject =
+  | SubjectConnectionFields
   | { name: 'pageInfo', args?: [] | false, alias?: string  } 
   | { name: 'edges', args?: [] | false, alias?: string  } 
   | { name: 'aggregate', args?: [] | false, alias?: string  } 
 
-type PostConnectionFields =
+type SubjectConnectionFields =
   | 'pageInfo'
   | 'edges'
   | 'aggregate'
@@ -583,7 +993,7 @@ type PostConnectionFields =
 
   
 
-export interface PostConnectionFieldDetails {
+export interface SubjectConnectionFieldDetails {
   pageInfo: {
     type: 'PageInfo'
     args: {}
@@ -591,49 +1001,49 @@ export interface PostConnectionFieldDetails {
     list: undefined
     nullable: false
     resolve: (
-      root: core.RootValue<"PostConnection">,
+      root: core.RootValue<"SubjectConnection">,
       args: {  }  ,
       context: core.GetGen<"context">,
       info?: GraphQLResolveInfo
     ) => Promise<prisma.PageInfo> | prisma.PageInfo
   }
   edges: {
-    type: 'PostEdge'
+    type: 'SubjectEdge'
     args: {}
     description: string
     list: true
     nullable: false
     resolve: (
-      root: core.RootValue<"PostConnection">,
+      root: core.RootValue<"SubjectConnection">,
       args: {  }  ,
       context: core.GetGen<"context">,
       info?: GraphQLResolveInfo
-    ) => Promise<prisma.PostEdge[]> | prisma.PostEdge[]
+    ) => Promise<prisma.SubjectEdge[]> | prisma.SubjectEdge[]
   }
   aggregate: {
-    type: 'AggregatePost'
+    type: 'AggregateSubject'
     args: {}
     description: string
     list: undefined
     nullable: false
     resolve: (
-      root: core.RootValue<"PostConnection">,
+      root: core.RootValue<"SubjectConnection">,
       args: {  }  ,
       context: core.GetGen<"context">,
       info?: GraphQLResolveInfo
-    ) => Promise<prisma.AggregatePost> | prisma.AggregatePost
+    ) => Promise<prisma.AggregateSubject> | prisma.AggregateSubject
   }
 }
   
 
-// Types for PostEdge
+// Types for SubjectEdge
 
-type PostEdgeObject =
-  | PostEdgeFields
+type SubjectEdgeObject =
+  | SubjectEdgeFields
   | { name: 'node', args?: [] | false, alias?: string  } 
   | { name: 'cursor', args?: [] | false, alias?: string  } 
 
-type PostEdgeFields =
+type SubjectEdgeFields =
   | 'node'
   | 'cursor'
 
@@ -641,19 +1051,19 @@ type PostEdgeFields =
 
   
 
-export interface PostEdgeFieldDetails {
+export interface SubjectEdgeFieldDetails {
   node: {
-    type: 'Post'
+    type: 'Subject'
     args: {}
     description: string
     list: undefined
     nullable: false
     resolve: (
-      root: core.RootValue<"PostEdge">,
+      root: core.RootValue<"SubjectEdge">,
       args: {  }  ,
       context: core.GetGen<"context">,
       info?: GraphQLResolveInfo
-    ) => Promise<prisma.Post> | prisma.Post
+    ) => Promise<prisma.Subject> | prisma.Subject
   }
   cursor: {
     type: 'String'
@@ -666,20 +1076,395 @@ export interface PostEdgeFieldDetails {
 }
   
 
-// Types for AggregatePost
+// Types for AggregateSubject
 
-type AggregatePostObject =
-  | AggregatePostFields
+type AggregateSubjectObject =
+  | AggregateSubjectFields
   | { name: 'count', args?: [] | false, alias?: string  } 
 
-type AggregatePostFields =
+type AggregateSubjectFields =
   | 'count'
 
 
 
   
 
-export interface AggregatePostFieldDetails {
+export interface AggregateSubjectFieldDetails {
+  count: {
+    type: 'Int'
+    args: {}
+    description: string
+    list: undefined
+    nullable: false
+    resolve: undefined
+  }
+}
+  
+
+// Types for DegreeConnection
+
+type DegreeConnectionObject =
+  | DegreeConnectionFields
+  | { name: 'pageInfo', args?: [] | false, alias?: string  } 
+  | { name: 'edges', args?: [] | false, alias?: string  } 
+  | { name: 'aggregate', args?: [] | false, alias?: string  } 
+
+type DegreeConnectionFields =
+  | 'pageInfo'
+  | 'edges'
+  | 'aggregate'
+
+
+
+  
+
+export interface DegreeConnectionFieldDetails {
+  pageInfo: {
+    type: 'PageInfo'
+    args: {}
+    description: string
+    list: undefined
+    nullable: false
+    resolve: (
+      root: core.RootValue<"DegreeConnection">,
+      args: {  }  ,
+      context: core.GetGen<"context">,
+      info?: GraphQLResolveInfo
+    ) => Promise<prisma.PageInfo> | prisma.PageInfo
+  }
+  edges: {
+    type: 'DegreeEdge'
+    args: {}
+    description: string
+    list: true
+    nullable: false
+    resolve: (
+      root: core.RootValue<"DegreeConnection">,
+      args: {  }  ,
+      context: core.GetGen<"context">,
+      info?: GraphQLResolveInfo
+    ) => Promise<prisma.DegreeEdge[]> | prisma.DegreeEdge[]
+  }
+  aggregate: {
+    type: 'AggregateDegree'
+    args: {}
+    description: string
+    list: undefined
+    nullable: false
+    resolve: (
+      root: core.RootValue<"DegreeConnection">,
+      args: {  }  ,
+      context: core.GetGen<"context">,
+      info?: GraphQLResolveInfo
+    ) => Promise<prisma.AggregateDegree> | prisma.AggregateDegree
+  }
+}
+  
+
+// Types for DegreeEdge
+
+type DegreeEdgeObject =
+  | DegreeEdgeFields
+  | { name: 'node', args?: [] | false, alias?: string  } 
+  | { name: 'cursor', args?: [] | false, alias?: string  } 
+
+type DegreeEdgeFields =
+  | 'node'
+  | 'cursor'
+
+
+
+  
+
+export interface DegreeEdgeFieldDetails {
+  node: {
+    type: 'Degree'
+    args: {}
+    description: string
+    list: undefined
+    nullable: false
+    resolve: (
+      root: core.RootValue<"DegreeEdge">,
+      args: {  }  ,
+      context: core.GetGen<"context">,
+      info?: GraphQLResolveInfo
+    ) => Promise<prisma.Degree> | prisma.Degree
+  }
+  cursor: {
+    type: 'String'
+    args: {}
+    description: string
+    list: undefined
+    nullable: false
+    resolve: undefined
+  }
+}
+  
+
+// Types for AggregateDegree
+
+type AggregateDegreeObject =
+  | AggregateDegreeFields
+  | { name: 'count', args?: [] | false, alias?: string  } 
+
+type AggregateDegreeFields =
+  | 'count'
+
+
+
+  
+
+export interface AggregateDegreeFieldDetails {
+  count: {
+    type: 'Int'
+    args: {}
+    description: string
+    list: undefined
+    nullable: false
+    resolve: undefined
+  }
+}
+  
+
+// Types for DepartmentConnection
+
+type DepartmentConnectionObject =
+  | DepartmentConnectionFields
+  | { name: 'pageInfo', args?: [] | false, alias?: string  } 
+  | { name: 'edges', args?: [] | false, alias?: string  } 
+  | { name: 'aggregate', args?: [] | false, alias?: string  } 
+
+type DepartmentConnectionFields =
+  | 'pageInfo'
+  | 'edges'
+  | 'aggregate'
+
+
+
+  
+
+export interface DepartmentConnectionFieldDetails {
+  pageInfo: {
+    type: 'PageInfo'
+    args: {}
+    description: string
+    list: undefined
+    nullable: false
+    resolve: (
+      root: core.RootValue<"DepartmentConnection">,
+      args: {  }  ,
+      context: core.GetGen<"context">,
+      info?: GraphQLResolveInfo
+    ) => Promise<prisma.PageInfo> | prisma.PageInfo
+  }
+  edges: {
+    type: 'DepartmentEdge'
+    args: {}
+    description: string
+    list: true
+    nullable: false
+    resolve: (
+      root: core.RootValue<"DepartmentConnection">,
+      args: {  }  ,
+      context: core.GetGen<"context">,
+      info?: GraphQLResolveInfo
+    ) => Promise<prisma.DepartmentEdge[]> | prisma.DepartmentEdge[]
+  }
+  aggregate: {
+    type: 'AggregateDepartment'
+    args: {}
+    description: string
+    list: undefined
+    nullable: false
+    resolve: (
+      root: core.RootValue<"DepartmentConnection">,
+      args: {  }  ,
+      context: core.GetGen<"context">,
+      info?: GraphQLResolveInfo
+    ) => Promise<prisma.AggregateDepartment> | prisma.AggregateDepartment
+  }
+}
+  
+
+// Types for DepartmentEdge
+
+type DepartmentEdgeObject =
+  | DepartmentEdgeFields
+  | { name: 'node', args?: [] | false, alias?: string  } 
+  | { name: 'cursor', args?: [] | false, alias?: string  } 
+
+type DepartmentEdgeFields =
+  | 'node'
+  | 'cursor'
+
+
+
+  
+
+export interface DepartmentEdgeFieldDetails {
+  node: {
+    type: 'Department'
+    args: {}
+    description: string
+    list: undefined
+    nullable: false
+    resolve: (
+      root: core.RootValue<"DepartmentEdge">,
+      args: {  }  ,
+      context: core.GetGen<"context">,
+      info?: GraphQLResolveInfo
+    ) => Promise<prisma.Department> | prisma.Department
+  }
+  cursor: {
+    type: 'String'
+    args: {}
+    description: string
+    list: undefined
+    nullable: false
+    resolve: undefined
+  }
+}
+  
+
+// Types for AggregateDepartment
+
+type AggregateDepartmentObject =
+  | AggregateDepartmentFields
+  | { name: 'count', args?: [] | false, alias?: string  } 
+
+type AggregateDepartmentFields =
+  | 'count'
+
+
+
+  
+
+export interface AggregateDepartmentFieldDetails {
+  count: {
+    type: 'Int'
+    args: {}
+    description: string
+    list: undefined
+    nullable: false
+    resolve: undefined
+  }
+}
+  
+
+// Types for CourseConnection
+
+type CourseConnectionObject =
+  | CourseConnectionFields
+  | { name: 'pageInfo', args?: [] | false, alias?: string  } 
+  | { name: 'edges', args?: [] | false, alias?: string  } 
+  | { name: 'aggregate', args?: [] | false, alias?: string  } 
+
+type CourseConnectionFields =
+  | 'pageInfo'
+  | 'edges'
+  | 'aggregate'
+
+
+
+  
+
+export interface CourseConnectionFieldDetails {
+  pageInfo: {
+    type: 'PageInfo'
+    args: {}
+    description: string
+    list: undefined
+    nullable: false
+    resolve: (
+      root: core.RootValue<"CourseConnection">,
+      args: {  }  ,
+      context: core.GetGen<"context">,
+      info?: GraphQLResolveInfo
+    ) => Promise<prisma.PageInfo> | prisma.PageInfo
+  }
+  edges: {
+    type: 'CourseEdge'
+    args: {}
+    description: string
+    list: true
+    nullable: false
+    resolve: (
+      root: core.RootValue<"CourseConnection">,
+      args: {  }  ,
+      context: core.GetGen<"context">,
+      info?: GraphQLResolveInfo
+    ) => Promise<prisma.CourseEdge[]> | prisma.CourseEdge[]
+  }
+  aggregate: {
+    type: 'AggregateCourse'
+    args: {}
+    description: string
+    list: undefined
+    nullable: false
+    resolve: (
+      root: core.RootValue<"CourseConnection">,
+      args: {  }  ,
+      context: core.GetGen<"context">,
+      info?: GraphQLResolveInfo
+    ) => Promise<prisma.AggregateCourse> | prisma.AggregateCourse
+  }
+}
+  
+
+// Types for CourseEdge
+
+type CourseEdgeObject =
+  | CourseEdgeFields
+  | { name: 'node', args?: [] | false, alias?: string  } 
+  | { name: 'cursor', args?: [] | false, alias?: string  } 
+
+type CourseEdgeFields =
+  | 'node'
+  | 'cursor'
+
+
+
+  
+
+export interface CourseEdgeFieldDetails {
+  node: {
+    type: 'Course'
+    args: {}
+    description: string
+    list: undefined
+    nullable: false
+    resolve: (
+      root: core.RootValue<"CourseEdge">,
+      args: {  }  ,
+      context: core.GetGen<"context">,
+      info?: GraphQLResolveInfo
+    ) => Promise<prisma.Course> | prisma.Course
+  }
+  cursor: {
+    type: 'String'
+    args: {}
+    description: string
+    list: undefined
+    nullable: false
+    resolve: undefined
+  }
+}
+  
+
+// Types for AggregateCourse
+
+type AggregateCourseObject =
+  | AggregateCourseFields
+  | { name: 'count', args?: [] | false, alias?: string  } 
+
+type AggregateCourseFields =
+  | 'count'
+
+
+
+  
+
+export interface AggregateCourseFieldDetails {
   count: {
     type: 'Int'
     args: {}
@@ -695,221 +1480,539 @@ export interface AggregatePostFieldDetails {
 
 type MutationObject =
   | MutationFields
-  | { name: 'createUser', args?: MutationCreateUserArgs[] | false, alias?: string  } 
-  | { name: 'updateUser', args?: MutationUpdateUserArgs[] | false, alias?: string  } 
-  | { name: 'updateManyUsers', args?: MutationUpdateManyUsersArgs[] | false, alias?: string  } 
-  | { name: 'upsertUser', args?: MutationUpsertUserArgs[] | false, alias?: string  } 
-  | { name: 'deleteUser', args?: MutationDeleteUserArgs[] | false, alias?: string  } 
-  | { name: 'deleteManyUsers', args?: MutationDeleteManyUsersArgs[] | false, alias?: string  } 
-  | { name: 'createPost', args?: MutationCreatePostArgs[] | false, alias?: string  } 
-  | { name: 'updatePost', args?: MutationUpdatePostArgs[] | false, alias?: string  } 
-  | { name: 'updateManyPosts', args?: MutationUpdateManyPostsArgs[] | false, alias?: string  } 
-  | { name: 'upsertPost', args?: MutationUpsertPostArgs[] | false, alias?: string  } 
-  | { name: 'deletePost', args?: MutationDeletePostArgs[] | false, alias?: string  } 
-  | { name: 'deleteManyPosts', args?: MutationDeleteManyPostsArgs[] | false, alias?: string  } 
+  | { name: 'createStudent', args?: MutationCreateStudentArgs[] | false, alias?: string  } 
+  | { name: 'updateStudent', args?: MutationUpdateStudentArgs[] | false, alias?: string  } 
+  | { name: 'updateManyStudents', args?: MutationUpdateManyStudentsArgs[] | false, alias?: string  } 
+  | { name: 'upsertStudent', args?: MutationUpsertStudentArgs[] | false, alias?: string  } 
+  | { name: 'deleteStudent', args?: MutationDeleteStudentArgs[] | false, alias?: string  } 
+  | { name: 'deleteManyStudents', args?: MutationDeleteManyStudentsArgs[] | false, alias?: string  } 
+  | { name: 'createSubject', args?: MutationCreateSubjectArgs[] | false, alias?: string  } 
+  | { name: 'updateSubject', args?: MutationUpdateSubjectArgs[] | false, alias?: string  } 
+  | { name: 'updateManySubjects', args?: MutationUpdateManySubjectsArgs[] | false, alias?: string  } 
+  | { name: 'upsertSubject', args?: MutationUpsertSubjectArgs[] | false, alias?: string  } 
+  | { name: 'deleteSubject', args?: MutationDeleteSubjectArgs[] | false, alias?: string  } 
+  | { name: 'deleteManySubjects', args?: MutationDeleteManySubjectsArgs[] | false, alias?: string  } 
+  | { name: 'createDegree', args?: MutationCreateDegreeArgs[] | false, alias?: string  } 
+  | { name: 'updateDegree', args?: MutationUpdateDegreeArgs[] | false, alias?: string  } 
+  | { name: 'updateManyDegrees', args?: MutationUpdateManyDegreesArgs[] | false, alias?: string  } 
+  | { name: 'upsertDegree', args?: MutationUpsertDegreeArgs[] | false, alias?: string  } 
+  | { name: 'deleteDegree', args?: MutationDeleteDegreeArgs[] | false, alias?: string  } 
+  | { name: 'deleteManyDegrees', args?: MutationDeleteManyDegreesArgs[] | false, alias?: string  } 
+  | { name: 'createDepartment', args?: MutationCreateDepartmentArgs[] | false, alias?: string  } 
+  | { name: 'updateDepartment', args?: MutationUpdateDepartmentArgs[] | false, alias?: string  } 
+  | { name: 'updateManyDepartments', args?: MutationUpdateManyDepartmentsArgs[] | false, alias?: string  } 
+  | { name: 'upsertDepartment', args?: MutationUpsertDepartmentArgs[] | false, alias?: string  } 
+  | { name: 'deleteDepartment', args?: MutationDeleteDepartmentArgs[] | false, alias?: string  } 
+  | { name: 'deleteManyDepartments', args?: MutationDeleteManyDepartmentsArgs[] | false, alias?: string  } 
+  | { name: 'createCourse', args?: MutationCreateCourseArgs[] | false, alias?: string  } 
+  | { name: 'updateCourse', args?: MutationUpdateCourseArgs[] | false, alias?: string  } 
+  | { name: 'updateManyCourses', args?: MutationUpdateManyCoursesArgs[] | false, alias?: string  } 
+  | { name: 'upsertCourse', args?: MutationUpsertCourseArgs[] | false, alias?: string  } 
+  | { name: 'deleteCourse', args?: MutationDeleteCourseArgs[] | false, alias?: string  } 
+  | { name: 'deleteManyCourses', args?: MutationDeleteManyCoursesArgs[] | false, alias?: string  } 
 
 type MutationFields =
-  | 'createUser'
-  | 'updateUser'
-  | 'updateManyUsers'
-  | 'upsertUser'
-  | 'deleteUser'
-  | 'deleteManyUsers'
-  | 'createPost'
-  | 'updatePost'
-  | 'updateManyPosts'
-  | 'upsertPost'
-  | 'deletePost'
-  | 'deleteManyPosts'
+  | 'createStudent'
+  | 'updateStudent'
+  | 'updateManyStudents'
+  | 'upsertStudent'
+  | 'deleteStudent'
+  | 'deleteManyStudents'
+  | 'createSubject'
+  | 'updateSubject'
+  | 'updateManySubjects'
+  | 'upsertSubject'
+  | 'deleteSubject'
+  | 'deleteManySubjects'
+  | 'createDegree'
+  | 'updateDegree'
+  | 'updateManyDegrees'
+  | 'upsertDegree'
+  | 'deleteDegree'
+  | 'deleteManyDegrees'
+  | 'createDepartment'
+  | 'updateDepartment'
+  | 'updateManyDepartments'
+  | 'upsertDepartment'
+  | 'deleteDepartment'
+  | 'deleteManyDepartments'
+  | 'createCourse'
+  | 'updateCourse'
+  | 'updateManyCourses'
+  | 'upsertCourse'
+  | 'deleteCourse'
+  | 'deleteManyCourses'
 
 
-type MutationCreateUserArgs =
+type MutationCreateStudentArgs =
   | 'data'
-type MutationUpdateUserArgs =
-  | 'data'
-  | 'where'
-type MutationUpdateManyUsersArgs =
+type MutationUpdateStudentArgs =
   | 'data'
   | 'where'
-type MutationUpsertUserArgs =
+type MutationUpdateManyStudentsArgs =
+  | 'data'
+  | 'where'
+type MutationUpsertStudentArgs =
   | 'where'
   | 'create'
   | 'update'
-type MutationDeleteUserArgs =
+type MutationDeleteStudentArgs =
   | 'where'
-type MutationDeleteManyUsersArgs =
+type MutationDeleteManyStudentsArgs =
   | 'where'
-type MutationCreatePostArgs =
+type MutationCreateSubjectArgs =
   | 'data'
-type MutationUpdatePostArgs =
-  | 'data'
-  | 'where'
-type MutationUpdateManyPostsArgs =
+type MutationUpdateSubjectArgs =
   | 'data'
   | 'where'
-type MutationUpsertPostArgs =
+type MutationUpdateManySubjectsArgs =
+  | 'data'
+  | 'where'
+type MutationUpsertSubjectArgs =
   | 'where'
   | 'create'
   | 'update'
-type MutationDeletePostArgs =
+type MutationDeleteSubjectArgs =
   | 'where'
-type MutationDeleteManyPostsArgs =
+type MutationDeleteManySubjectsArgs =
+  | 'where'
+type MutationCreateDegreeArgs =
+  | 'data'
+type MutationUpdateDegreeArgs =
+  | 'data'
+  | 'where'
+type MutationUpdateManyDegreesArgs =
+  | 'data'
+  | 'where'
+type MutationUpsertDegreeArgs =
+  | 'where'
+  | 'create'
+  | 'update'
+type MutationDeleteDegreeArgs =
+  | 'where'
+type MutationDeleteManyDegreesArgs =
+  | 'where'
+type MutationCreateDepartmentArgs =
+  | 'data'
+type MutationUpdateDepartmentArgs =
+  | 'data'
+  | 'where'
+type MutationUpdateManyDepartmentsArgs =
+  | 'data'
+  | 'where'
+type MutationUpsertDepartmentArgs =
+  | 'where'
+  | 'create'
+  | 'update'
+type MutationDeleteDepartmentArgs =
+  | 'where'
+type MutationDeleteManyDepartmentsArgs =
+  | 'where'
+type MutationCreateCourseArgs =
+  | 'data'
+type MutationUpdateCourseArgs =
+  | 'data'
+  | 'where'
+type MutationUpdateManyCoursesArgs =
+  | 'data'
+  | 'where'
+type MutationUpsertCourseArgs =
+  | 'where'
+  | 'create'
+  | 'update'
+type MutationDeleteCourseArgs =
+  | 'where'
+type MutationDeleteManyCoursesArgs =
   | 'where'
   
 
 export interface MutationFieldDetails {
-  createUser: {
-    type: 'User'
-    args: Record<MutationCreateUserArgs, core.NexusArgDef<string>>
+  createStudent: {
+    type: 'Student'
+    args: Record<MutationCreateStudentArgs, core.NexusArgDef<string>>
     description: string
     list: undefined
     nullable: false
     resolve: (
       root: core.RootValue<"Mutation">,
-      args: { data: UserCreateInput }  ,
+      args: { data: StudentCreateInput }  ,
       context: core.GetGen<"context">,
       info?: GraphQLResolveInfo
-    ) => Promise<prisma.User> | prisma.User
+    ) => Promise<prisma.Student> | prisma.Student
   }
-  updateUser: {
-    type: 'User'
-    args: Record<MutationUpdateUserArgs, core.NexusArgDef<string>>
+  updateStudent: {
+    type: 'Student'
+    args: Record<MutationUpdateStudentArgs, core.NexusArgDef<string>>
     description: string
     list: undefined
     nullable: true
     resolve: (
       root: core.RootValue<"Mutation">,
-      args: { data: UserUpdateInput, where: UserWhereUniqueInput }  ,
+      args: { data: StudentUpdateInput, where: StudentWhereUniqueInput }  ,
       context: core.GetGen<"context">,
       info?: GraphQLResolveInfo
-    ) => Promise<prisma.User | null> | prisma.User | null
+    ) => Promise<prisma.Student | null> | prisma.Student | null
   }
-  updateManyUsers: {
+  updateManyStudents: {
     type: 'BatchPayload'
-    args: Record<MutationUpdateManyUsersArgs, core.NexusArgDef<string>>
+    args: Record<MutationUpdateManyStudentsArgs, core.NexusArgDef<string>>
     description: string
     list: undefined
     nullable: false
     resolve: (
       root: core.RootValue<"Mutation">,
-      args: { data: UserUpdateManyMutationInput, where?: UserWhereInput | null }  ,
+      args: { data: StudentUpdateManyMutationInput, where?: StudentWhereInput | null }  ,
       context: core.GetGen<"context">,
       info?: GraphQLResolveInfo
     ) => Promise<prisma.BatchPayload> | prisma.BatchPayload
   }
-  upsertUser: {
-    type: 'User'
-    args: Record<MutationUpsertUserArgs, core.NexusArgDef<string>>
+  upsertStudent: {
+    type: 'Student'
+    args: Record<MutationUpsertStudentArgs, core.NexusArgDef<string>>
     description: string
     list: undefined
     nullable: false
     resolve: (
       root: core.RootValue<"Mutation">,
-      args: { where: UserWhereUniqueInput, create: UserCreateInput, update: UserUpdateInput }  ,
+      args: { where: StudentWhereUniqueInput, create: StudentCreateInput, update: StudentUpdateInput }  ,
       context: core.GetGen<"context">,
       info?: GraphQLResolveInfo
-    ) => Promise<prisma.User> | prisma.User
+    ) => Promise<prisma.Student> | prisma.Student
   }
-  deleteUser: {
-    type: 'User'
-    args: Record<MutationDeleteUserArgs, core.NexusArgDef<string>>
+  deleteStudent: {
+    type: 'Student'
+    args: Record<MutationDeleteStudentArgs, core.NexusArgDef<string>>
     description: string
     list: undefined
     nullable: true
     resolve: (
       root: core.RootValue<"Mutation">,
-      args: { where: UserWhereUniqueInput }  ,
+      args: { where: StudentWhereUniqueInput }  ,
       context: core.GetGen<"context">,
       info?: GraphQLResolveInfo
-    ) => Promise<prisma.User | null> | prisma.User | null
+    ) => Promise<prisma.Student | null> | prisma.Student | null
   }
-  deleteManyUsers: {
+  deleteManyStudents: {
     type: 'BatchPayload'
-    args: Record<MutationDeleteManyUsersArgs, core.NexusArgDef<string>>
+    args: Record<MutationDeleteManyStudentsArgs, core.NexusArgDef<string>>
     description: string
     list: undefined
     nullable: false
     resolve: (
       root: core.RootValue<"Mutation">,
-      args: { where?: UserWhereInput | null }  ,
+      args: { where?: StudentWhereInput | null }  ,
       context: core.GetGen<"context">,
       info?: GraphQLResolveInfo
     ) => Promise<prisma.BatchPayload> | prisma.BatchPayload
   }
-  createPost: {
-    type: 'Post'
-    args: Record<MutationCreatePostArgs, core.NexusArgDef<string>>
+  createSubject: {
+    type: 'Subject'
+    args: Record<MutationCreateSubjectArgs, core.NexusArgDef<string>>
     description: string
     list: undefined
     nullable: false
     resolve: (
       root: core.RootValue<"Mutation">,
-      args: { data: PostCreateInput }  ,
+      args: { data: SubjectCreateInput }  ,
       context: core.GetGen<"context">,
       info?: GraphQLResolveInfo
-    ) => Promise<prisma.Post> | prisma.Post
+    ) => Promise<prisma.Subject> | prisma.Subject
   }
-  updatePost: {
-    type: 'Post'
-    args: Record<MutationUpdatePostArgs, core.NexusArgDef<string>>
+  updateSubject: {
+    type: 'Subject'
+    args: Record<MutationUpdateSubjectArgs, core.NexusArgDef<string>>
     description: string
     list: undefined
     nullable: true
     resolve: (
       root: core.RootValue<"Mutation">,
-      args: { data: PostUpdateInput, where: PostWhereUniqueInput }  ,
+      args: { data: SubjectUpdateInput, where: SubjectWhereUniqueInput }  ,
       context: core.GetGen<"context">,
       info?: GraphQLResolveInfo
-    ) => Promise<prisma.Post | null> | prisma.Post | null
+    ) => Promise<prisma.Subject | null> | prisma.Subject | null
   }
-  updateManyPosts: {
+  updateManySubjects: {
     type: 'BatchPayload'
-    args: Record<MutationUpdateManyPostsArgs, core.NexusArgDef<string>>
+    args: Record<MutationUpdateManySubjectsArgs, core.NexusArgDef<string>>
     description: string
     list: undefined
     nullable: false
     resolve: (
       root: core.RootValue<"Mutation">,
-      args: { data: PostUpdateManyMutationInput, where?: PostWhereInput | null }  ,
+      args: { data: SubjectUpdateManyMutationInput, where?: SubjectWhereInput | null }  ,
       context: core.GetGen<"context">,
       info?: GraphQLResolveInfo
     ) => Promise<prisma.BatchPayload> | prisma.BatchPayload
   }
-  upsertPost: {
-    type: 'Post'
-    args: Record<MutationUpsertPostArgs, core.NexusArgDef<string>>
+  upsertSubject: {
+    type: 'Subject'
+    args: Record<MutationUpsertSubjectArgs, core.NexusArgDef<string>>
     description: string
     list: undefined
     nullable: false
     resolve: (
       root: core.RootValue<"Mutation">,
-      args: { where: PostWhereUniqueInput, create: PostCreateInput, update: PostUpdateInput }  ,
+      args: { where: SubjectWhereUniqueInput, create: SubjectCreateInput, update: SubjectUpdateInput }  ,
       context: core.GetGen<"context">,
       info?: GraphQLResolveInfo
-    ) => Promise<prisma.Post> | prisma.Post
+    ) => Promise<prisma.Subject> | prisma.Subject
   }
-  deletePost: {
-    type: 'Post'
-    args: Record<MutationDeletePostArgs, core.NexusArgDef<string>>
+  deleteSubject: {
+    type: 'Subject'
+    args: Record<MutationDeleteSubjectArgs, core.NexusArgDef<string>>
     description: string
     list: undefined
     nullable: true
     resolve: (
       root: core.RootValue<"Mutation">,
-      args: { where: PostWhereUniqueInput }  ,
+      args: { where: SubjectWhereUniqueInput }  ,
       context: core.GetGen<"context">,
       info?: GraphQLResolveInfo
-    ) => Promise<prisma.Post | null> | prisma.Post | null
+    ) => Promise<prisma.Subject | null> | prisma.Subject | null
   }
-  deleteManyPosts: {
+  deleteManySubjects: {
     type: 'BatchPayload'
-    args: Record<MutationDeleteManyPostsArgs, core.NexusArgDef<string>>
+    args: Record<MutationDeleteManySubjectsArgs, core.NexusArgDef<string>>
     description: string
     list: undefined
     nullable: false
     resolve: (
       root: core.RootValue<"Mutation">,
-      args: { where?: PostWhereInput | null }  ,
+      args: { where?: SubjectWhereInput | null }  ,
+      context: core.GetGen<"context">,
+      info?: GraphQLResolveInfo
+    ) => Promise<prisma.BatchPayload> | prisma.BatchPayload
+  }
+  createDegree: {
+    type: 'Degree'
+    args: Record<MutationCreateDegreeArgs, core.NexusArgDef<string>>
+    description: string
+    list: undefined
+    nullable: false
+    resolve: (
+      root: core.RootValue<"Mutation">,
+      args: { data: DegreeCreateInput }  ,
+      context: core.GetGen<"context">,
+      info?: GraphQLResolveInfo
+    ) => Promise<prisma.Degree> | prisma.Degree
+  }
+  updateDegree: {
+    type: 'Degree'
+    args: Record<MutationUpdateDegreeArgs, core.NexusArgDef<string>>
+    description: string
+    list: undefined
+    nullable: true
+    resolve: (
+      root: core.RootValue<"Mutation">,
+      args: { data: DegreeUpdateInput, where: DegreeWhereUniqueInput }  ,
+      context: core.GetGen<"context">,
+      info?: GraphQLResolveInfo
+    ) => Promise<prisma.Degree | null> | prisma.Degree | null
+  }
+  updateManyDegrees: {
+    type: 'BatchPayload'
+    args: Record<MutationUpdateManyDegreesArgs, core.NexusArgDef<string>>
+    description: string
+    list: undefined
+    nullable: false
+    resolve: (
+      root: core.RootValue<"Mutation">,
+      args: { data: DegreeUpdateManyMutationInput, where?: DegreeWhereInput | null }  ,
+      context: core.GetGen<"context">,
+      info?: GraphQLResolveInfo
+    ) => Promise<prisma.BatchPayload> | prisma.BatchPayload
+  }
+  upsertDegree: {
+    type: 'Degree'
+    args: Record<MutationUpsertDegreeArgs, core.NexusArgDef<string>>
+    description: string
+    list: undefined
+    nullable: false
+    resolve: (
+      root: core.RootValue<"Mutation">,
+      args: { where: DegreeWhereUniqueInput, create: DegreeCreateInput, update: DegreeUpdateInput }  ,
+      context: core.GetGen<"context">,
+      info?: GraphQLResolveInfo
+    ) => Promise<prisma.Degree> | prisma.Degree
+  }
+  deleteDegree: {
+    type: 'Degree'
+    args: Record<MutationDeleteDegreeArgs, core.NexusArgDef<string>>
+    description: string
+    list: undefined
+    nullable: true
+    resolve: (
+      root: core.RootValue<"Mutation">,
+      args: { where: DegreeWhereUniqueInput }  ,
+      context: core.GetGen<"context">,
+      info?: GraphQLResolveInfo
+    ) => Promise<prisma.Degree | null> | prisma.Degree | null
+  }
+  deleteManyDegrees: {
+    type: 'BatchPayload'
+    args: Record<MutationDeleteManyDegreesArgs, core.NexusArgDef<string>>
+    description: string
+    list: undefined
+    nullable: false
+    resolve: (
+      root: core.RootValue<"Mutation">,
+      args: { where?: DegreeWhereInput | null }  ,
+      context: core.GetGen<"context">,
+      info?: GraphQLResolveInfo
+    ) => Promise<prisma.BatchPayload> | prisma.BatchPayload
+  }
+  createDepartment: {
+    type: 'Department'
+    args: Record<MutationCreateDepartmentArgs, core.NexusArgDef<string>>
+    description: string
+    list: undefined
+    nullable: false
+    resolve: (
+      root: core.RootValue<"Mutation">,
+      args: { data: DepartmentCreateInput }  ,
+      context: core.GetGen<"context">,
+      info?: GraphQLResolveInfo
+    ) => Promise<prisma.Department> | prisma.Department
+  }
+  updateDepartment: {
+    type: 'Department'
+    args: Record<MutationUpdateDepartmentArgs, core.NexusArgDef<string>>
+    description: string
+    list: undefined
+    nullable: true
+    resolve: (
+      root: core.RootValue<"Mutation">,
+      args: { data: DepartmentUpdateInput, where: DepartmentWhereUniqueInput }  ,
+      context: core.GetGen<"context">,
+      info?: GraphQLResolveInfo
+    ) => Promise<prisma.Department | null> | prisma.Department | null
+  }
+  updateManyDepartments: {
+    type: 'BatchPayload'
+    args: Record<MutationUpdateManyDepartmentsArgs, core.NexusArgDef<string>>
+    description: string
+    list: undefined
+    nullable: false
+    resolve: (
+      root: core.RootValue<"Mutation">,
+      args: { data: DepartmentUpdateManyMutationInput, where?: DepartmentWhereInput | null }  ,
+      context: core.GetGen<"context">,
+      info?: GraphQLResolveInfo
+    ) => Promise<prisma.BatchPayload> | prisma.BatchPayload
+  }
+  upsertDepartment: {
+    type: 'Department'
+    args: Record<MutationUpsertDepartmentArgs, core.NexusArgDef<string>>
+    description: string
+    list: undefined
+    nullable: false
+    resolve: (
+      root: core.RootValue<"Mutation">,
+      args: { where: DepartmentWhereUniqueInput, create: DepartmentCreateInput, update: DepartmentUpdateInput }  ,
+      context: core.GetGen<"context">,
+      info?: GraphQLResolveInfo
+    ) => Promise<prisma.Department> | prisma.Department
+  }
+  deleteDepartment: {
+    type: 'Department'
+    args: Record<MutationDeleteDepartmentArgs, core.NexusArgDef<string>>
+    description: string
+    list: undefined
+    nullable: true
+    resolve: (
+      root: core.RootValue<"Mutation">,
+      args: { where: DepartmentWhereUniqueInput }  ,
+      context: core.GetGen<"context">,
+      info?: GraphQLResolveInfo
+    ) => Promise<prisma.Department | null> | prisma.Department | null
+  }
+  deleteManyDepartments: {
+    type: 'BatchPayload'
+    args: Record<MutationDeleteManyDepartmentsArgs, core.NexusArgDef<string>>
+    description: string
+    list: undefined
+    nullable: false
+    resolve: (
+      root: core.RootValue<"Mutation">,
+      args: { where?: DepartmentWhereInput | null }  ,
+      context: core.GetGen<"context">,
+      info?: GraphQLResolveInfo
+    ) => Promise<prisma.BatchPayload> | prisma.BatchPayload
+  }
+  createCourse: {
+    type: 'Course'
+    args: Record<MutationCreateCourseArgs, core.NexusArgDef<string>>
+    description: string
+    list: undefined
+    nullable: false
+    resolve: (
+      root: core.RootValue<"Mutation">,
+      args: { data: CourseCreateInput }  ,
+      context: core.GetGen<"context">,
+      info?: GraphQLResolveInfo
+    ) => Promise<prisma.Course> | prisma.Course
+  }
+  updateCourse: {
+    type: 'Course'
+    args: Record<MutationUpdateCourseArgs, core.NexusArgDef<string>>
+    description: string
+    list: undefined
+    nullable: true
+    resolve: (
+      root: core.RootValue<"Mutation">,
+      args: { data: CourseUpdateInput, where: CourseWhereUniqueInput }  ,
+      context: core.GetGen<"context">,
+      info?: GraphQLResolveInfo
+    ) => Promise<prisma.Course | null> | prisma.Course | null
+  }
+  updateManyCourses: {
+    type: 'BatchPayload'
+    args: Record<MutationUpdateManyCoursesArgs, core.NexusArgDef<string>>
+    description: string
+    list: undefined
+    nullable: false
+    resolve: (
+      root: core.RootValue<"Mutation">,
+      args: { data: CourseUpdateManyMutationInput, where?: CourseWhereInput | null }  ,
+      context: core.GetGen<"context">,
+      info?: GraphQLResolveInfo
+    ) => Promise<prisma.BatchPayload> | prisma.BatchPayload
+  }
+  upsertCourse: {
+    type: 'Course'
+    args: Record<MutationUpsertCourseArgs, core.NexusArgDef<string>>
+    description: string
+    list: undefined
+    nullable: false
+    resolve: (
+      root: core.RootValue<"Mutation">,
+      args: { where: CourseWhereUniqueInput, create: CourseCreateInput, update: CourseUpdateInput }  ,
+      context: core.GetGen<"context">,
+      info?: GraphQLResolveInfo
+    ) => Promise<prisma.Course> | prisma.Course
+  }
+  deleteCourse: {
+    type: 'Course'
+    args: Record<MutationDeleteCourseArgs, core.NexusArgDef<string>>
+    description: string
+    list: undefined
+    nullable: true
+    resolve: (
+      root: core.RootValue<"Mutation">,
+      args: { where: CourseWhereUniqueInput }  ,
+      context: core.GetGen<"context">,
+      info?: GraphQLResolveInfo
+    ) => Promise<prisma.Course | null> | prisma.Course | null
+  }
+  deleteManyCourses: {
+    type: 'BatchPayload'
+    args: Record<MutationDeleteManyCoursesArgs, core.NexusArgDef<string>>
+    description: string
+    list: undefined
+    nullable: false
+    resolve: (
+      root: core.RootValue<"Mutation">,
+      args: { where?: CourseWhereInput | null }  ,
       context: core.GetGen<"context">,
       info?: GraphQLResolveInfo
     ) => Promise<prisma.BatchPayload> | prisma.BatchPayload
@@ -946,60 +2049,111 @@ export interface BatchPayloadFieldDetails {
 
 type SubscriptionObject =
   | SubscriptionFields
-  | { name: 'user', args?: SubscriptionUserArgs[] | false, alias?: string  } 
-  | { name: 'post', args?: SubscriptionPostArgs[] | false, alias?: string  } 
+  | { name: 'student', args?: SubscriptionStudentArgs[] | false, alias?: string  } 
+  | { name: 'subject', args?: SubscriptionSubjectArgs[] | false, alias?: string  } 
+  | { name: 'degree', args?: SubscriptionDegreeArgs[] | false, alias?: string  } 
+  | { name: 'department', args?: SubscriptionDepartmentArgs[] | false, alias?: string  } 
+  | { name: 'course', args?: SubscriptionCourseArgs[] | false, alias?: string  } 
 
 type SubscriptionFields =
-  | 'user'
-  | 'post'
+  | 'student'
+  | 'subject'
+  | 'degree'
+  | 'department'
+  | 'course'
 
 
-type SubscriptionUserArgs =
+type SubscriptionStudentArgs =
   | 'where'
-type SubscriptionPostArgs =
+type SubscriptionSubjectArgs =
+  | 'where'
+type SubscriptionDegreeArgs =
+  | 'where'
+type SubscriptionDepartmentArgs =
+  | 'where'
+type SubscriptionCourseArgs =
   | 'where'
   
 
 export interface SubscriptionFieldDetails {
-  user: {
-    type: 'UserSubscriptionPayload'
-    args: Record<SubscriptionUserArgs, core.NexusArgDef<string>>
+  student: {
+    type: 'StudentSubscriptionPayload'
+    args: Record<SubscriptionStudentArgs, core.NexusArgDef<string>>
     description: string
     list: undefined
     nullable: true
     resolve: (
       root: core.RootValue<"Subscription">,
-      args: { where?: UserSubscriptionWhereInput | null }  ,
+      args: { where?: StudentSubscriptionWhereInput | null }  ,
       context: core.GetGen<"context">,
       info?: GraphQLResolveInfo
-    ) => Promise<prisma.UserSubscriptionPayload | null> | prisma.UserSubscriptionPayload | null
+    ) => Promise<prisma.StudentSubscriptionPayload | null> | prisma.StudentSubscriptionPayload | null
   }
-  post: {
-    type: 'PostSubscriptionPayload'
-    args: Record<SubscriptionPostArgs, core.NexusArgDef<string>>
+  subject: {
+    type: 'SubjectSubscriptionPayload'
+    args: Record<SubscriptionSubjectArgs, core.NexusArgDef<string>>
     description: string
     list: undefined
     nullable: true
     resolve: (
       root: core.RootValue<"Subscription">,
-      args: { where?: PostSubscriptionWhereInput | null }  ,
+      args: { where?: SubjectSubscriptionWhereInput | null }  ,
       context: core.GetGen<"context">,
       info?: GraphQLResolveInfo
-    ) => Promise<prisma.PostSubscriptionPayload | null> | prisma.PostSubscriptionPayload | null
+    ) => Promise<prisma.SubjectSubscriptionPayload | null> | prisma.SubjectSubscriptionPayload | null
+  }
+  degree: {
+    type: 'DegreeSubscriptionPayload'
+    args: Record<SubscriptionDegreeArgs, core.NexusArgDef<string>>
+    description: string
+    list: undefined
+    nullable: true
+    resolve: (
+      root: core.RootValue<"Subscription">,
+      args: { where?: DegreeSubscriptionWhereInput | null }  ,
+      context: core.GetGen<"context">,
+      info?: GraphQLResolveInfo
+    ) => Promise<prisma.DegreeSubscriptionPayload | null> | prisma.DegreeSubscriptionPayload | null
+  }
+  department: {
+    type: 'DepartmentSubscriptionPayload'
+    args: Record<SubscriptionDepartmentArgs, core.NexusArgDef<string>>
+    description: string
+    list: undefined
+    nullable: true
+    resolve: (
+      root: core.RootValue<"Subscription">,
+      args: { where?: DepartmentSubscriptionWhereInput | null }  ,
+      context: core.GetGen<"context">,
+      info?: GraphQLResolveInfo
+    ) => Promise<prisma.DepartmentSubscriptionPayload | null> | prisma.DepartmentSubscriptionPayload | null
+  }
+  course: {
+    type: 'CourseSubscriptionPayload'
+    args: Record<SubscriptionCourseArgs, core.NexusArgDef<string>>
+    description: string
+    list: undefined
+    nullable: true
+    resolve: (
+      root: core.RootValue<"Subscription">,
+      args: { where?: CourseSubscriptionWhereInput | null }  ,
+      context: core.GetGen<"context">,
+      info?: GraphQLResolveInfo
+    ) => Promise<prisma.CourseSubscriptionPayload | null> | prisma.CourseSubscriptionPayload | null
   }
 }
   
 
-// Types for UserSubscriptionPayload
+// Types for StudentSubscriptionPayload
 
-type UserSubscriptionPayloadObject =
-  | UserSubscriptionPayloadFields
+type StudentSubscriptionPayloadObject =
+  | StudentSubscriptionPayloadFields
   | { name: 'mutation', args?: [] | false, alias?: string  } 
   | { name: 'node', args?: [] | false, alias?: string  } 
   | { name: 'updatedFields', args?: [] | false, alias?: string  } 
   | { name: 'previousValues', args?: [] | false, alias?: string  } 
 
-type UserSubscriptionPayloadFields =
+type StudentSubscriptionPayloadFields =
   | 'mutation'
   | 'node'
   | 'updatedFields'
@@ -1009,7 +2163,7 @@ type UserSubscriptionPayloadFields =
 
   
 
-export interface UserSubscriptionPayloadFieldDetails {
+export interface StudentSubscriptionPayloadFieldDetails {
   mutation: {
     type: 'MutationType'
     args: {}
@@ -1017,24 +2171,24 @@ export interface UserSubscriptionPayloadFieldDetails {
     list: undefined
     nullable: false
     resolve: (
-      root: core.RootValue<"UserSubscriptionPayload">,
+      root: core.RootValue<"StudentSubscriptionPayload">,
       args: {  }  ,
       context: core.GetGen<"context">,
       info?: GraphQLResolveInfo
     ) => Promise<prisma.MutationType> | prisma.MutationType
   }
   node: {
-    type: 'User'
+    type: 'Student'
     args: {}
     description: string
     list: undefined
     nullable: true
     resolve: (
-      root: core.RootValue<"UserSubscriptionPayload">,
+      root: core.RootValue<"StudentSubscriptionPayload">,
       args: {  }  ,
       context: core.GetGen<"context">,
       info?: GraphQLResolveInfo
-    ) => Promise<prisma.User | null> | prisma.User | null
+    ) => Promise<prisma.Student | null> | prisma.Student | null
   }
   updatedFields: {
     type: 'String'
@@ -1045,49 +2199,39 @@ export interface UserSubscriptionPayloadFieldDetails {
     resolve: undefined
   }
   previousValues: {
-    type: 'UserPreviousValues'
+    type: 'StudentPreviousValues'
     args: {}
     description: string
     list: undefined
     nullable: true
     resolve: (
-      root: core.RootValue<"UserSubscriptionPayload">,
+      root: core.RootValue<"StudentSubscriptionPayload">,
       args: {  }  ,
       context: core.GetGen<"context">,
       info?: GraphQLResolveInfo
-    ) => Promise<prisma.UserPreviousValues | null> | prisma.UserPreviousValues | null
+    ) => Promise<prisma.StudentPreviousValues | null> | prisma.StudentPreviousValues | null
   }
 }
   
 
-// Types for UserPreviousValues
+// Types for StudentPreviousValues
 
-type UserPreviousValuesObject =
-  | UserPreviousValuesFields
+type StudentPreviousValuesObject =
+  | StudentPreviousValuesFields
   | { name: 'id', args?: [] | false, alias?: string  } 
-  | { name: 'email', args?: [] | false, alias?: string  } 
   | { name: 'name', args?: [] | false, alias?: string  } 
 
-type UserPreviousValuesFields =
+type StudentPreviousValuesFields =
   | 'id'
-  | 'email'
   | 'name'
 
 
 
   
 
-export interface UserPreviousValuesFieldDetails {
+export interface StudentPreviousValuesFieldDetails {
   id: {
     type: 'ID'
-    args: {}
-    description: string
-    list: undefined
-    nullable: false
-    resolve: undefined
-  }
-  email: {
-    type: 'String'
     args: {}
     description: string
     list: undefined
@@ -1105,16 +2249,16 @@ export interface UserPreviousValuesFieldDetails {
 }
   
 
-// Types for PostSubscriptionPayload
+// Types for SubjectSubscriptionPayload
 
-type PostSubscriptionPayloadObject =
-  | PostSubscriptionPayloadFields
+type SubjectSubscriptionPayloadObject =
+  | SubjectSubscriptionPayloadFields
   | { name: 'mutation', args?: [] | false, alias?: string  } 
   | { name: 'node', args?: [] | false, alias?: string  } 
   | { name: 'updatedFields', args?: [] | false, alias?: string  } 
   | { name: 'previousValues', args?: [] | false, alias?: string  } 
 
-type PostSubscriptionPayloadFields =
+type SubjectSubscriptionPayloadFields =
   | 'mutation'
   | 'node'
   | 'updatedFields'
@@ -1124,7 +2268,7 @@ type PostSubscriptionPayloadFields =
 
   
 
-export interface PostSubscriptionPayloadFieldDetails {
+export interface SubjectSubscriptionPayloadFieldDetails {
   mutation: {
     type: 'MutationType'
     args: {}
@@ -1132,24 +2276,24 @@ export interface PostSubscriptionPayloadFieldDetails {
     list: undefined
     nullable: false
     resolve: (
-      root: core.RootValue<"PostSubscriptionPayload">,
+      root: core.RootValue<"SubjectSubscriptionPayload">,
       args: {  }  ,
       context: core.GetGen<"context">,
       info?: GraphQLResolveInfo
     ) => Promise<prisma.MutationType> | prisma.MutationType
   }
   node: {
-    type: 'Post'
+    type: 'Subject'
     args: {}
     description: string
     list: undefined
     nullable: true
     resolve: (
-      root: core.RootValue<"PostSubscriptionPayload">,
+      root: core.RootValue<"SubjectSubscriptionPayload">,
       args: {  }  ,
       context: core.GetGen<"context">,
       info?: GraphQLResolveInfo
-    ) => Promise<prisma.Post | null> | prisma.Post | null
+    ) => Promise<prisma.Subject | null> | prisma.Subject | null
   }
   updatedFields: {
     type: 'String'
@@ -1160,45 +2304,37 @@ export interface PostSubscriptionPayloadFieldDetails {
     resolve: undefined
   }
   previousValues: {
-    type: 'PostPreviousValues'
+    type: 'SubjectPreviousValues'
     args: {}
     description: string
     list: undefined
     nullable: true
     resolve: (
-      root: core.RootValue<"PostSubscriptionPayload">,
+      root: core.RootValue<"SubjectSubscriptionPayload">,
       args: {  }  ,
       context: core.GetGen<"context">,
       info?: GraphQLResolveInfo
-    ) => Promise<prisma.PostPreviousValues | null> | prisma.PostPreviousValues | null
+    ) => Promise<prisma.SubjectPreviousValues | null> | prisma.SubjectPreviousValues | null
   }
 }
   
 
-// Types for PostPreviousValues
+// Types for SubjectPreviousValues
 
-type PostPreviousValuesObject =
-  | PostPreviousValuesFields
+type SubjectPreviousValuesObject =
+  | SubjectPreviousValuesFields
   | { name: 'id', args?: [] | false, alias?: string  } 
-  | { name: 'createdAt', args?: [] | false, alias?: string  } 
-  | { name: 'updatedAt', args?: [] | false, alias?: string  } 
-  | { name: 'published', args?: [] | false, alias?: string  } 
-  | { name: 'title', args?: [] | false, alias?: string  } 
-  | { name: 'content', args?: [] | false, alias?: string  } 
+  | { name: 'name', args?: [] | false, alias?: string  } 
 
-type PostPreviousValuesFields =
+type SubjectPreviousValuesFields =
   | 'id'
-  | 'createdAt'
-  | 'updatedAt'
-  | 'published'
-  | 'title'
-  | 'content'
+  | 'name'
 
 
 
   
 
-export interface PostPreviousValuesFieldDetails {
+export interface SubjectPreviousValuesFieldDetails {
   id: {
     type: 'ID'
     args: {}
@@ -1207,31 +2343,7 @@ export interface PostPreviousValuesFieldDetails {
     nullable: false
     resolve: undefined
   }
-  createdAt: {
-    type: 'DateTime'
-    args: {}
-    description: string
-    list: undefined
-    nullable: false
-    resolve: undefined
-  }
-  updatedAt: {
-    type: 'DateTime'
-    args: {}
-    description: string
-    list: undefined
-    nullable: false
-    resolve: undefined
-  }
-  published: {
-    type: 'Boolean'
-    args: {}
-    description: string
-    list: undefined
-    nullable: false
-    resolve: undefined
-  }
-  title: {
+  name: {
     type: 'String'
     args: {}
     description: string
@@ -1239,28 +2351,373 @@ export interface PostPreviousValuesFieldDetails {
     nullable: false
     resolve: undefined
   }
-  content: {
-    type: 'String'
+}
+  
+
+// Types for DegreeSubscriptionPayload
+
+type DegreeSubscriptionPayloadObject =
+  | DegreeSubscriptionPayloadFields
+  | { name: 'mutation', args?: [] | false, alias?: string  } 
+  | { name: 'node', args?: [] | false, alias?: string  } 
+  | { name: 'updatedFields', args?: [] | false, alias?: string  } 
+  | { name: 'previousValues', args?: [] | false, alias?: string  } 
+
+type DegreeSubscriptionPayloadFields =
+  | 'mutation'
+  | 'node'
+  | 'updatedFields'
+  | 'previousValues'
+
+
+
+  
+
+export interface DegreeSubscriptionPayloadFieldDetails {
+  mutation: {
+    type: 'MutationType'
+    args: {}
+    description: string
+    list: undefined
+    nullable: false
+    resolve: (
+      root: core.RootValue<"DegreeSubscriptionPayload">,
+      args: {  }  ,
+      context: core.GetGen<"context">,
+      info?: GraphQLResolveInfo
+    ) => Promise<prisma.MutationType> | prisma.MutationType
+  }
+  node: {
+    type: 'Degree'
     args: {}
     description: string
     list: undefined
     nullable: true
+    resolve: (
+      root: core.RootValue<"DegreeSubscriptionPayload">,
+      args: {  }  ,
+      context: core.GetGen<"context">,
+      info?: GraphQLResolveInfo
+    ) => Promise<prisma.Degree | null> | prisma.Degree | null
+  }
+  updatedFields: {
+    type: 'String'
+    args: {}
+    description: string
+    list: true
+    nullable: false
+    resolve: undefined
+  }
+  previousValues: {
+    type: 'DegreePreviousValues'
+    args: {}
+    description: string
+    list: undefined
+    nullable: true
+    resolve: (
+      root: core.RootValue<"DegreeSubscriptionPayload">,
+      args: {  }  ,
+      context: core.GetGen<"context">,
+      info?: GraphQLResolveInfo
+    ) => Promise<prisma.DegreePreviousValues | null> | prisma.DegreePreviousValues | null
+  }
+}
+  
+
+// Types for DegreePreviousValues
+
+type DegreePreviousValuesObject =
+  | DegreePreviousValuesFields
+  | { name: 'id', args?: [] | false, alias?: string  } 
+  | { name: 'name', args?: [] | false, alias?: string  } 
+  | { name: 'requiredCredits', args?: [] | false, alias?: string  } 
+
+type DegreePreviousValuesFields =
+  | 'id'
+  | 'name'
+  | 'requiredCredits'
+
+
+
+  
+
+export interface DegreePreviousValuesFieldDetails {
+  id: {
+    type: 'ID'
+    args: {}
+    description: string
+    list: undefined
+    nullable: false
+    resolve: undefined
+  }
+  name: {
+    type: 'String'
+    args: {}
+    description: string
+    list: undefined
+    nullable: false
+    resolve: undefined
+  }
+  requiredCredits: {
+    type: 'Int'
+    args: {}
+    description: string
+    list: undefined
+    nullable: false
+    resolve: undefined
+  }
+}
+  
+
+// Types for DepartmentSubscriptionPayload
+
+type DepartmentSubscriptionPayloadObject =
+  | DepartmentSubscriptionPayloadFields
+  | { name: 'mutation', args?: [] | false, alias?: string  } 
+  | { name: 'node', args?: [] | false, alias?: string  } 
+  | { name: 'updatedFields', args?: [] | false, alias?: string  } 
+  | { name: 'previousValues', args?: [] | false, alias?: string  } 
+
+type DepartmentSubscriptionPayloadFields =
+  | 'mutation'
+  | 'node'
+  | 'updatedFields'
+  | 'previousValues'
+
+
+
+  
+
+export interface DepartmentSubscriptionPayloadFieldDetails {
+  mutation: {
+    type: 'MutationType'
+    args: {}
+    description: string
+    list: undefined
+    nullable: false
+    resolve: (
+      root: core.RootValue<"DepartmentSubscriptionPayload">,
+      args: {  }  ,
+      context: core.GetGen<"context">,
+      info?: GraphQLResolveInfo
+    ) => Promise<prisma.MutationType> | prisma.MutationType
+  }
+  node: {
+    type: 'Department'
+    args: {}
+    description: string
+    list: undefined
+    nullable: true
+    resolve: (
+      root: core.RootValue<"DepartmentSubscriptionPayload">,
+      args: {  }  ,
+      context: core.GetGen<"context">,
+      info?: GraphQLResolveInfo
+    ) => Promise<prisma.Department | null> | prisma.Department | null
+  }
+  updatedFields: {
+    type: 'String'
+    args: {}
+    description: string
+    list: true
+    nullable: false
+    resolve: undefined
+  }
+  previousValues: {
+    type: 'DepartmentPreviousValues'
+    args: {}
+    description: string
+    list: undefined
+    nullable: true
+    resolve: (
+      root: core.RootValue<"DepartmentSubscriptionPayload">,
+      args: {  }  ,
+      context: core.GetGen<"context">,
+      info?: GraphQLResolveInfo
+    ) => Promise<prisma.DepartmentPreviousValues | null> | prisma.DepartmentPreviousValues | null
+  }
+}
+  
+
+// Types for DepartmentPreviousValues
+
+type DepartmentPreviousValuesObject =
+  | DepartmentPreviousValuesFields
+  | { name: 'id', args?: [] | false, alias?: string  } 
+  | { name: 'name', args?: [] | false, alias?: string  } 
+
+type DepartmentPreviousValuesFields =
+  | 'id'
+  | 'name'
+
+
+
+  
+
+export interface DepartmentPreviousValuesFieldDetails {
+  id: {
+    type: 'ID'
+    args: {}
+    description: string
+    list: undefined
+    nullable: false
+    resolve: undefined
+  }
+  name: {
+    type: 'String'
+    args: {}
+    description: string
+    list: undefined
+    nullable: false
+    resolve: undefined
+  }
+}
+  
+
+// Types for CourseSubscriptionPayload
+
+type CourseSubscriptionPayloadObject =
+  | CourseSubscriptionPayloadFields
+  | { name: 'mutation', args?: [] | false, alias?: string  } 
+  | { name: 'node', args?: [] | false, alias?: string  } 
+  | { name: 'updatedFields', args?: [] | false, alias?: string  } 
+  | { name: 'previousValues', args?: [] | false, alias?: string  } 
+
+type CourseSubscriptionPayloadFields =
+  | 'mutation'
+  | 'node'
+  | 'updatedFields'
+  | 'previousValues'
+
+
+
+  
+
+export interface CourseSubscriptionPayloadFieldDetails {
+  mutation: {
+    type: 'MutationType'
+    args: {}
+    description: string
+    list: undefined
+    nullable: false
+    resolve: (
+      root: core.RootValue<"CourseSubscriptionPayload">,
+      args: {  }  ,
+      context: core.GetGen<"context">,
+      info?: GraphQLResolveInfo
+    ) => Promise<prisma.MutationType> | prisma.MutationType
+  }
+  node: {
+    type: 'Course'
+    args: {}
+    description: string
+    list: undefined
+    nullable: true
+    resolve: (
+      root: core.RootValue<"CourseSubscriptionPayload">,
+      args: {  }  ,
+      context: core.GetGen<"context">,
+      info?: GraphQLResolveInfo
+    ) => Promise<prisma.Course | null> | prisma.Course | null
+  }
+  updatedFields: {
+    type: 'String'
+    args: {}
+    description: string
+    list: true
+    nullable: false
+    resolve: undefined
+  }
+  previousValues: {
+    type: 'CoursePreviousValues'
+    args: {}
+    description: string
+    list: undefined
+    nullable: true
+    resolve: (
+      root: core.RootValue<"CourseSubscriptionPayload">,
+      args: {  }  ,
+      context: core.GetGen<"context">,
+      info?: GraphQLResolveInfo
+    ) => Promise<prisma.CoursePreviousValues | null> | prisma.CoursePreviousValues | null
+  }
+}
+  
+
+// Types for CoursePreviousValues
+
+type CoursePreviousValuesObject =
+  | CoursePreviousValuesFields
+  | { name: 'id', args?: [] | false, alias?: string  } 
+  | { name: 'name', args?: [] | false, alias?: string  } 
+  | { name: 'number', args?: [] | false, alias?: string  } 
+  | { name: 'level', args?: [] | false, alias?: string  } 
+  | { name: 'credits', args?: [] | false, alias?: string  } 
+
+type CoursePreviousValuesFields =
+  | 'id'
+  | 'name'
+  | 'number'
+  | 'level'
+  | 'credits'
+
+
+
+  
+
+export interface CoursePreviousValuesFieldDetails {
+  id: {
+    type: 'ID'
+    args: {}
+    description: string
+    list: undefined
+    nullable: false
+    resolve: undefined
+  }
+  name: {
+    type: 'String'
+    args: {}
+    description: string
+    list: undefined
+    nullable: false
+    resolve: undefined
+  }
+  number: {
+    type: 'String'
+    args: {}
+    description: string
+    list: undefined
+    nullable: false
+    resolve: undefined
+  }
+  level: {
+    type: 'Int'
+    args: {}
+    description: string
+    list: undefined
+    nullable: false
+    resolve: undefined
+  }
+  credits: {
+    type: 'Int'
+    args: {}
+    description: string
+    list: undefined
+    nullable: false
     resolve: undefined
   }
 }
   
 
 
-export interface UserWhereUniqueInput {
+export interface StudentWhereUniqueInput {
   id?: string | null
-  email?: string | null
 }
-export type UserWhereUniqueInputInputObject =
-  | Extract<keyof UserWhereUniqueInput, string>
+export type StudentWhereUniqueInputInputObject =
+  | Extract<keyof StudentWhereUniqueInput, string>
   | { name: 'id', alias?: string  } 
-  | { name: 'email', alias?: string  } 
   
-export interface PostWhereInput {
+export interface CourseWhereInput {
   id?: string | null
   id_not?: string | null
   id_in?: string[]
@@ -1275,153 +2732,6 @@ export interface PostWhereInput {
   id_not_starts_with?: string | null
   id_ends_with?: string | null
   id_not_ends_with?: string | null
-  createdAt?: string | null
-  createdAt_not?: string | null
-  createdAt_in?: string[]
-  createdAt_not_in?: string[]
-  createdAt_lt?: string | null
-  createdAt_lte?: string | null
-  createdAt_gt?: string | null
-  createdAt_gte?: string | null
-  updatedAt?: string | null
-  updatedAt_not?: string | null
-  updatedAt_in?: string[]
-  updatedAt_not_in?: string[]
-  updatedAt_lt?: string | null
-  updatedAt_lte?: string | null
-  updatedAt_gt?: string | null
-  updatedAt_gte?: string | null
-  published?: boolean | null
-  published_not?: boolean | null
-  title?: string | null
-  title_not?: string | null
-  title_in?: string[]
-  title_not_in?: string[]
-  title_lt?: string | null
-  title_lte?: string | null
-  title_gt?: string | null
-  title_gte?: string | null
-  title_contains?: string | null
-  title_not_contains?: string | null
-  title_starts_with?: string | null
-  title_not_starts_with?: string | null
-  title_ends_with?: string | null
-  title_not_ends_with?: string | null
-  content?: string | null
-  content_not?: string | null
-  content_in?: string[]
-  content_not_in?: string[]
-  content_lt?: string | null
-  content_lte?: string | null
-  content_gt?: string | null
-  content_gte?: string | null
-  content_contains?: string | null
-  content_not_contains?: string | null
-  content_starts_with?: string | null
-  content_not_starts_with?: string | null
-  content_ends_with?: string | null
-  content_not_ends_with?: string | null
-  author?: UserWhereInput | null
-  AND?: PostWhereInput[]
-  OR?: PostWhereInput[]
-  NOT?: PostWhereInput[]
-}
-export type PostWhereInputInputObject =
-  | Extract<keyof PostWhereInput, string>
-  | { name: 'id', alias?: string  } 
-  | { name: 'id_not', alias?: string  } 
-  | { name: 'id_in', alias?: string  } 
-  | { name: 'id_not_in', alias?: string  } 
-  | { name: 'id_lt', alias?: string  } 
-  | { name: 'id_lte', alias?: string  } 
-  | { name: 'id_gt', alias?: string  } 
-  | { name: 'id_gte', alias?: string  } 
-  | { name: 'id_contains', alias?: string  } 
-  | { name: 'id_not_contains', alias?: string  } 
-  | { name: 'id_starts_with', alias?: string  } 
-  | { name: 'id_not_starts_with', alias?: string  } 
-  | { name: 'id_ends_with', alias?: string  } 
-  | { name: 'id_not_ends_with', alias?: string  } 
-  | { name: 'createdAt', alias?: string  } 
-  | { name: 'createdAt_not', alias?: string  } 
-  | { name: 'createdAt_in', alias?: string  } 
-  | { name: 'createdAt_not_in', alias?: string  } 
-  | { name: 'createdAt_lt', alias?: string  } 
-  | { name: 'createdAt_lte', alias?: string  } 
-  | { name: 'createdAt_gt', alias?: string  } 
-  | { name: 'createdAt_gte', alias?: string  } 
-  | { name: 'updatedAt', alias?: string  } 
-  | { name: 'updatedAt_not', alias?: string  } 
-  | { name: 'updatedAt_in', alias?: string  } 
-  | { name: 'updatedAt_not_in', alias?: string  } 
-  | { name: 'updatedAt_lt', alias?: string  } 
-  | { name: 'updatedAt_lte', alias?: string  } 
-  | { name: 'updatedAt_gt', alias?: string  } 
-  | { name: 'updatedAt_gte', alias?: string  } 
-  | { name: 'published', alias?: string  } 
-  | { name: 'published_not', alias?: string  } 
-  | { name: 'title', alias?: string  } 
-  | { name: 'title_not', alias?: string  } 
-  | { name: 'title_in', alias?: string  } 
-  | { name: 'title_not_in', alias?: string  } 
-  | { name: 'title_lt', alias?: string  } 
-  | { name: 'title_lte', alias?: string  } 
-  | { name: 'title_gt', alias?: string  } 
-  | { name: 'title_gte', alias?: string  } 
-  | { name: 'title_contains', alias?: string  } 
-  | { name: 'title_not_contains', alias?: string  } 
-  | { name: 'title_starts_with', alias?: string  } 
-  | { name: 'title_not_starts_with', alias?: string  } 
-  | { name: 'title_ends_with', alias?: string  } 
-  | { name: 'title_not_ends_with', alias?: string  } 
-  | { name: 'content', alias?: string  } 
-  | { name: 'content_not', alias?: string  } 
-  | { name: 'content_in', alias?: string  } 
-  | { name: 'content_not_in', alias?: string  } 
-  | { name: 'content_lt', alias?: string  } 
-  | { name: 'content_lte', alias?: string  } 
-  | { name: 'content_gt', alias?: string  } 
-  | { name: 'content_gte', alias?: string  } 
-  | { name: 'content_contains', alias?: string  } 
-  | { name: 'content_not_contains', alias?: string  } 
-  | { name: 'content_starts_with', alias?: string  } 
-  | { name: 'content_not_starts_with', alias?: string  } 
-  | { name: 'content_ends_with', alias?: string  } 
-  | { name: 'content_not_ends_with', alias?: string  } 
-  | { name: 'author', alias?: string  } 
-  | { name: 'AND', alias?: string  } 
-  | { name: 'OR', alias?: string  } 
-  | { name: 'NOT', alias?: string  } 
-  
-export interface UserWhereInput {
-  id?: string | null
-  id_not?: string | null
-  id_in?: string[]
-  id_not_in?: string[]
-  id_lt?: string | null
-  id_lte?: string | null
-  id_gt?: string | null
-  id_gte?: string | null
-  id_contains?: string | null
-  id_not_contains?: string | null
-  id_starts_with?: string | null
-  id_not_starts_with?: string | null
-  id_ends_with?: string | null
-  id_not_ends_with?: string | null
-  email?: string | null
-  email_not?: string | null
-  email_in?: string[]
-  email_not_in?: string[]
-  email_lt?: string | null
-  email_lte?: string | null
-  email_gt?: string | null
-  email_gte?: string | null
-  email_contains?: string | null
-  email_not_contains?: string | null
-  email_starts_with?: string | null
-  email_not_starts_with?: string | null
-  email_ends_with?: string | null
-  email_not_ends_with?: string | null
   name?: string | null
   name_not?: string | null
   name_in?: string[]
@@ -1436,15 +2746,46 @@ export interface UserWhereInput {
   name_not_starts_with?: string | null
   name_ends_with?: string | null
   name_not_ends_with?: string | null
-  posts_every?: PostWhereInput | null
-  posts_some?: PostWhereInput | null
-  posts_none?: PostWhereInput | null
-  AND?: UserWhereInput[]
-  OR?: UserWhereInput[]
-  NOT?: UserWhereInput[]
+  number?: string | null
+  number_not?: string | null
+  number_in?: string[]
+  number_not_in?: string[]
+  number_lt?: string | null
+  number_lte?: string | null
+  number_gt?: string | null
+  number_gte?: string | null
+  number_contains?: string | null
+  number_not_contains?: string | null
+  number_starts_with?: string | null
+  number_not_starts_with?: string | null
+  number_ends_with?: string | null
+  number_not_ends_with?: string | null
+  level?: number | null
+  level_not?: number | null
+  level_in?: number[]
+  level_not_in?: number[]
+  level_lt?: number | null
+  level_lte?: number | null
+  level_gt?: number | null
+  level_gte?: number | null
+  credits?: number | null
+  credits_not?: number | null
+  credits_in?: number[]
+  credits_not_in?: number[]
+  credits_lt?: number | null
+  credits_lte?: number | null
+  credits_gt?: number | null
+  credits_gte?: number | null
+  subject?: SubjectWhereInput | null
+  degree?: DegreeWhereInput | null
+  department?: DepartmentWhereInput | null
+  prerequisite?: CourseWhereInput | null
+  AND?: CourseWhereInput[]
+  OR?: CourseWhereInput[]
+  NOT?: CourseWhereInput[]
 }
-export type UserWhereInputInputObject =
-  | Extract<keyof UserWhereInput, string>
+export type CourseWhereInputInputObject =
+  | Extract<keyof CourseWhereInput, string>
   | { name: 'id', alias?: string  } 
   | { name: 'id_not', alias?: string  } 
   | { name: 'id_in', alias?: string  } 
@@ -1459,20 +2800,6 @@ export type UserWhereInputInputObject =
   | { name: 'id_not_starts_with', alias?: string  } 
   | { name: 'id_ends_with', alias?: string  } 
   | { name: 'id_not_ends_with', alias?: string  } 
-  | { name: 'email', alias?: string  } 
-  | { name: 'email_not', alias?: string  } 
-  | { name: 'email_in', alias?: string  } 
-  | { name: 'email_not_in', alias?: string  } 
-  | { name: 'email_lt', alias?: string  } 
-  | { name: 'email_lte', alias?: string  } 
-  | { name: 'email_gt', alias?: string  } 
-  | { name: 'email_gte', alias?: string  } 
-  | { name: 'email_contains', alias?: string  } 
-  | { name: 'email_not_contains', alias?: string  } 
-  | { name: 'email_starts_with', alias?: string  } 
-  | { name: 'email_not_starts_with', alias?: string  } 
-  | { name: 'email_ends_with', alias?: string  } 
-  | { name: 'email_not_ends_with', alias?: string  } 
   | { name: 'name', alias?: string  } 
   | { name: 'name_not', alias?: string  } 
   | { name: 'name_in', alias?: string  } 
@@ -1487,117 +2814,45 @@ export type UserWhereInputInputObject =
   | { name: 'name_not_starts_with', alias?: string  } 
   | { name: 'name_ends_with', alias?: string  } 
   | { name: 'name_not_ends_with', alias?: string  } 
-  | { name: 'posts_every', alias?: string  } 
-  | { name: 'posts_some', alias?: string  } 
-  | { name: 'posts_none', alias?: string  } 
+  | { name: 'number', alias?: string  } 
+  | { name: 'number_not', alias?: string  } 
+  | { name: 'number_in', alias?: string  } 
+  | { name: 'number_not_in', alias?: string  } 
+  | { name: 'number_lt', alias?: string  } 
+  | { name: 'number_lte', alias?: string  } 
+  | { name: 'number_gt', alias?: string  } 
+  | { name: 'number_gte', alias?: string  } 
+  | { name: 'number_contains', alias?: string  } 
+  | { name: 'number_not_contains', alias?: string  } 
+  | { name: 'number_starts_with', alias?: string  } 
+  | { name: 'number_not_starts_with', alias?: string  } 
+  | { name: 'number_ends_with', alias?: string  } 
+  | { name: 'number_not_ends_with', alias?: string  } 
+  | { name: 'level', alias?: string  } 
+  | { name: 'level_not', alias?: string  } 
+  | { name: 'level_in', alias?: string  } 
+  | { name: 'level_not_in', alias?: string  } 
+  | { name: 'level_lt', alias?: string  } 
+  | { name: 'level_lte', alias?: string  } 
+  | { name: 'level_gt', alias?: string  } 
+  | { name: 'level_gte', alias?: string  } 
+  | { name: 'credits', alias?: string  } 
+  | { name: 'credits_not', alias?: string  } 
+  | { name: 'credits_in', alias?: string  } 
+  | { name: 'credits_not_in', alias?: string  } 
+  | { name: 'credits_lt', alias?: string  } 
+  | { name: 'credits_lte', alias?: string  } 
+  | { name: 'credits_gt', alias?: string  } 
+  | { name: 'credits_gte', alias?: string  } 
+  | { name: 'subject', alias?: string  } 
+  | { name: 'degree', alias?: string  } 
+  | { name: 'department', alias?: string  } 
+  | { name: 'prerequisite', alias?: string  } 
   | { name: 'AND', alias?: string  } 
   | { name: 'OR', alias?: string  } 
   | { name: 'NOT', alias?: string  } 
   
-export interface PostWhereUniqueInput {
-  id?: string | null
-}
-export type PostWhereUniqueInputInputObject =
-  | Extract<keyof PostWhereUniqueInput, string>
-  | { name: 'id', alias?: string  } 
-  
-export interface UserCreateInput {
-  email?: string
-  name?: string | null
-  posts?: PostCreateManyWithoutAuthorInput | null
-}
-export type UserCreateInputInputObject =
-  | Extract<keyof UserCreateInput, string>
-  | { name: 'email', alias?: string  } 
-  | { name: 'name', alias?: string  } 
-  | { name: 'posts', alias?: string  } 
-  
-export interface PostCreateManyWithoutAuthorInput {
-  create?: PostCreateWithoutAuthorInput[]
-  connect?: PostWhereUniqueInput[]
-}
-export type PostCreateManyWithoutAuthorInputInputObject =
-  | Extract<keyof PostCreateManyWithoutAuthorInput, string>
-  | { name: 'create', alias?: string  } 
-  | { name: 'connect', alias?: string  } 
-  
-export interface PostCreateWithoutAuthorInput {
-  published?: boolean | null
-  title?: string
-  content?: string | null
-}
-export type PostCreateWithoutAuthorInputInputObject =
-  | Extract<keyof PostCreateWithoutAuthorInput, string>
-  | { name: 'published', alias?: string  } 
-  | { name: 'title', alias?: string  } 
-  | { name: 'content', alias?: string  } 
-  
-export interface UserUpdateInput {
-  email?: string | null
-  name?: string | null
-  posts?: PostUpdateManyWithoutAuthorInput | null
-}
-export type UserUpdateInputInputObject =
-  | Extract<keyof UserUpdateInput, string>
-  | { name: 'email', alias?: string  } 
-  | { name: 'name', alias?: string  } 
-  | { name: 'posts', alias?: string  } 
-  
-export interface PostUpdateManyWithoutAuthorInput {
-  create?: PostCreateWithoutAuthorInput[]
-  delete?: PostWhereUniqueInput[]
-  connect?: PostWhereUniqueInput[]
-  set?: PostWhereUniqueInput[]
-  disconnect?: PostWhereUniqueInput[]
-  update?: PostUpdateWithWhereUniqueWithoutAuthorInput[]
-  upsert?: PostUpsertWithWhereUniqueWithoutAuthorInput[]
-  deleteMany?: PostScalarWhereInput[]
-  updateMany?: PostUpdateManyWithWhereNestedInput[]
-}
-export type PostUpdateManyWithoutAuthorInputInputObject =
-  | Extract<keyof PostUpdateManyWithoutAuthorInput, string>
-  | { name: 'create', alias?: string  } 
-  | { name: 'delete', alias?: string  } 
-  | { name: 'connect', alias?: string  } 
-  | { name: 'set', alias?: string  } 
-  | { name: 'disconnect', alias?: string  } 
-  | { name: 'update', alias?: string  } 
-  | { name: 'upsert', alias?: string  } 
-  | { name: 'deleteMany', alias?: string  } 
-  | { name: 'updateMany', alias?: string  } 
-  
-export interface PostUpdateWithWhereUniqueWithoutAuthorInput {
-  where?: PostWhereUniqueInput
-  data?: PostUpdateWithoutAuthorDataInput
-}
-export type PostUpdateWithWhereUniqueWithoutAuthorInputInputObject =
-  | Extract<keyof PostUpdateWithWhereUniqueWithoutAuthorInput, string>
-  | { name: 'where', alias?: string  } 
-  | { name: 'data', alias?: string  } 
-  
-export interface PostUpdateWithoutAuthorDataInput {
-  published?: boolean | null
-  title?: string | null
-  content?: string | null
-}
-export type PostUpdateWithoutAuthorDataInputInputObject =
-  | Extract<keyof PostUpdateWithoutAuthorDataInput, string>
-  | { name: 'published', alias?: string  } 
-  | { name: 'title', alias?: string  } 
-  | { name: 'content', alias?: string  } 
-  
-export interface PostUpsertWithWhereUniqueWithoutAuthorInput {
-  where?: PostWhereUniqueInput
-  update?: PostUpdateWithoutAuthorDataInput
-  create?: PostCreateWithoutAuthorInput
-}
-export type PostUpsertWithWhereUniqueWithoutAuthorInputInputObject =
-  | Extract<keyof PostUpsertWithWhereUniqueWithoutAuthorInput, string>
-  | { name: 'where', alias?: string  } 
-  | { name: 'update', alias?: string  } 
-  | { name: 'create', alias?: string  } 
-  
-export interface PostScalarWhereInput {
+export interface SubjectWhereInput {
   id?: string | null
   id_not?: string | null
   id_in?: string[]
@@ -1612,58 +2867,26 @@ export interface PostScalarWhereInput {
   id_not_starts_with?: string | null
   id_ends_with?: string | null
   id_not_ends_with?: string | null
-  createdAt?: string | null
-  createdAt_not?: string | null
-  createdAt_in?: string[]
-  createdAt_not_in?: string[]
-  createdAt_lt?: string | null
-  createdAt_lte?: string | null
-  createdAt_gt?: string | null
-  createdAt_gte?: string | null
-  updatedAt?: string | null
-  updatedAt_not?: string | null
-  updatedAt_in?: string[]
-  updatedAt_not_in?: string[]
-  updatedAt_lt?: string | null
-  updatedAt_lte?: string | null
-  updatedAt_gt?: string | null
-  updatedAt_gte?: string | null
-  published?: boolean | null
-  published_not?: boolean | null
-  title?: string | null
-  title_not?: string | null
-  title_in?: string[]
-  title_not_in?: string[]
-  title_lt?: string | null
-  title_lte?: string | null
-  title_gt?: string | null
-  title_gte?: string | null
-  title_contains?: string | null
-  title_not_contains?: string | null
-  title_starts_with?: string | null
-  title_not_starts_with?: string | null
-  title_ends_with?: string | null
-  title_not_ends_with?: string | null
-  content?: string | null
-  content_not?: string | null
-  content_in?: string[]
-  content_not_in?: string[]
-  content_lt?: string | null
-  content_lte?: string | null
-  content_gt?: string | null
-  content_gte?: string | null
-  content_contains?: string | null
-  content_not_contains?: string | null
-  content_starts_with?: string | null
-  content_not_starts_with?: string | null
-  content_ends_with?: string | null
-  content_not_ends_with?: string | null
-  AND?: PostScalarWhereInput[]
-  OR?: PostScalarWhereInput[]
-  NOT?: PostScalarWhereInput[]
+  name?: string | null
+  name_not?: string | null
+  name_in?: string[]
+  name_not_in?: string[]
+  name_lt?: string | null
+  name_lte?: string | null
+  name_gt?: string | null
+  name_gte?: string | null
+  name_contains?: string | null
+  name_not_contains?: string | null
+  name_starts_with?: string | null
+  name_not_starts_with?: string | null
+  name_ends_with?: string | null
+  name_not_ends_with?: string | null
+  AND?: SubjectWhereInput[]
+  OR?: SubjectWhereInput[]
+  NOT?: SubjectWhereInput[]
 }
-export type PostScalarWhereInputInputObject =
-  | Extract<keyof PostScalarWhereInput, string>
+export type SubjectWhereInputInputObject =
+  | Extract<keyof SubjectWhereInput, string>
   | { name: 'id', alias?: string  } 
   | { name: 'id_not', alias?: string  } 
   | { name: 'id_in', alias?: string  } 
@@ -1678,183 +2901,827 @@ export type PostScalarWhereInputInputObject =
   | { name: 'id_not_starts_with', alias?: string  } 
   | { name: 'id_ends_with', alias?: string  } 
   | { name: 'id_not_ends_with', alias?: string  } 
-  | { name: 'createdAt', alias?: string  } 
-  | { name: 'createdAt_not', alias?: string  } 
-  | { name: 'createdAt_in', alias?: string  } 
-  | { name: 'createdAt_not_in', alias?: string  } 
-  | { name: 'createdAt_lt', alias?: string  } 
-  | { name: 'createdAt_lte', alias?: string  } 
-  | { name: 'createdAt_gt', alias?: string  } 
-  | { name: 'createdAt_gte', alias?: string  } 
-  | { name: 'updatedAt', alias?: string  } 
-  | { name: 'updatedAt_not', alias?: string  } 
-  | { name: 'updatedAt_in', alias?: string  } 
-  | { name: 'updatedAt_not_in', alias?: string  } 
-  | { name: 'updatedAt_lt', alias?: string  } 
-  | { name: 'updatedAt_lte', alias?: string  } 
-  | { name: 'updatedAt_gt', alias?: string  } 
-  | { name: 'updatedAt_gte', alias?: string  } 
-  | { name: 'published', alias?: string  } 
-  | { name: 'published_not', alias?: string  } 
-  | { name: 'title', alias?: string  } 
-  | { name: 'title_not', alias?: string  } 
-  | { name: 'title_in', alias?: string  } 
-  | { name: 'title_not_in', alias?: string  } 
-  | { name: 'title_lt', alias?: string  } 
-  | { name: 'title_lte', alias?: string  } 
-  | { name: 'title_gt', alias?: string  } 
-  | { name: 'title_gte', alias?: string  } 
-  | { name: 'title_contains', alias?: string  } 
-  | { name: 'title_not_contains', alias?: string  } 
-  | { name: 'title_starts_with', alias?: string  } 
-  | { name: 'title_not_starts_with', alias?: string  } 
-  | { name: 'title_ends_with', alias?: string  } 
-  | { name: 'title_not_ends_with', alias?: string  } 
-  | { name: 'content', alias?: string  } 
-  | { name: 'content_not', alias?: string  } 
-  | { name: 'content_in', alias?: string  } 
-  | { name: 'content_not_in', alias?: string  } 
-  | { name: 'content_lt', alias?: string  } 
-  | { name: 'content_lte', alias?: string  } 
-  | { name: 'content_gt', alias?: string  } 
-  | { name: 'content_gte', alias?: string  } 
-  | { name: 'content_contains', alias?: string  } 
-  | { name: 'content_not_contains', alias?: string  } 
-  | { name: 'content_starts_with', alias?: string  } 
-  | { name: 'content_not_starts_with', alias?: string  } 
-  | { name: 'content_ends_with', alias?: string  } 
-  | { name: 'content_not_ends_with', alias?: string  } 
+  | { name: 'name', alias?: string  } 
+  | { name: 'name_not', alias?: string  } 
+  | { name: 'name_in', alias?: string  } 
+  | { name: 'name_not_in', alias?: string  } 
+  | { name: 'name_lt', alias?: string  } 
+  | { name: 'name_lte', alias?: string  } 
+  | { name: 'name_gt', alias?: string  } 
+  | { name: 'name_gte', alias?: string  } 
+  | { name: 'name_contains', alias?: string  } 
+  | { name: 'name_not_contains', alias?: string  } 
+  | { name: 'name_starts_with', alias?: string  } 
+  | { name: 'name_not_starts_with', alias?: string  } 
+  | { name: 'name_ends_with', alias?: string  } 
+  | { name: 'name_not_ends_with', alias?: string  } 
   | { name: 'AND', alias?: string  } 
   | { name: 'OR', alias?: string  } 
   | { name: 'NOT', alias?: string  } 
   
-export interface PostUpdateManyWithWhereNestedInput {
-  where?: PostScalarWhereInput
-  data?: PostUpdateManyDataInput
-}
-export type PostUpdateManyWithWhereNestedInputInputObject =
-  | Extract<keyof PostUpdateManyWithWhereNestedInput, string>
-  | { name: 'where', alias?: string  } 
-  | { name: 'data', alias?: string  } 
-  
-export interface PostUpdateManyDataInput {
-  published?: boolean | null
-  title?: string | null
-  content?: string | null
-}
-export type PostUpdateManyDataInputInputObject =
-  | Extract<keyof PostUpdateManyDataInput, string>
-  | { name: 'published', alias?: string  } 
-  | { name: 'title', alias?: string  } 
-  | { name: 'content', alias?: string  } 
-  
-export interface UserUpdateManyMutationInput {
-  email?: string | null
+export interface DegreeWhereInput {
+  id?: string | null
+  id_not?: string | null
+  id_in?: string[]
+  id_not_in?: string[]
+  id_lt?: string | null
+  id_lte?: string | null
+  id_gt?: string | null
+  id_gte?: string | null
+  id_contains?: string | null
+  id_not_contains?: string | null
+  id_starts_with?: string | null
+  id_not_starts_with?: string | null
+  id_ends_with?: string | null
+  id_not_ends_with?: string | null
   name?: string | null
+  name_not?: string | null
+  name_in?: string[]
+  name_not_in?: string[]
+  name_lt?: string | null
+  name_lte?: string | null
+  name_gt?: string | null
+  name_gte?: string | null
+  name_contains?: string | null
+  name_not_contains?: string | null
+  name_starts_with?: string | null
+  name_not_starts_with?: string | null
+  name_ends_with?: string | null
+  name_not_ends_with?: string | null
+  requiredCredits?: number | null
+  requiredCredits_not?: number | null
+  requiredCredits_in?: number[]
+  requiredCredits_not_in?: number[]
+  requiredCredits_lt?: number | null
+  requiredCredits_lte?: number | null
+  requiredCredits_gt?: number | null
+  requiredCredits_gte?: number | null
+  AND?: DegreeWhereInput[]
+  OR?: DegreeWhereInput[]
+  NOT?: DegreeWhereInput[]
 }
-export type UserUpdateManyMutationInputInputObject =
-  | Extract<keyof UserUpdateManyMutationInput, string>
-  | { name: 'email', alias?: string  } 
+export type DegreeWhereInputInputObject =
+  | Extract<keyof DegreeWhereInput, string>
+  | { name: 'id', alias?: string  } 
+  | { name: 'id_not', alias?: string  } 
+  | { name: 'id_in', alias?: string  } 
+  | { name: 'id_not_in', alias?: string  } 
+  | { name: 'id_lt', alias?: string  } 
+  | { name: 'id_lte', alias?: string  } 
+  | { name: 'id_gt', alias?: string  } 
+  | { name: 'id_gte', alias?: string  } 
+  | { name: 'id_contains', alias?: string  } 
+  | { name: 'id_not_contains', alias?: string  } 
+  | { name: 'id_starts_with', alias?: string  } 
+  | { name: 'id_not_starts_with', alias?: string  } 
+  | { name: 'id_ends_with', alias?: string  } 
+  | { name: 'id_not_ends_with', alias?: string  } 
   | { name: 'name', alias?: string  } 
+  | { name: 'name_not', alias?: string  } 
+  | { name: 'name_in', alias?: string  } 
+  | { name: 'name_not_in', alias?: string  } 
+  | { name: 'name_lt', alias?: string  } 
+  | { name: 'name_lte', alias?: string  } 
+  | { name: 'name_gt', alias?: string  } 
+  | { name: 'name_gte', alias?: string  } 
+  | { name: 'name_contains', alias?: string  } 
+  | { name: 'name_not_contains', alias?: string  } 
+  | { name: 'name_starts_with', alias?: string  } 
+  | { name: 'name_not_starts_with', alias?: string  } 
+  | { name: 'name_ends_with', alias?: string  } 
+  | { name: 'name_not_ends_with', alias?: string  } 
+  | { name: 'requiredCredits', alias?: string  } 
+  | { name: 'requiredCredits_not', alias?: string  } 
+  | { name: 'requiredCredits_in', alias?: string  } 
+  | { name: 'requiredCredits_not_in', alias?: string  } 
+  | { name: 'requiredCredits_lt', alias?: string  } 
+  | { name: 'requiredCredits_lte', alias?: string  } 
+  | { name: 'requiredCredits_gt', alias?: string  } 
+  | { name: 'requiredCredits_gte', alias?: string  } 
+  | { name: 'AND', alias?: string  } 
+  | { name: 'OR', alias?: string  } 
+  | { name: 'NOT', alias?: string  } 
   
-export interface PostCreateInput {
-  published?: boolean | null
-  title?: string
-  content?: string | null
-  author?: UserCreateOneWithoutPostsInput
+export interface DepartmentWhereInput {
+  id?: string | null
+  id_not?: string | null
+  id_in?: string[]
+  id_not_in?: string[]
+  id_lt?: string | null
+  id_lte?: string | null
+  id_gt?: string | null
+  id_gte?: string | null
+  id_contains?: string | null
+  id_not_contains?: string | null
+  id_starts_with?: string | null
+  id_not_starts_with?: string | null
+  id_ends_with?: string | null
+  id_not_ends_with?: string | null
+  name?: string | null
+  name_not?: string | null
+  name_in?: string[]
+  name_not_in?: string[]
+  name_lt?: string | null
+  name_lte?: string | null
+  name_gt?: string | null
+  name_gte?: string | null
+  name_contains?: string | null
+  name_not_contains?: string | null
+  name_starts_with?: string | null
+  name_not_starts_with?: string | null
+  name_ends_with?: string | null
+  name_not_ends_with?: string | null
+  AND?: DepartmentWhereInput[]
+  OR?: DepartmentWhereInput[]
+  NOT?: DepartmentWhereInput[]
 }
-export type PostCreateInputInputObject =
-  | Extract<keyof PostCreateInput, string>
-  | { name: 'published', alias?: string  } 
-  | { name: 'title', alias?: string  } 
-  | { name: 'content', alias?: string  } 
-  | { name: 'author', alias?: string  } 
+export type DepartmentWhereInputInputObject =
+  | Extract<keyof DepartmentWhereInput, string>
+  | { name: 'id', alias?: string  } 
+  | { name: 'id_not', alias?: string  } 
+  | { name: 'id_in', alias?: string  } 
+  | { name: 'id_not_in', alias?: string  } 
+  | { name: 'id_lt', alias?: string  } 
+  | { name: 'id_lte', alias?: string  } 
+  | { name: 'id_gt', alias?: string  } 
+  | { name: 'id_gte', alias?: string  } 
+  | { name: 'id_contains', alias?: string  } 
+  | { name: 'id_not_contains', alias?: string  } 
+  | { name: 'id_starts_with', alias?: string  } 
+  | { name: 'id_not_starts_with', alias?: string  } 
+  | { name: 'id_ends_with', alias?: string  } 
+  | { name: 'id_not_ends_with', alias?: string  } 
+  | { name: 'name', alias?: string  } 
+  | { name: 'name_not', alias?: string  } 
+  | { name: 'name_in', alias?: string  } 
+  | { name: 'name_not_in', alias?: string  } 
+  | { name: 'name_lt', alias?: string  } 
+  | { name: 'name_lte', alias?: string  } 
+  | { name: 'name_gt', alias?: string  } 
+  | { name: 'name_gte', alias?: string  } 
+  | { name: 'name_contains', alias?: string  } 
+  | { name: 'name_not_contains', alias?: string  } 
+  | { name: 'name_starts_with', alias?: string  } 
+  | { name: 'name_not_starts_with', alias?: string  } 
+  | { name: 'name_ends_with', alias?: string  } 
+  | { name: 'name_not_ends_with', alias?: string  } 
+  | { name: 'AND', alias?: string  } 
+  | { name: 'OR', alias?: string  } 
+  | { name: 'NOT', alias?: string  } 
   
-export interface UserCreateOneWithoutPostsInput {
-  create?: UserCreateWithoutPostsInput | null
-  connect?: UserWhereUniqueInput | null
+export interface StudentWhereInput {
+  id?: string | null
+  id_not?: string | null
+  id_in?: string[]
+  id_not_in?: string[]
+  id_lt?: string | null
+  id_lte?: string | null
+  id_gt?: string | null
+  id_gte?: string | null
+  id_contains?: string | null
+  id_not_contains?: string | null
+  id_starts_with?: string | null
+  id_not_starts_with?: string | null
+  id_ends_with?: string | null
+  id_not_ends_with?: string | null
+  name?: string | null
+  name_not?: string | null
+  name_in?: string[]
+  name_not_in?: string[]
+  name_lt?: string | null
+  name_lte?: string | null
+  name_gt?: string | null
+  name_gte?: string | null
+  name_contains?: string | null
+  name_not_contains?: string | null
+  name_starts_with?: string | null
+  name_not_starts_with?: string | null
+  name_ends_with?: string | null
+  name_not_ends_with?: string | null
+  coursesPassed_every?: CourseWhereInput | null
+  coursesPassed_some?: CourseWhereInput | null
+  coursesPassed_none?: CourseWhereInput | null
+  enrolledDegree?: DegreeWhereInput | null
+  AND?: StudentWhereInput[]
+  OR?: StudentWhereInput[]
+  NOT?: StudentWhereInput[]
 }
-export type UserCreateOneWithoutPostsInputInputObject =
-  | Extract<keyof UserCreateOneWithoutPostsInput, string>
+export type StudentWhereInputInputObject =
+  | Extract<keyof StudentWhereInput, string>
+  | { name: 'id', alias?: string  } 
+  | { name: 'id_not', alias?: string  } 
+  | { name: 'id_in', alias?: string  } 
+  | { name: 'id_not_in', alias?: string  } 
+  | { name: 'id_lt', alias?: string  } 
+  | { name: 'id_lte', alias?: string  } 
+  | { name: 'id_gt', alias?: string  } 
+  | { name: 'id_gte', alias?: string  } 
+  | { name: 'id_contains', alias?: string  } 
+  | { name: 'id_not_contains', alias?: string  } 
+  | { name: 'id_starts_with', alias?: string  } 
+  | { name: 'id_not_starts_with', alias?: string  } 
+  | { name: 'id_ends_with', alias?: string  } 
+  | { name: 'id_not_ends_with', alias?: string  } 
+  | { name: 'name', alias?: string  } 
+  | { name: 'name_not', alias?: string  } 
+  | { name: 'name_in', alias?: string  } 
+  | { name: 'name_not_in', alias?: string  } 
+  | { name: 'name_lt', alias?: string  } 
+  | { name: 'name_lte', alias?: string  } 
+  | { name: 'name_gt', alias?: string  } 
+  | { name: 'name_gte', alias?: string  } 
+  | { name: 'name_contains', alias?: string  } 
+  | { name: 'name_not_contains', alias?: string  } 
+  | { name: 'name_starts_with', alias?: string  } 
+  | { name: 'name_not_starts_with', alias?: string  } 
+  | { name: 'name_ends_with', alias?: string  } 
+  | { name: 'name_not_ends_with', alias?: string  } 
+  | { name: 'coursesPassed_every', alias?: string  } 
+  | { name: 'coursesPassed_some', alias?: string  } 
+  | { name: 'coursesPassed_none', alias?: string  } 
+  | { name: 'enrolledDegree', alias?: string  } 
+  | { name: 'AND', alias?: string  } 
+  | { name: 'OR', alias?: string  } 
+  | { name: 'NOT', alias?: string  } 
+  
+export interface SubjectWhereUniqueInput {
+  id?: string | null
+}
+export type SubjectWhereUniqueInputInputObject =
+  | Extract<keyof SubjectWhereUniqueInput, string>
+  | { name: 'id', alias?: string  } 
+  
+export interface DegreeWhereUniqueInput {
+  id?: string | null
+}
+export type DegreeWhereUniqueInputInputObject =
+  | Extract<keyof DegreeWhereUniqueInput, string>
+  | { name: 'id', alias?: string  } 
+  
+export interface DepartmentWhereUniqueInput {
+  id?: string | null
+}
+export type DepartmentWhereUniqueInputInputObject =
+  | Extract<keyof DepartmentWhereUniqueInput, string>
+  | { name: 'id', alias?: string  } 
+  
+export interface CourseWhereUniqueInput {
+  id?: string | null
+}
+export type CourseWhereUniqueInputInputObject =
+  | Extract<keyof CourseWhereUniqueInput, string>
+  | { name: 'id', alias?: string  } 
+  
+export interface StudentCreateInput {
+  name?: string | null
+  coursesPassed?: CourseCreateManyInput | null
+  enrolledDegree?: DegreeCreateOneInput | null
+}
+export type StudentCreateInputInputObject =
+  | Extract<keyof StudentCreateInput, string>
+  | { name: 'name', alias?: string  } 
+  | { name: 'coursesPassed', alias?: string  } 
+  | { name: 'enrolledDegree', alias?: string  } 
+  
+export interface CourseCreateManyInput {
+  create?: CourseCreateInput[]
+  connect?: CourseWhereUniqueInput[]
+}
+export type CourseCreateManyInputInputObject =
+  | Extract<keyof CourseCreateManyInput, string>
   | { name: 'create', alias?: string  } 
   | { name: 'connect', alias?: string  } 
   
-export interface UserCreateWithoutPostsInput {
-  email?: string
-  name?: string | null
+export interface CourseCreateInput {
+  name?: string
+  number?: string
+  level?: number
+  credits?: number
+  subject?: SubjectCreateOneInput | null
+  degree?: DegreeCreateOneInput | null
+  department?: DepartmentCreateOneInput | null
+  prerequisite?: CourseCreateOneInput | null
 }
-export type UserCreateWithoutPostsInputInputObject =
-  | Extract<keyof UserCreateWithoutPostsInput, string>
-  | { name: 'email', alias?: string  } 
+export type CourseCreateInputInputObject =
+  | Extract<keyof CourseCreateInput, string>
+  | { name: 'name', alias?: string  } 
+  | { name: 'number', alias?: string  } 
+  | { name: 'level', alias?: string  } 
+  | { name: 'credits', alias?: string  } 
+  | { name: 'subject', alias?: string  } 
+  | { name: 'degree', alias?: string  } 
+  | { name: 'department', alias?: string  } 
+  | { name: 'prerequisite', alias?: string  } 
+  
+export interface SubjectCreateOneInput {
+  create?: SubjectCreateInput | null
+  connect?: SubjectWhereUniqueInput | null
+}
+export type SubjectCreateOneInputInputObject =
+  | Extract<keyof SubjectCreateOneInput, string>
+  | { name: 'create', alias?: string  } 
+  | { name: 'connect', alias?: string  } 
+  
+export interface SubjectCreateInput {
+  name?: string
+}
+export type SubjectCreateInputInputObject =
+  | Extract<keyof SubjectCreateInput, string>
   | { name: 'name', alias?: string  } 
   
-export interface PostUpdateInput {
-  published?: boolean | null
-  title?: string | null
-  content?: string | null
-  author?: UserUpdateOneRequiredWithoutPostsInput | null
+export interface DegreeCreateOneInput {
+  create?: DegreeCreateInput | null
+  connect?: DegreeWhereUniqueInput | null
 }
-export type PostUpdateInputInputObject =
-  | Extract<keyof PostUpdateInput, string>
-  | { name: 'published', alias?: string  } 
-  | { name: 'title', alias?: string  } 
-  | { name: 'content', alias?: string  } 
-  | { name: 'author', alias?: string  } 
+export type DegreeCreateOneInputInputObject =
+  | Extract<keyof DegreeCreateOneInput, string>
+  | { name: 'create', alias?: string  } 
+  | { name: 'connect', alias?: string  } 
   
-export interface UserUpdateOneRequiredWithoutPostsInput {
-  create?: UserCreateWithoutPostsInput | null
-  update?: UserUpdateWithoutPostsDataInput | null
-  upsert?: UserUpsertWithoutPostsInput | null
-  connect?: UserWhereUniqueInput | null
+export interface DegreeCreateInput {
+  name?: string
+  requiredCredits?: number
 }
-export type UserUpdateOneRequiredWithoutPostsInputInputObject =
-  | Extract<keyof UserUpdateOneRequiredWithoutPostsInput, string>
+export type DegreeCreateInputInputObject =
+  | Extract<keyof DegreeCreateInput, string>
+  | { name: 'name', alias?: string  } 
+  | { name: 'requiredCredits', alias?: string  } 
+  
+export interface DepartmentCreateOneInput {
+  create?: DepartmentCreateInput | null
+  connect?: DepartmentWhereUniqueInput | null
+}
+export type DepartmentCreateOneInputInputObject =
+  | Extract<keyof DepartmentCreateOneInput, string>
+  | { name: 'create', alias?: string  } 
+  | { name: 'connect', alias?: string  } 
+  
+export interface DepartmentCreateInput {
+  name?: string
+}
+export type DepartmentCreateInputInputObject =
+  | Extract<keyof DepartmentCreateInput, string>
+  | { name: 'name', alias?: string  } 
+  
+export interface CourseCreateOneInput {
+  create?: CourseCreateInput | null
+  connect?: CourseWhereUniqueInput | null
+}
+export type CourseCreateOneInputInputObject =
+  | Extract<keyof CourseCreateOneInput, string>
+  | { name: 'create', alias?: string  } 
+  | { name: 'connect', alias?: string  } 
+  
+export interface StudentUpdateInput {
+  name?: string | null
+  coursesPassed?: CourseUpdateManyInput | null
+  enrolledDegree?: DegreeUpdateOneInput | null
+}
+export type StudentUpdateInputInputObject =
+  | Extract<keyof StudentUpdateInput, string>
+  | { name: 'name', alias?: string  } 
+  | { name: 'coursesPassed', alias?: string  } 
+  | { name: 'enrolledDegree', alias?: string  } 
+  
+export interface CourseUpdateManyInput {
+  create?: CourseCreateInput[]
+  update?: CourseUpdateWithWhereUniqueNestedInput[]
+  upsert?: CourseUpsertWithWhereUniqueNestedInput[]
+  delete?: CourseWhereUniqueInput[]
+  connect?: CourseWhereUniqueInput[]
+  set?: CourseWhereUniqueInput[]
+  disconnect?: CourseWhereUniqueInput[]
+  deleteMany?: CourseScalarWhereInput[]
+  updateMany?: CourseUpdateManyWithWhereNestedInput[]
+}
+export type CourseUpdateManyInputInputObject =
+  | Extract<keyof CourseUpdateManyInput, string>
   | { name: 'create', alias?: string  } 
   | { name: 'update', alias?: string  } 
   | { name: 'upsert', alias?: string  } 
+  | { name: 'delete', alias?: string  } 
+  | { name: 'connect', alias?: string  } 
+  | { name: 'set', alias?: string  } 
+  | { name: 'disconnect', alias?: string  } 
+  | { name: 'deleteMany', alias?: string  } 
+  | { name: 'updateMany', alias?: string  } 
+  
+export interface CourseUpdateWithWhereUniqueNestedInput {
+  where?: CourseWhereUniqueInput
+  data?: CourseUpdateDataInput
+}
+export type CourseUpdateWithWhereUniqueNestedInputInputObject =
+  | Extract<keyof CourseUpdateWithWhereUniqueNestedInput, string>
+  | { name: 'where', alias?: string  } 
+  | { name: 'data', alias?: string  } 
+  
+export interface CourseUpdateDataInput {
+  name?: string | null
+  number?: string | null
+  level?: number | null
+  credits?: number | null
+  subject?: SubjectUpdateOneInput | null
+  degree?: DegreeUpdateOneInput | null
+  department?: DepartmentUpdateOneInput | null
+  prerequisite?: CourseUpdateOneInput | null
+}
+export type CourseUpdateDataInputInputObject =
+  | Extract<keyof CourseUpdateDataInput, string>
+  | { name: 'name', alias?: string  } 
+  | { name: 'number', alias?: string  } 
+  | { name: 'level', alias?: string  } 
+  | { name: 'credits', alias?: string  } 
+  | { name: 'subject', alias?: string  } 
+  | { name: 'degree', alias?: string  } 
+  | { name: 'department', alias?: string  } 
+  | { name: 'prerequisite', alias?: string  } 
+  
+export interface SubjectUpdateOneInput {
+  create?: SubjectCreateInput | null
+  update?: SubjectUpdateDataInput | null
+  upsert?: SubjectUpsertNestedInput | null
+  delete?: boolean | null
+  disconnect?: boolean | null
+  connect?: SubjectWhereUniqueInput | null
+}
+export type SubjectUpdateOneInputInputObject =
+  | Extract<keyof SubjectUpdateOneInput, string>
+  | { name: 'create', alias?: string  } 
+  | { name: 'update', alias?: string  } 
+  | { name: 'upsert', alias?: string  } 
+  | { name: 'delete', alias?: string  } 
+  | { name: 'disconnect', alias?: string  } 
   | { name: 'connect', alias?: string  } 
   
-export interface UserUpdateWithoutPostsDataInput {
-  email?: string | null
+export interface SubjectUpdateDataInput {
   name?: string | null
 }
-export type UserUpdateWithoutPostsDataInputInputObject =
-  | Extract<keyof UserUpdateWithoutPostsDataInput, string>
-  | { name: 'email', alias?: string  } 
+export type SubjectUpdateDataInputInputObject =
+  | Extract<keyof SubjectUpdateDataInput, string>
   | { name: 'name', alias?: string  } 
   
-export interface UserUpsertWithoutPostsInput {
-  update?: UserUpdateWithoutPostsDataInput
-  create?: UserCreateWithoutPostsInput
+export interface SubjectUpsertNestedInput {
+  update?: SubjectUpdateDataInput
+  create?: SubjectCreateInput
 }
-export type UserUpsertWithoutPostsInputInputObject =
-  | Extract<keyof UserUpsertWithoutPostsInput, string>
+export type SubjectUpsertNestedInputInputObject =
+  | Extract<keyof SubjectUpsertNestedInput, string>
   | { name: 'update', alias?: string  } 
   | { name: 'create', alias?: string  } 
   
-export interface PostUpdateManyMutationInput {
-  published?: boolean | null
-  title?: string | null
-  content?: string | null
+export interface DegreeUpdateOneInput {
+  create?: DegreeCreateInput | null
+  update?: DegreeUpdateDataInput | null
+  upsert?: DegreeUpsertNestedInput | null
+  delete?: boolean | null
+  disconnect?: boolean | null
+  connect?: DegreeWhereUniqueInput | null
 }
-export type PostUpdateManyMutationInputInputObject =
-  | Extract<keyof PostUpdateManyMutationInput, string>
-  | { name: 'published', alias?: string  } 
-  | { name: 'title', alias?: string  } 
-  | { name: 'content', alias?: string  } 
+export type DegreeUpdateOneInputInputObject =
+  | Extract<keyof DegreeUpdateOneInput, string>
+  | { name: 'create', alias?: string  } 
+  | { name: 'update', alias?: string  } 
+  | { name: 'upsert', alias?: string  } 
+  | { name: 'delete', alias?: string  } 
+  | { name: 'disconnect', alias?: string  } 
+  | { name: 'connect', alias?: string  } 
   
-export interface UserSubscriptionWhereInput {
+export interface DegreeUpdateDataInput {
+  name?: string | null
+  requiredCredits?: number | null
+}
+export type DegreeUpdateDataInputInputObject =
+  | Extract<keyof DegreeUpdateDataInput, string>
+  | { name: 'name', alias?: string  } 
+  | { name: 'requiredCredits', alias?: string  } 
+  
+export interface DegreeUpsertNestedInput {
+  update?: DegreeUpdateDataInput
+  create?: DegreeCreateInput
+}
+export type DegreeUpsertNestedInputInputObject =
+  | Extract<keyof DegreeUpsertNestedInput, string>
+  | { name: 'update', alias?: string  } 
+  | { name: 'create', alias?: string  } 
+  
+export interface DepartmentUpdateOneInput {
+  create?: DepartmentCreateInput | null
+  update?: DepartmentUpdateDataInput | null
+  upsert?: DepartmentUpsertNestedInput | null
+  delete?: boolean | null
+  disconnect?: boolean | null
+  connect?: DepartmentWhereUniqueInput | null
+}
+export type DepartmentUpdateOneInputInputObject =
+  | Extract<keyof DepartmentUpdateOneInput, string>
+  | { name: 'create', alias?: string  } 
+  | { name: 'update', alias?: string  } 
+  | { name: 'upsert', alias?: string  } 
+  | { name: 'delete', alias?: string  } 
+  | { name: 'disconnect', alias?: string  } 
+  | { name: 'connect', alias?: string  } 
+  
+export interface DepartmentUpdateDataInput {
+  name?: string | null
+}
+export type DepartmentUpdateDataInputInputObject =
+  | Extract<keyof DepartmentUpdateDataInput, string>
+  | { name: 'name', alias?: string  } 
+  
+export interface DepartmentUpsertNestedInput {
+  update?: DepartmentUpdateDataInput
+  create?: DepartmentCreateInput
+}
+export type DepartmentUpsertNestedInputInputObject =
+  | Extract<keyof DepartmentUpsertNestedInput, string>
+  | { name: 'update', alias?: string  } 
+  | { name: 'create', alias?: string  } 
+  
+export interface CourseUpdateOneInput {
+  create?: CourseCreateInput | null
+  update?: CourseUpdateDataInput | null
+  upsert?: CourseUpsertNestedInput | null
+  delete?: boolean | null
+  disconnect?: boolean | null
+  connect?: CourseWhereUniqueInput | null
+}
+export type CourseUpdateOneInputInputObject =
+  | Extract<keyof CourseUpdateOneInput, string>
+  | { name: 'create', alias?: string  } 
+  | { name: 'update', alias?: string  } 
+  | { name: 'upsert', alias?: string  } 
+  | { name: 'delete', alias?: string  } 
+  | { name: 'disconnect', alias?: string  } 
+  | { name: 'connect', alias?: string  } 
+  
+export interface CourseUpsertNestedInput {
+  update?: CourseUpdateDataInput
+  create?: CourseCreateInput
+}
+export type CourseUpsertNestedInputInputObject =
+  | Extract<keyof CourseUpsertNestedInput, string>
+  | { name: 'update', alias?: string  } 
+  | { name: 'create', alias?: string  } 
+  
+export interface CourseUpsertWithWhereUniqueNestedInput {
+  where?: CourseWhereUniqueInput
+  update?: CourseUpdateDataInput
+  create?: CourseCreateInput
+}
+export type CourseUpsertWithWhereUniqueNestedInputInputObject =
+  | Extract<keyof CourseUpsertWithWhereUniqueNestedInput, string>
+  | { name: 'where', alias?: string  } 
+  | { name: 'update', alias?: string  } 
+  | { name: 'create', alias?: string  } 
+  
+export interface CourseScalarWhereInput {
+  id?: string | null
+  id_not?: string | null
+  id_in?: string[]
+  id_not_in?: string[]
+  id_lt?: string | null
+  id_lte?: string | null
+  id_gt?: string | null
+  id_gte?: string | null
+  id_contains?: string | null
+  id_not_contains?: string | null
+  id_starts_with?: string | null
+  id_not_starts_with?: string | null
+  id_ends_with?: string | null
+  id_not_ends_with?: string | null
+  name?: string | null
+  name_not?: string | null
+  name_in?: string[]
+  name_not_in?: string[]
+  name_lt?: string | null
+  name_lte?: string | null
+  name_gt?: string | null
+  name_gte?: string | null
+  name_contains?: string | null
+  name_not_contains?: string | null
+  name_starts_with?: string | null
+  name_not_starts_with?: string | null
+  name_ends_with?: string | null
+  name_not_ends_with?: string | null
+  number?: string | null
+  number_not?: string | null
+  number_in?: string[]
+  number_not_in?: string[]
+  number_lt?: string | null
+  number_lte?: string | null
+  number_gt?: string | null
+  number_gte?: string | null
+  number_contains?: string | null
+  number_not_contains?: string | null
+  number_starts_with?: string | null
+  number_not_starts_with?: string | null
+  number_ends_with?: string | null
+  number_not_ends_with?: string | null
+  level?: number | null
+  level_not?: number | null
+  level_in?: number[]
+  level_not_in?: number[]
+  level_lt?: number | null
+  level_lte?: number | null
+  level_gt?: number | null
+  level_gte?: number | null
+  credits?: number | null
+  credits_not?: number | null
+  credits_in?: number[]
+  credits_not_in?: number[]
+  credits_lt?: number | null
+  credits_lte?: number | null
+  credits_gt?: number | null
+  credits_gte?: number | null
+  AND?: CourseScalarWhereInput[]
+  OR?: CourseScalarWhereInput[]
+  NOT?: CourseScalarWhereInput[]
+}
+export type CourseScalarWhereInputInputObject =
+  | Extract<keyof CourseScalarWhereInput, string>
+  | { name: 'id', alias?: string  } 
+  | { name: 'id_not', alias?: string  } 
+  | { name: 'id_in', alias?: string  } 
+  | { name: 'id_not_in', alias?: string  } 
+  | { name: 'id_lt', alias?: string  } 
+  | { name: 'id_lte', alias?: string  } 
+  | { name: 'id_gt', alias?: string  } 
+  | { name: 'id_gte', alias?: string  } 
+  | { name: 'id_contains', alias?: string  } 
+  | { name: 'id_not_contains', alias?: string  } 
+  | { name: 'id_starts_with', alias?: string  } 
+  | { name: 'id_not_starts_with', alias?: string  } 
+  | { name: 'id_ends_with', alias?: string  } 
+  | { name: 'id_not_ends_with', alias?: string  } 
+  | { name: 'name', alias?: string  } 
+  | { name: 'name_not', alias?: string  } 
+  | { name: 'name_in', alias?: string  } 
+  | { name: 'name_not_in', alias?: string  } 
+  | { name: 'name_lt', alias?: string  } 
+  | { name: 'name_lte', alias?: string  } 
+  | { name: 'name_gt', alias?: string  } 
+  | { name: 'name_gte', alias?: string  } 
+  | { name: 'name_contains', alias?: string  } 
+  | { name: 'name_not_contains', alias?: string  } 
+  | { name: 'name_starts_with', alias?: string  } 
+  | { name: 'name_not_starts_with', alias?: string  } 
+  | { name: 'name_ends_with', alias?: string  } 
+  | { name: 'name_not_ends_with', alias?: string  } 
+  | { name: 'number', alias?: string  } 
+  | { name: 'number_not', alias?: string  } 
+  | { name: 'number_in', alias?: string  } 
+  | { name: 'number_not_in', alias?: string  } 
+  | { name: 'number_lt', alias?: string  } 
+  | { name: 'number_lte', alias?: string  } 
+  | { name: 'number_gt', alias?: string  } 
+  | { name: 'number_gte', alias?: string  } 
+  | { name: 'number_contains', alias?: string  } 
+  | { name: 'number_not_contains', alias?: string  } 
+  | { name: 'number_starts_with', alias?: string  } 
+  | { name: 'number_not_starts_with', alias?: string  } 
+  | { name: 'number_ends_with', alias?: string  } 
+  | { name: 'number_not_ends_with', alias?: string  } 
+  | { name: 'level', alias?: string  } 
+  | { name: 'level_not', alias?: string  } 
+  | { name: 'level_in', alias?: string  } 
+  | { name: 'level_not_in', alias?: string  } 
+  | { name: 'level_lt', alias?: string  } 
+  | { name: 'level_lte', alias?: string  } 
+  | { name: 'level_gt', alias?: string  } 
+  | { name: 'level_gte', alias?: string  } 
+  | { name: 'credits', alias?: string  } 
+  | { name: 'credits_not', alias?: string  } 
+  | { name: 'credits_in', alias?: string  } 
+  | { name: 'credits_not_in', alias?: string  } 
+  | { name: 'credits_lt', alias?: string  } 
+  | { name: 'credits_lte', alias?: string  } 
+  | { name: 'credits_gt', alias?: string  } 
+  | { name: 'credits_gte', alias?: string  } 
+  | { name: 'AND', alias?: string  } 
+  | { name: 'OR', alias?: string  } 
+  | { name: 'NOT', alias?: string  } 
+  
+export interface CourseUpdateManyWithWhereNestedInput {
+  where?: CourseScalarWhereInput
+  data?: CourseUpdateManyDataInput
+}
+export type CourseUpdateManyWithWhereNestedInputInputObject =
+  | Extract<keyof CourseUpdateManyWithWhereNestedInput, string>
+  | { name: 'where', alias?: string  } 
+  | { name: 'data', alias?: string  } 
+  
+export interface CourseUpdateManyDataInput {
+  name?: string | null
+  number?: string | null
+  level?: number | null
+  credits?: number | null
+}
+export type CourseUpdateManyDataInputInputObject =
+  | Extract<keyof CourseUpdateManyDataInput, string>
+  | { name: 'name', alias?: string  } 
+  | { name: 'number', alias?: string  } 
+  | { name: 'level', alias?: string  } 
+  | { name: 'credits', alias?: string  } 
+  
+export interface StudentUpdateManyMutationInput {
+  name?: string | null
+}
+export type StudentUpdateManyMutationInputInputObject =
+  | Extract<keyof StudentUpdateManyMutationInput, string>
+  | { name: 'name', alias?: string  } 
+  
+export interface SubjectUpdateInput {
+  name?: string | null
+}
+export type SubjectUpdateInputInputObject =
+  | Extract<keyof SubjectUpdateInput, string>
+  | { name: 'name', alias?: string  } 
+  
+export interface SubjectUpdateManyMutationInput {
+  name?: string | null
+}
+export type SubjectUpdateManyMutationInputInputObject =
+  | Extract<keyof SubjectUpdateManyMutationInput, string>
+  | { name: 'name', alias?: string  } 
+  
+export interface DegreeUpdateInput {
+  name?: string | null
+  requiredCredits?: number | null
+}
+export type DegreeUpdateInputInputObject =
+  | Extract<keyof DegreeUpdateInput, string>
+  | { name: 'name', alias?: string  } 
+  | { name: 'requiredCredits', alias?: string  } 
+  
+export interface DegreeUpdateManyMutationInput {
+  name?: string | null
+  requiredCredits?: number | null
+}
+export type DegreeUpdateManyMutationInputInputObject =
+  | Extract<keyof DegreeUpdateManyMutationInput, string>
+  | { name: 'name', alias?: string  } 
+  | { name: 'requiredCredits', alias?: string  } 
+  
+export interface DepartmentUpdateInput {
+  name?: string | null
+}
+export type DepartmentUpdateInputInputObject =
+  | Extract<keyof DepartmentUpdateInput, string>
+  | { name: 'name', alias?: string  } 
+  
+export interface DepartmentUpdateManyMutationInput {
+  name?: string | null
+}
+export type DepartmentUpdateManyMutationInputInputObject =
+  | Extract<keyof DepartmentUpdateManyMutationInput, string>
+  | { name: 'name', alias?: string  } 
+  
+export interface CourseUpdateInput {
+  name?: string | null
+  number?: string | null
+  level?: number | null
+  credits?: number | null
+  subject?: SubjectUpdateOneInput | null
+  degree?: DegreeUpdateOneInput | null
+  department?: DepartmentUpdateOneInput | null
+  prerequisite?: CourseUpdateOneInput | null
+}
+export type CourseUpdateInputInputObject =
+  | Extract<keyof CourseUpdateInput, string>
+  | { name: 'name', alias?: string  } 
+  | { name: 'number', alias?: string  } 
+  | { name: 'level', alias?: string  } 
+  | { name: 'credits', alias?: string  } 
+  | { name: 'subject', alias?: string  } 
+  | { name: 'degree', alias?: string  } 
+  | { name: 'department', alias?: string  } 
+  | { name: 'prerequisite', alias?: string  } 
+  
+export interface CourseUpdateManyMutationInput {
+  name?: string | null
+  number?: string | null
+  level?: number | null
+  credits?: number | null
+}
+export type CourseUpdateManyMutationInputInputObject =
+  | Extract<keyof CourseUpdateManyMutationInput, string>
+  | { name: 'name', alias?: string  } 
+  | { name: 'number', alias?: string  } 
+  | { name: 'level', alias?: string  } 
+  | { name: 'credits', alias?: string  } 
+  
+export interface StudentSubscriptionWhereInput {
   mutation_in?: prisma.MutationType[]
   updatedFields_contains?: string | null
   updatedFields_contains_every?: string[]
   updatedFields_contains_some?: string[]
-  node?: UserWhereInput | null
-  AND?: UserSubscriptionWhereInput[]
-  OR?: UserSubscriptionWhereInput[]
-  NOT?: UserSubscriptionWhereInput[]
+  node?: StudentWhereInput | null
+  AND?: StudentSubscriptionWhereInput[]
+  OR?: StudentSubscriptionWhereInput[]
+  NOT?: StudentSubscriptionWhereInput[]
 }
-export type UserSubscriptionWhereInputInputObject =
-  | Extract<keyof UserSubscriptionWhereInput, string>
+export type StudentSubscriptionWhereInputInputObject =
+  | Extract<keyof StudentSubscriptionWhereInput, string>
   | { name: 'mutation_in', alias?: string  } 
   | { name: 'updatedFields_contains', alias?: string  } 
   | { name: 'updatedFields_contains_every', alias?: string  } 
@@ -1864,18 +3731,81 @@ export type UserSubscriptionWhereInputInputObject =
   | { name: 'OR', alias?: string  } 
   | { name: 'NOT', alias?: string  } 
   
-export interface PostSubscriptionWhereInput {
+export interface SubjectSubscriptionWhereInput {
   mutation_in?: prisma.MutationType[]
   updatedFields_contains?: string | null
   updatedFields_contains_every?: string[]
   updatedFields_contains_some?: string[]
-  node?: PostWhereInput | null
-  AND?: PostSubscriptionWhereInput[]
-  OR?: PostSubscriptionWhereInput[]
-  NOT?: PostSubscriptionWhereInput[]
+  node?: SubjectWhereInput | null
+  AND?: SubjectSubscriptionWhereInput[]
+  OR?: SubjectSubscriptionWhereInput[]
+  NOT?: SubjectSubscriptionWhereInput[]
 }
-export type PostSubscriptionWhereInputInputObject =
-  | Extract<keyof PostSubscriptionWhereInput, string>
+export type SubjectSubscriptionWhereInputInputObject =
+  | Extract<keyof SubjectSubscriptionWhereInput, string>
+  | { name: 'mutation_in', alias?: string  } 
+  | { name: 'updatedFields_contains', alias?: string  } 
+  | { name: 'updatedFields_contains_every', alias?: string  } 
+  | { name: 'updatedFields_contains_some', alias?: string  } 
+  | { name: 'node', alias?: string  } 
+  | { name: 'AND', alias?: string  } 
+  | { name: 'OR', alias?: string  } 
+  | { name: 'NOT', alias?: string  } 
+  
+export interface DegreeSubscriptionWhereInput {
+  mutation_in?: prisma.MutationType[]
+  updatedFields_contains?: string | null
+  updatedFields_contains_every?: string[]
+  updatedFields_contains_some?: string[]
+  node?: DegreeWhereInput | null
+  AND?: DegreeSubscriptionWhereInput[]
+  OR?: DegreeSubscriptionWhereInput[]
+  NOT?: DegreeSubscriptionWhereInput[]
+}
+export type DegreeSubscriptionWhereInputInputObject =
+  | Extract<keyof DegreeSubscriptionWhereInput, string>
+  | { name: 'mutation_in', alias?: string  } 
+  | { name: 'updatedFields_contains', alias?: string  } 
+  | { name: 'updatedFields_contains_every', alias?: string  } 
+  | { name: 'updatedFields_contains_some', alias?: string  } 
+  | { name: 'node', alias?: string  } 
+  | { name: 'AND', alias?: string  } 
+  | { name: 'OR', alias?: string  } 
+  | { name: 'NOT', alias?: string  } 
+  
+export interface DepartmentSubscriptionWhereInput {
+  mutation_in?: prisma.MutationType[]
+  updatedFields_contains?: string | null
+  updatedFields_contains_every?: string[]
+  updatedFields_contains_some?: string[]
+  node?: DepartmentWhereInput | null
+  AND?: DepartmentSubscriptionWhereInput[]
+  OR?: DepartmentSubscriptionWhereInput[]
+  NOT?: DepartmentSubscriptionWhereInput[]
+}
+export type DepartmentSubscriptionWhereInputInputObject =
+  | Extract<keyof DepartmentSubscriptionWhereInput, string>
+  | { name: 'mutation_in', alias?: string  } 
+  | { name: 'updatedFields_contains', alias?: string  } 
+  | { name: 'updatedFields_contains_every', alias?: string  } 
+  | { name: 'updatedFields_contains_some', alias?: string  } 
+  | { name: 'node', alias?: string  } 
+  | { name: 'AND', alias?: string  } 
+  | { name: 'OR', alias?: string  } 
+  | { name: 'NOT', alias?: string  } 
+  
+export interface CourseSubscriptionWhereInput {
+  mutation_in?: prisma.MutationType[]
+  updatedFields_contains?: string | null
+  updatedFields_contains_every?: string[]
+  updatedFields_contains_some?: string[]
+  node?: CourseWhereInput | null
+  AND?: CourseSubscriptionWhereInput[]
+  OR?: CourseSubscriptionWhereInput[]
+  NOT?: CourseSubscriptionWhereInput[]
+}
+export type CourseSubscriptionWhereInputInputObject =
+  | Extract<keyof CourseSubscriptionWhereInput, string>
   | { name: 'mutation_in', alias?: string  } 
   | { name: 'updatedFields_contains', alias?: string  } 
   | { name: 'updatedFields_contains_every', alias?: string  } 
@@ -1886,25 +3816,57 @@ export type PostSubscriptionWhereInputInputObject =
   | { name: 'NOT', alias?: string  } 
   
 
-export type PostOrderByInputValues =
+export type CourseOrderByInputValues =
   | 'id_ASC'
   | 'id_DESC'
+  | 'name_ASC'
+  | 'name_DESC'
+  | 'number_ASC'
+  | 'number_DESC'
+  | 'level_ASC'
+  | 'level_DESC'
+  | 'credits_ASC'
+  | 'credits_DESC'
   | 'createdAt_ASC'
   | 'createdAt_DESC'
   | 'updatedAt_ASC'
   | 'updatedAt_DESC'
-  | 'published_ASC'
-  | 'published_DESC'
-  | 'title_ASC'
-  | 'title_DESC'
-  | 'content_ASC'
-  | 'content_DESC'
   
-export type UserOrderByInputValues =
+export type StudentOrderByInputValues =
   | 'id_ASC'
   | 'id_DESC'
-  | 'email_ASC'
-  | 'email_DESC'
+  | 'name_ASC'
+  | 'name_DESC'
+  | 'createdAt_ASC'
+  | 'createdAt_DESC'
+  | 'updatedAt_ASC'
+  | 'updatedAt_DESC'
+  
+export type SubjectOrderByInputValues =
+  | 'id_ASC'
+  | 'id_DESC'
+  | 'name_ASC'
+  | 'name_DESC'
+  | 'createdAt_ASC'
+  | 'createdAt_DESC'
+  | 'updatedAt_ASC'
+  | 'updatedAt_DESC'
+  
+export type DegreeOrderByInputValues =
+  | 'id_ASC'
+  | 'id_DESC'
+  | 'name_ASC'
+  | 'name_DESC'
+  | 'requiredCredits_ASC'
+  | 'requiredCredits_DESC'
+  | 'createdAt_ASC'
+  | 'createdAt_DESC'
+  | 'updatedAt_ASC'
+  | 'updatedAt_DESC'
+  
+export type DepartmentOrderByInputValues =
+  | 'id_ASC'
+  | 'id_DESC'
   | 'name_ASC'
   | 'name_DESC'
   | 'createdAt_ASC'

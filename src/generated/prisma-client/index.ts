@@ -14,8 +14,11 @@ export type AtLeastOne<T, U = { [K in keyof T]: Pick<T, K> }> = Partial<T> &
   U[keyof U];
 
 export interface Exists {
-  post: (where?: PostWhereInput) => Promise<boolean>;
-  user: (where?: UserWhereInput) => Promise<boolean>;
+  course: (where?: CourseWhereInput) => Promise<boolean>;
+  degree: (where?: DegreeWhereInput) => Promise<boolean>;
+  department: (where?: DepartmentWhereInput) => Promise<boolean>;
+  student: (where?: StudentWhereInput) => Promise<boolean>;
+  subject: (where?: SubjectWhereInput) => Promise<boolean>;
 }
 
 export interface Node {}
@@ -37,90 +40,210 @@ export interface Prisma {
    * Queries
    */
 
-  post: (where: PostWhereUniqueInput) => PostPromise;
-  posts: (
+  course: (where: CourseWhereUniqueInput) => CoursePromise;
+  courses: (
     args?: {
-      where?: PostWhereInput;
-      orderBy?: PostOrderByInput;
+      where?: CourseWhereInput;
+      orderBy?: CourseOrderByInput;
       skip?: Int;
       after?: String;
       before?: String;
       first?: Int;
       last?: Int;
     }
-  ) => FragmentableArray<Post>;
-  postsConnection: (
+  ) => FragmentableArray<Course>;
+  coursesConnection: (
     args?: {
-      where?: PostWhereInput;
-      orderBy?: PostOrderByInput;
+      where?: CourseWhereInput;
+      orderBy?: CourseOrderByInput;
       skip?: Int;
       after?: String;
       before?: String;
       first?: Int;
       last?: Int;
     }
-  ) => PostConnectionPromise;
-  user: (where: UserWhereUniqueInput) => UserPromise;
-  users: (
+  ) => CourseConnectionPromise;
+  degree: (where: DegreeWhereUniqueInput) => DegreePromise;
+  degrees: (
     args?: {
-      where?: UserWhereInput;
-      orderBy?: UserOrderByInput;
+      where?: DegreeWhereInput;
+      orderBy?: DegreeOrderByInput;
       skip?: Int;
       after?: String;
       before?: String;
       first?: Int;
       last?: Int;
     }
-  ) => FragmentableArray<User>;
-  usersConnection: (
+  ) => FragmentableArray<Degree>;
+  degreesConnection: (
     args?: {
-      where?: UserWhereInput;
-      orderBy?: UserOrderByInput;
+      where?: DegreeWhereInput;
+      orderBy?: DegreeOrderByInput;
       skip?: Int;
       after?: String;
       before?: String;
       first?: Int;
       last?: Int;
     }
-  ) => UserConnectionPromise;
+  ) => DegreeConnectionPromise;
+  department: (where: DepartmentWhereUniqueInput) => DepartmentPromise;
+  departments: (
+    args?: {
+      where?: DepartmentWhereInput;
+      orderBy?: DepartmentOrderByInput;
+      skip?: Int;
+      after?: String;
+      before?: String;
+      first?: Int;
+      last?: Int;
+    }
+  ) => FragmentableArray<Department>;
+  departmentsConnection: (
+    args?: {
+      where?: DepartmentWhereInput;
+      orderBy?: DepartmentOrderByInput;
+      skip?: Int;
+      after?: String;
+      before?: String;
+      first?: Int;
+      last?: Int;
+    }
+  ) => DepartmentConnectionPromise;
+  student: (where: StudentWhereUniqueInput) => StudentPromise;
+  students: (
+    args?: {
+      where?: StudentWhereInput;
+      orderBy?: StudentOrderByInput;
+      skip?: Int;
+      after?: String;
+      before?: String;
+      first?: Int;
+      last?: Int;
+    }
+  ) => FragmentableArray<Student>;
+  studentsConnection: (
+    args?: {
+      where?: StudentWhereInput;
+      orderBy?: StudentOrderByInput;
+      skip?: Int;
+      after?: String;
+      before?: String;
+      first?: Int;
+      last?: Int;
+    }
+  ) => StudentConnectionPromise;
+  subject: (where: SubjectWhereUniqueInput) => SubjectPromise;
+  subjects: (
+    args?: {
+      where?: SubjectWhereInput;
+      orderBy?: SubjectOrderByInput;
+      skip?: Int;
+      after?: String;
+      before?: String;
+      first?: Int;
+      last?: Int;
+    }
+  ) => FragmentableArray<Subject>;
+  subjectsConnection: (
+    args?: {
+      where?: SubjectWhereInput;
+      orderBy?: SubjectOrderByInput;
+      skip?: Int;
+      after?: String;
+      before?: String;
+      first?: Int;
+      last?: Int;
+    }
+  ) => SubjectConnectionPromise;
   node: (args: { id: ID_Output }) => Node;
 
   /**
    * Mutations
    */
 
-  createPost: (data: PostCreateInput) => PostPromise;
-  updatePost: (
-    args: { data: PostUpdateInput; where: PostWhereUniqueInput }
-  ) => PostPromise;
-  updateManyPosts: (
-    args: { data: PostUpdateManyMutationInput; where?: PostWhereInput }
+  createCourse: (data: CourseCreateInput) => CoursePromise;
+  updateCourse: (
+    args: { data: CourseUpdateInput; where: CourseWhereUniqueInput }
+  ) => CoursePromise;
+  updateManyCourses: (
+    args: { data: CourseUpdateManyMutationInput; where?: CourseWhereInput }
   ) => BatchPayloadPromise;
-  upsertPost: (
+  upsertCourse: (
     args: {
-      where: PostWhereUniqueInput;
-      create: PostCreateInput;
-      update: PostUpdateInput;
+      where: CourseWhereUniqueInput;
+      create: CourseCreateInput;
+      update: CourseUpdateInput;
     }
-  ) => PostPromise;
-  deletePost: (where: PostWhereUniqueInput) => PostPromise;
-  deleteManyPosts: (where?: PostWhereInput) => BatchPayloadPromise;
-  createUser: (data: UserCreateInput) => UserPromise;
-  updateUser: (
-    args: { data: UserUpdateInput; where: UserWhereUniqueInput }
-  ) => UserPromise;
-  updateManyUsers: (
-    args: { data: UserUpdateManyMutationInput; where?: UserWhereInput }
+  ) => CoursePromise;
+  deleteCourse: (where: CourseWhereUniqueInput) => CoursePromise;
+  deleteManyCourses: (where?: CourseWhereInput) => BatchPayloadPromise;
+  createDegree: (data: DegreeCreateInput) => DegreePromise;
+  updateDegree: (
+    args: { data: DegreeUpdateInput; where: DegreeWhereUniqueInput }
+  ) => DegreePromise;
+  updateManyDegrees: (
+    args: { data: DegreeUpdateManyMutationInput; where?: DegreeWhereInput }
   ) => BatchPayloadPromise;
-  upsertUser: (
+  upsertDegree: (
     args: {
-      where: UserWhereUniqueInput;
-      create: UserCreateInput;
-      update: UserUpdateInput;
+      where: DegreeWhereUniqueInput;
+      create: DegreeCreateInput;
+      update: DegreeUpdateInput;
     }
-  ) => UserPromise;
-  deleteUser: (where: UserWhereUniqueInput) => UserPromise;
-  deleteManyUsers: (where?: UserWhereInput) => BatchPayloadPromise;
+  ) => DegreePromise;
+  deleteDegree: (where: DegreeWhereUniqueInput) => DegreePromise;
+  deleteManyDegrees: (where?: DegreeWhereInput) => BatchPayloadPromise;
+  createDepartment: (data: DepartmentCreateInput) => DepartmentPromise;
+  updateDepartment: (
+    args: { data: DepartmentUpdateInput; where: DepartmentWhereUniqueInput }
+  ) => DepartmentPromise;
+  updateManyDepartments: (
+    args: {
+      data: DepartmentUpdateManyMutationInput;
+      where?: DepartmentWhereInput;
+    }
+  ) => BatchPayloadPromise;
+  upsertDepartment: (
+    args: {
+      where: DepartmentWhereUniqueInput;
+      create: DepartmentCreateInput;
+      update: DepartmentUpdateInput;
+    }
+  ) => DepartmentPromise;
+  deleteDepartment: (where: DepartmentWhereUniqueInput) => DepartmentPromise;
+  deleteManyDepartments: (where?: DepartmentWhereInput) => BatchPayloadPromise;
+  createStudent: (data: StudentCreateInput) => StudentPromise;
+  updateStudent: (
+    args: { data: StudentUpdateInput; where: StudentWhereUniqueInput }
+  ) => StudentPromise;
+  updateManyStudents: (
+    args: { data: StudentUpdateManyMutationInput; where?: StudentWhereInput }
+  ) => BatchPayloadPromise;
+  upsertStudent: (
+    args: {
+      where: StudentWhereUniqueInput;
+      create: StudentCreateInput;
+      update: StudentUpdateInput;
+    }
+  ) => StudentPromise;
+  deleteStudent: (where: StudentWhereUniqueInput) => StudentPromise;
+  deleteManyStudents: (where?: StudentWhereInput) => BatchPayloadPromise;
+  createSubject: (data: SubjectCreateInput) => SubjectPromise;
+  updateSubject: (
+    args: { data: SubjectUpdateInput; where: SubjectWhereUniqueInput }
+  ) => SubjectPromise;
+  updateManySubjects: (
+    args: { data: SubjectUpdateManyMutationInput; where?: SubjectWhereInput }
+  ) => BatchPayloadPromise;
+  upsertSubject: (
+    args: {
+      where: SubjectWhereUniqueInput;
+      create: SubjectCreateInput;
+      update: SubjectUpdateInput;
+    }
+  ) => SubjectPromise;
+  deleteSubject: (where: SubjectWhereUniqueInput) => SubjectPromise;
+  deleteManySubjects: (where?: SubjectWhereInput) => BatchPayloadPromise;
 
   /**
    * Subscriptions
@@ -130,12 +253,21 @@ export interface Prisma {
 }
 
 export interface Subscription {
-  post: (
-    where?: PostSubscriptionWhereInput
-  ) => PostSubscriptionPayloadSubscription;
-  user: (
-    where?: UserSubscriptionWhereInput
-  ) => UserSubscriptionPayloadSubscription;
+  course: (
+    where?: CourseSubscriptionWhereInput
+  ) => CourseSubscriptionPayloadSubscription;
+  degree: (
+    where?: DegreeSubscriptionWhereInput
+  ) => DegreeSubscriptionPayloadSubscription;
+  department: (
+    where?: DepartmentSubscriptionWhereInput
+  ) => DepartmentSubscriptionPayloadSubscription;
+  student: (
+    where?: StudentSubscriptionWhereInput
+  ) => StudentSubscriptionPayloadSubscription;
+  subject: (
+    where?: SubjectSubscriptionWhereInput
+  ) => SubjectSubscriptionPayloadSubscription;
 }
 
 export interface ClientConstructor<T> {
@@ -146,25 +278,57 @@ export interface ClientConstructor<T> {
  * Types
  */
 
-export type PostOrderByInput =
+export type CourseOrderByInput =
   | "id_ASC"
   | "id_DESC"
+  | "name_ASC"
+  | "name_DESC"
+  | "number_ASC"
+  | "number_DESC"
+  | "level_ASC"
+  | "level_DESC"
+  | "credits_ASC"
+  | "credits_DESC"
   | "createdAt_ASC"
   | "createdAt_DESC"
   | "updatedAt_ASC"
-  | "updatedAt_DESC"
-  | "published_ASC"
-  | "published_DESC"
-  | "title_ASC"
-  | "title_DESC"
-  | "content_ASC"
-  | "content_DESC";
+  | "updatedAt_DESC";
 
-export type UserOrderByInput =
+export type DegreeOrderByInput =
   | "id_ASC"
   | "id_DESC"
-  | "email_ASC"
-  | "email_DESC"
+  | "name_ASC"
+  | "name_DESC"
+  | "requiredCredits_ASC"
+  | "requiredCredits_DESC"
+  | "createdAt_ASC"
+  | "createdAt_DESC"
+  | "updatedAt_ASC"
+  | "updatedAt_DESC";
+
+export type DepartmentOrderByInput =
+  | "id_ASC"
+  | "id_DESC"
+  | "name_ASC"
+  | "name_DESC"
+  | "createdAt_ASC"
+  | "createdAt_DESC"
+  | "updatedAt_ASC"
+  | "updatedAt_DESC";
+
+export type StudentOrderByInput =
+  | "id_ASC"
+  | "id_DESC"
+  | "name_ASC"
+  | "name_DESC"
+  | "createdAt_ASC"
+  | "createdAt_DESC"
+  | "updatedAt_ASC"
+  | "updatedAt_DESC";
+
+export type SubjectOrderByInput =
+  | "id_ASC"
+  | "id_DESC"
   | "name_ASC"
   | "name_DESC"
   | "createdAt_ASC"
@@ -174,52 +338,21 @@ export type UserOrderByInput =
 
 export type MutationType = "CREATED" | "UPDATED" | "DELETED";
 
-export interface UserUpdateOneRequiredWithoutPostsInput {
-  create?: UserCreateWithoutPostsInput;
-  update?: UserUpdateWithoutPostsDataInput;
-  upsert?: UserUpsertWithoutPostsInput;
-  connect?: UserWhereUniqueInput;
+export interface CourseCreateOneInput {
+  create?: CourseCreateInput;
+  connect?: CourseWhereUniqueInput;
 }
 
-export type PostWhereUniqueInput = AtLeastOne<{
+export type CourseWhereUniqueInput = AtLeastOne<{
   id: ID_Input;
 }>;
 
-export interface PostUpdateWithWhereUniqueWithoutAuthorInput {
-  where: PostWhereUniqueInput;
-  data: PostUpdateWithoutAuthorDataInput;
+export interface SubjectUpsertNestedInput {
+  update: SubjectUpdateDataInput;
+  create: SubjectCreateInput;
 }
 
-export interface UserCreateInput {
-  email: String;
-  name?: String;
-  posts?: PostCreateManyWithoutAuthorInput;
-}
-
-export interface PostUpdateManyWithoutAuthorInput {
-  create?: PostCreateWithoutAuthorInput[] | PostCreateWithoutAuthorInput;
-  delete?: PostWhereUniqueInput[] | PostWhereUniqueInput;
-  connect?: PostWhereUniqueInput[] | PostWhereUniqueInput;
-  set?: PostWhereUniqueInput[] | PostWhereUniqueInput;
-  disconnect?: PostWhereUniqueInput[] | PostWhereUniqueInput;
-  update?:
-    | PostUpdateWithWhereUniqueWithoutAuthorInput[]
-    | PostUpdateWithWhereUniqueWithoutAuthorInput;
-  upsert?:
-    | PostUpsertWithWhereUniqueWithoutAuthorInput[]
-    | PostUpsertWithWhereUniqueWithoutAuthorInput;
-  deleteMany?: PostScalarWhereInput[] | PostScalarWhereInput;
-  updateMany?:
-    | PostUpdateManyWithWhereNestedInput[]
-    | PostUpdateManyWithWhereNestedInput;
-}
-
-export interface UserUpsertWithoutPostsInput {
-  update: UserUpdateWithoutPostsDataInput;
-  create: UserCreateWithoutPostsInput;
-}
-
-export interface UserWhereInput {
+export interface CourseWhereInput {
   id?: ID_Input;
   id_not?: ID_Input;
   id_in?: ID_Input[] | ID_Input;
@@ -234,20 +367,6 @@ export interface UserWhereInput {
   id_not_starts_with?: ID_Input;
   id_ends_with?: ID_Input;
   id_not_ends_with?: ID_Input;
-  email?: String;
-  email_not?: String;
-  email_in?: String[] | String;
-  email_not_in?: String[] | String;
-  email_lt?: String;
-  email_lte?: String;
-  email_gt?: String;
-  email_gte?: String;
-  email_contains?: String;
-  email_not_contains?: String;
-  email_starts_with?: String;
-  email_not_starts_with?: String;
-  email_ends_with?: String;
-  email_not_ends_with?: String;
   name?: String;
   name_not?: String;
   name_in?: String[] | String;
@@ -262,44 +381,55 @@ export interface UserWhereInput {
   name_not_starts_with?: String;
   name_ends_with?: String;
   name_not_ends_with?: String;
-  posts_every?: PostWhereInput;
-  posts_some?: PostWhereInput;
-  posts_none?: PostWhereInput;
-  AND?: UserWhereInput[] | UserWhereInput;
-  OR?: UserWhereInput[] | UserWhereInput;
-  NOT?: UserWhereInput[] | UserWhereInput;
+  number?: String;
+  number_not?: String;
+  number_in?: String[] | String;
+  number_not_in?: String[] | String;
+  number_lt?: String;
+  number_lte?: String;
+  number_gt?: String;
+  number_gte?: String;
+  number_contains?: String;
+  number_not_contains?: String;
+  number_starts_with?: String;
+  number_not_starts_with?: String;
+  number_ends_with?: String;
+  number_not_ends_with?: String;
+  level?: Int;
+  level_not?: Int;
+  level_in?: Int[] | Int;
+  level_not_in?: Int[] | Int;
+  level_lt?: Int;
+  level_lte?: Int;
+  level_gt?: Int;
+  level_gte?: Int;
+  credits?: Int;
+  credits_not?: Int;
+  credits_in?: Int[] | Int;
+  credits_not_in?: Int[] | Int;
+  credits_lt?: Int;
+  credits_lte?: Int;
+  credits_gt?: Int;
+  credits_gte?: Int;
+  subject?: SubjectWhereInput;
+  degree?: DegreeWhereInput;
+  department?: DepartmentWhereInput;
+  prerequisite?: CourseWhereInput;
+  AND?: CourseWhereInput[] | CourseWhereInput;
+  OR?: CourseWhereInput[] | CourseWhereInput;
+  NOT?: CourseWhereInput[] | CourseWhereInput;
 }
 
-export interface PostSubscriptionWhereInput {
-  mutation_in?: MutationType[] | MutationType;
-  updatedFields_contains?: String;
-  updatedFields_contains_every?: String[] | String;
-  updatedFields_contains_some?: String[] | String;
-  node?: PostWhereInput;
-  AND?: PostSubscriptionWhereInput[] | PostSubscriptionWhereInput;
-  OR?: PostSubscriptionWhereInput[] | PostSubscriptionWhereInput;
-  NOT?: PostSubscriptionWhereInput[] | PostSubscriptionWhereInput;
+export interface DegreeUpdateOneInput {
+  create?: DegreeCreateInput;
+  update?: DegreeUpdateDataInput;
+  upsert?: DegreeUpsertNestedInput;
+  delete?: Boolean;
+  disconnect?: Boolean;
+  connect?: DegreeWhereUniqueInput;
 }
 
-export interface PostCreateInput {
-  published?: Boolean;
-  title: String;
-  content?: String;
-  author: UserCreateOneWithoutPostsInput;
-}
-
-export interface PostUpdateManyDataInput {
-  published?: Boolean;
-  title?: String;
-  content?: String;
-}
-
-export interface UserCreateOneWithoutPostsInput {
-  create?: UserCreateWithoutPostsInput;
-  connect?: UserWhereUniqueInput;
-}
-
-export interface PostScalarWhereInput {
+export interface DegreeWhereInput {
   id?: ID_Input;
   id_not?: ID_Input;
   id_in?: ID_Input[] | ID_Input;
@@ -314,392 +444,1079 @@ export interface PostScalarWhereInput {
   id_not_starts_with?: ID_Input;
   id_ends_with?: ID_Input;
   id_not_ends_with?: ID_Input;
-  createdAt?: DateTimeInput;
-  createdAt_not?: DateTimeInput;
-  createdAt_in?: DateTimeInput[] | DateTimeInput;
-  createdAt_not_in?: DateTimeInput[] | DateTimeInput;
-  createdAt_lt?: DateTimeInput;
-  createdAt_lte?: DateTimeInput;
-  createdAt_gt?: DateTimeInput;
-  createdAt_gte?: DateTimeInput;
-  updatedAt?: DateTimeInput;
-  updatedAt_not?: DateTimeInput;
-  updatedAt_in?: DateTimeInput[] | DateTimeInput;
-  updatedAt_not_in?: DateTimeInput[] | DateTimeInput;
-  updatedAt_lt?: DateTimeInput;
-  updatedAt_lte?: DateTimeInput;
-  updatedAt_gt?: DateTimeInput;
-  updatedAt_gte?: DateTimeInput;
-  published?: Boolean;
-  published_not?: Boolean;
-  title?: String;
-  title_not?: String;
-  title_in?: String[] | String;
-  title_not_in?: String[] | String;
-  title_lt?: String;
-  title_lte?: String;
-  title_gt?: String;
-  title_gte?: String;
-  title_contains?: String;
-  title_not_contains?: String;
-  title_starts_with?: String;
-  title_not_starts_with?: String;
-  title_ends_with?: String;
-  title_not_ends_with?: String;
-  content?: String;
-  content_not?: String;
-  content_in?: String[] | String;
-  content_not_in?: String[] | String;
-  content_lt?: String;
-  content_lte?: String;
-  content_gt?: String;
-  content_gte?: String;
-  content_contains?: String;
-  content_not_contains?: String;
-  content_starts_with?: String;
-  content_not_starts_with?: String;
-  content_ends_with?: String;
-  content_not_ends_with?: String;
-  AND?: PostScalarWhereInput[] | PostScalarWhereInput;
-  OR?: PostScalarWhereInput[] | PostScalarWhereInput;
-  NOT?: PostScalarWhereInput[] | PostScalarWhereInput;
+  name?: String;
+  name_not?: String;
+  name_in?: String[] | String;
+  name_not_in?: String[] | String;
+  name_lt?: String;
+  name_lte?: String;
+  name_gt?: String;
+  name_gte?: String;
+  name_contains?: String;
+  name_not_contains?: String;
+  name_starts_with?: String;
+  name_not_starts_with?: String;
+  name_ends_with?: String;
+  name_not_ends_with?: String;
+  requiredCredits?: Int;
+  requiredCredits_not?: Int;
+  requiredCredits_in?: Int[] | Int;
+  requiredCredits_not_in?: Int[] | Int;
+  requiredCredits_lt?: Int;
+  requiredCredits_lte?: Int;
+  requiredCredits_gt?: Int;
+  requiredCredits_gte?: Int;
+  AND?: DegreeWhereInput[] | DegreeWhereInput;
+  OR?: DegreeWhereInput[] | DegreeWhereInput;
+  NOT?: DegreeWhereInput[] | DegreeWhereInput;
 }
 
-export interface UserCreateWithoutPostsInput {
-  email: String;
+export interface DepartmentUpdateInput {
   name?: String;
 }
 
-export interface PostUpsertWithWhereUniqueWithoutAuthorInput {
-  where: PostWhereUniqueInput;
-  update: PostUpdateWithoutAuthorDataInput;
-  create: PostCreateWithoutAuthorInput;
-}
-
-export interface PostUpdateInput {
-  published?: Boolean;
-  title?: String;
-  content?: String;
-  author?: UserUpdateOneRequiredWithoutPostsInput;
-}
-
-export interface PostWhereInput {
-  id?: ID_Input;
-  id_not?: ID_Input;
-  id_in?: ID_Input[] | ID_Input;
-  id_not_in?: ID_Input[] | ID_Input;
-  id_lt?: ID_Input;
-  id_lte?: ID_Input;
-  id_gt?: ID_Input;
-  id_gte?: ID_Input;
-  id_contains?: ID_Input;
-  id_not_contains?: ID_Input;
-  id_starts_with?: ID_Input;
-  id_not_starts_with?: ID_Input;
-  id_ends_with?: ID_Input;
-  id_not_ends_with?: ID_Input;
-  createdAt?: DateTimeInput;
-  createdAt_not?: DateTimeInput;
-  createdAt_in?: DateTimeInput[] | DateTimeInput;
-  createdAt_not_in?: DateTimeInput[] | DateTimeInput;
-  createdAt_lt?: DateTimeInput;
-  createdAt_lte?: DateTimeInput;
-  createdAt_gt?: DateTimeInput;
-  createdAt_gte?: DateTimeInput;
-  updatedAt?: DateTimeInput;
-  updatedAt_not?: DateTimeInput;
-  updatedAt_in?: DateTimeInput[] | DateTimeInput;
-  updatedAt_not_in?: DateTimeInput[] | DateTimeInput;
-  updatedAt_lt?: DateTimeInput;
-  updatedAt_lte?: DateTimeInput;
-  updatedAt_gt?: DateTimeInput;
-  updatedAt_gte?: DateTimeInput;
-  published?: Boolean;
-  published_not?: Boolean;
-  title?: String;
-  title_not?: String;
-  title_in?: String[] | String;
-  title_not_in?: String[] | String;
-  title_lt?: String;
-  title_lte?: String;
-  title_gt?: String;
-  title_gte?: String;
-  title_contains?: String;
-  title_not_contains?: String;
-  title_starts_with?: String;
-  title_not_starts_with?: String;
-  title_ends_with?: String;
-  title_not_ends_with?: String;
-  content?: String;
-  content_not?: String;
-  content_in?: String[] | String;
-  content_not_in?: String[] | String;
-  content_lt?: String;
-  content_lte?: String;
-  content_gt?: String;
-  content_gte?: String;
-  content_contains?: String;
-  content_not_contains?: String;
-  content_starts_with?: String;
-  content_not_starts_with?: String;
-  content_ends_with?: String;
-  content_not_ends_with?: String;
-  author?: UserWhereInput;
-  AND?: PostWhereInput[] | PostWhereInput;
-  OR?: PostWhereInput[] | PostWhereInput;
-  NOT?: PostWhereInput[] | PostWhereInput;
-}
-
-export interface UserUpdateInput {
-  email?: String;
+export interface CourseUpdateDataInput {
   name?: String;
-  posts?: PostUpdateManyWithoutAuthorInput;
+  number?: String;
+  level?: Int;
+  credits?: Int;
+  subject?: SubjectUpdateOneInput;
+  degree?: DegreeUpdateOneInput;
+  department?: DepartmentUpdateOneInput;
+  prerequisite?: CourseUpdateOneInput;
 }
 
-export interface UserUpdateManyMutationInput {
-  email?: String;
+export interface DegreeUpdateManyMutationInput {
   name?: String;
+  requiredCredits?: Int;
 }
 
-export interface PostCreateManyWithoutAuthorInput {
-  create?: PostCreateWithoutAuthorInput[] | PostCreateWithoutAuthorInput;
-  connect?: PostWhereUniqueInput[] | PostWhereUniqueInput;
-}
-
-export interface PostUpdateManyMutationInput {
-  published?: Boolean;
-  title?: String;
-  content?: String;
-}
-
-export interface PostCreateWithoutAuthorInput {
-  published?: Boolean;
-  title: String;
-  content?: String;
-}
-
-export interface UserUpdateWithoutPostsDataInput {
-  email?: String;
+export interface DegreeUpdateDataInput {
   name?: String;
+  requiredCredits?: Int;
 }
 
-export interface PostUpdateManyWithWhereNestedInput {
-  where: PostScalarWhereInput;
-  data: PostUpdateManyDataInput;
+export interface DegreeUpdateInput {
+  name?: String;
+  requiredCredits?: Int;
 }
 
-export interface UserSubscriptionWhereInput {
+export interface StudentSubscriptionWhereInput {
   mutation_in?: MutationType[] | MutationType;
   updatedFields_contains?: String;
   updatedFields_contains_every?: String[] | String;
   updatedFields_contains_some?: String[] | String;
-  node?: UserWhereInput;
-  AND?: UserSubscriptionWhereInput[] | UserSubscriptionWhereInput;
-  OR?: UserSubscriptionWhereInput[] | UserSubscriptionWhereInput;
-  NOT?: UserSubscriptionWhereInput[] | UserSubscriptionWhereInput;
+  node?: StudentWhereInput;
+  AND?: StudentSubscriptionWhereInput[] | StudentSubscriptionWhereInput;
+  OR?: StudentSubscriptionWhereInput[] | StudentSubscriptionWhereInput;
+  NOT?: StudentSubscriptionWhereInput[] | StudentSubscriptionWhereInput;
 }
 
-export interface PostUpdateWithoutAuthorDataInput {
-  published?: Boolean;
-  title?: String;
-  content?: String;
+export interface DegreeSubscriptionWhereInput {
+  mutation_in?: MutationType[] | MutationType;
+  updatedFields_contains?: String;
+  updatedFields_contains_every?: String[] | String;
+  updatedFields_contains_some?: String[] | String;
+  node?: DegreeWhereInput;
+  AND?: DegreeSubscriptionWhereInput[] | DegreeSubscriptionWhereInput;
+  OR?: DegreeSubscriptionWhereInput[] | DegreeSubscriptionWhereInput;
+  NOT?: DegreeSubscriptionWhereInput[] | DegreeSubscriptionWhereInput;
 }
 
-export type UserWhereUniqueInput = AtLeastOne<{
+export interface CourseSubscriptionWhereInput {
+  mutation_in?: MutationType[] | MutationType;
+  updatedFields_contains?: String;
+  updatedFields_contains_every?: String[] | String;
+  updatedFields_contains_some?: String[] | String;
+  node?: CourseWhereInput;
+  AND?: CourseSubscriptionWhereInput[] | CourseSubscriptionWhereInput;
+  OR?: CourseSubscriptionWhereInput[] | CourseSubscriptionWhereInput;
+  NOT?: CourseSubscriptionWhereInput[] | CourseSubscriptionWhereInput;
+}
+
+export interface CourseCreateInput {
+  name: String;
+  number: String;
+  level: Int;
+  credits: Int;
+  subject?: SubjectCreateOneInput;
+  degree?: DegreeCreateOneInput;
+  department?: DepartmentCreateOneInput;
+  prerequisite?: CourseCreateOneInput;
+}
+
+export interface SubjectUpdateInput {
+  name?: String;
+}
+
+export interface SubjectCreateOneInput {
+  create?: SubjectCreateInput;
+  connect?: SubjectWhereUniqueInput;
+}
+
+export type DepartmentWhereUniqueInput = AtLeastOne<{
   id: ID_Input;
-  email?: String;
 }>;
+
+export interface SubjectCreateInput {
+  name: String;
+}
+
+export interface CourseUpdateManyWithWhereNestedInput {
+  where: CourseScalarWhereInput;
+  data: CourseUpdateManyDataInput;
+}
+
+export interface DegreeCreateOneInput {
+  create?: DegreeCreateInput;
+  connect?: DegreeWhereUniqueInput;
+}
+
+export interface CourseUpsertWithWhereUniqueNestedInput {
+  where: CourseWhereUniqueInput;
+  update: CourseUpdateDataInput;
+  create: CourseCreateInput;
+}
+
+export interface DegreeCreateInput {
+  name: String;
+  requiredCredits: Int;
+}
+
+export interface CourseUpdateWithWhereUniqueNestedInput {
+  where: CourseWhereUniqueInput;
+  data: CourseUpdateDataInput;
+}
+
+export interface DepartmentCreateOneInput {
+  create?: DepartmentCreateInput;
+  connect?: DepartmentWhereUniqueInput;
+}
+
+export interface CourseUpdateManyInput {
+  create?: CourseCreateInput[] | CourseCreateInput;
+  update?:
+    | CourseUpdateWithWhereUniqueNestedInput[]
+    | CourseUpdateWithWhereUniqueNestedInput;
+  upsert?:
+    | CourseUpsertWithWhereUniqueNestedInput[]
+    | CourseUpsertWithWhereUniqueNestedInput;
+  delete?: CourseWhereUniqueInput[] | CourseWhereUniqueInput;
+  connect?: CourseWhereUniqueInput[] | CourseWhereUniqueInput;
+  set?: CourseWhereUniqueInput[] | CourseWhereUniqueInput;
+  disconnect?: CourseWhereUniqueInput[] | CourseWhereUniqueInput;
+  deleteMany?: CourseScalarWhereInput[] | CourseScalarWhereInput;
+  updateMany?:
+    | CourseUpdateManyWithWhereNestedInput[]
+    | CourseUpdateManyWithWhereNestedInput;
+}
+
+export interface DepartmentCreateInput {
+  name: String;
+}
+
+export interface CourseCreateManyInput {
+  create?: CourseCreateInput[] | CourseCreateInput;
+  connect?: CourseWhereUniqueInput[] | CourseWhereUniqueInput;
+}
+
+export interface CourseUpdateManyMutationInput {
+  name?: String;
+  number?: String;
+  level?: Int;
+  credits?: Int;
+}
+
+export type SubjectWhereUniqueInput = AtLeastOne<{
+  id: ID_Input;
+}>;
+
+export interface CourseUpdateInput {
+  name?: String;
+  number?: String;
+  level?: Int;
+  credits?: Int;
+  subject?: SubjectUpdateOneInput;
+  degree?: DegreeUpdateOneInput;
+  department?: DepartmentUpdateOneInput;
+  prerequisite?: CourseUpdateOneInput;
+}
+
+export interface SubjectSubscriptionWhereInput {
+  mutation_in?: MutationType[] | MutationType;
+  updatedFields_contains?: String;
+  updatedFields_contains_every?: String[] | String;
+  updatedFields_contains_some?: String[] | String;
+  node?: SubjectWhereInput;
+  AND?: SubjectSubscriptionWhereInput[] | SubjectSubscriptionWhereInput;
+  OR?: SubjectSubscriptionWhereInput[] | SubjectSubscriptionWhereInput;
+  NOT?: SubjectSubscriptionWhereInput[] | SubjectSubscriptionWhereInput;
+}
+
+export interface SubjectUpdateOneInput {
+  create?: SubjectCreateInput;
+  update?: SubjectUpdateDataInput;
+  upsert?: SubjectUpsertNestedInput;
+  delete?: Boolean;
+  disconnect?: Boolean;
+  connect?: SubjectWhereUniqueInput;
+}
+
+export type DegreeWhereUniqueInput = AtLeastOne<{
+  id: ID_Input;
+}>;
+
+export interface SubjectUpdateDataInput {
+  name?: String;
+}
+
+export interface StudentUpdateManyMutationInput {
+  name?: String;
+}
+
+export interface SubjectWhereInput {
+  id?: ID_Input;
+  id_not?: ID_Input;
+  id_in?: ID_Input[] | ID_Input;
+  id_not_in?: ID_Input[] | ID_Input;
+  id_lt?: ID_Input;
+  id_lte?: ID_Input;
+  id_gt?: ID_Input;
+  id_gte?: ID_Input;
+  id_contains?: ID_Input;
+  id_not_contains?: ID_Input;
+  id_starts_with?: ID_Input;
+  id_not_starts_with?: ID_Input;
+  id_ends_with?: ID_Input;
+  id_not_ends_with?: ID_Input;
+  name?: String;
+  name_not?: String;
+  name_in?: String[] | String;
+  name_not_in?: String[] | String;
+  name_lt?: String;
+  name_lte?: String;
+  name_gt?: String;
+  name_gte?: String;
+  name_contains?: String;
+  name_not_contains?: String;
+  name_starts_with?: String;
+  name_not_starts_with?: String;
+  name_ends_with?: String;
+  name_not_ends_with?: String;
+  AND?: SubjectWhereInput[] | SubjectWhereInput;
+  OR?: SubjectWhereInput[] | SubjectWhereInput;
+  NOT?: SubjectWhereInput[] | SubjectWhereInput;
+}
+
+export interface CourseScalarWhereInput {
+  id?: ID_Input;
+  id_not?: ID_Input;
+  id_in?: ID_Input[] | ID_Input;
+  id_not_in?: ID_Input[] | ID_Input;
+  id_lt?: ID_Input;
+  id_lte?: ID_Input;
+  id_gt?: ID_Input;
+  id_gte?: ID_Input;
+  id_contains?: ID_Input;
+  id_not_contains?: ID_Input;
+  id_starts_with?: ID_Input;
+  id_not_starts_with?: ID_Input;
+  id_ends_with?: ID_Input;
+  id_not_ends_with?: ID_Input;
+  name?: String;
+  name_not?: String;
+  name_in?: String[] | String;
+  name_not_in?: String[] | String;
+  name_lt?: String;
+  name_lte?: String;
+  name_gt?: String;
+  name_gte?: String;
+  name_contains?: String;
+  name_not_contains?: String;
+  name_starts_with?: String;
+  name_not_starts_with?: String;
+  name_ends_with?: String;
+  name_not_ends_with?: String;
+  number?: String;
+  number_not?: String;
+  number_in?: String[] | String;
+  number_not_in?: String[] | String;
+  number_lt?: String;
+  number_lte?: String;
+  number_gt?: String;
+  number_gte?: String;
+  number_contains?: String;
+  number_not_contains?: String;
+  number_starts_with?: String;
+  number_not_starts_with?: String;
+  number_ends_with?: String;
+  number_not_ends_with?: String;
+  level?: Int;
+  level_not?: Int;
+  level_in?: Int[] | Int;
+  level_not_in?: Int[] | Int;
+  level_lt?: Int;
+  level_lte?: Int;
+  level_gt?: Int;
+  level_gte?: Int;
+  credits?: Int;
+  credits_not?: Int;
+  credits_in?: Int[] | Int;
+  credits_not_in?: Int[] | Int;
+  credits_lt?: Int;
+  credits_lte?: Int;
+  credits_gt?: Int;
+  credits_gte?: Int;
+  AND?: CourseScalarWhereInput[] | CourseScalarWhereInput;
+  OR?: CourseScalarWhereInput[] | CourseScalarWhereInput;
+  NOT?: CourseScalarWhereInput[] | CourseScalarWhereInput;
+}
+
+export interface DepartmentWhereInput {
+  id?: ID_Input;
+  id_not?: ID_Input;
+  id_in?: ID_Input[] | ID_Input;
+  id_not_in?: ID_Input[] | ID_Input;
+  id_lt?: ID_Input;
+  id_lte?: ID_Input;
+  id_gt?: ID_Input;
+  id_gte?: ID_Input;
+  id_contains?: ID_Input;
+  id_not_contains?: ID_Input;
+  id_starts_with?: ID_Input;
+  id_not_starts_with?: ID_Input;
+  id_ends_with?: ID_Input;
+  id_not_ends_with?: ID_Input;
+  name?: String;
+  name_not?: String;
+  name_in?: String[] | String;
+  name_not_in?: String[] | String;
+  name_lt?: String;
+  name_lte?: String;
+  name_gt?: String;
+  name_gte?: String;
+  name_contains?: String;
+  name_not_contains?: String;
+  name_starts_with?: String;
+  name_not_starts_with?: String;
+  name_ends_with?: String;
+  name_not_ends_with?: String;
+  AND?: DepartmentWhereInput[] | DepartmentWhereInput;
+  OR?: DepartmentWhereInput[] | DepartmentWhereInput;
+  NOT?: DepartmentWhereInput[] | DepartmentWhereInput;
+}
+
+export interface StudentWhereInput {
+  id?: ID_Input;
+  id_not?: ID_Input;
+  id_in?: ID_Input[] | ID_Input;
+  id_not_in?: ID_Input[] | ID_Input;
+  id_lt?: ID_Input;
+  id_lte?: ID_Input;
+  id_gt?: ID_Input;
+  id_gte?: ID_Input;
+  id_contains?: ID_Input;
+  id_not_contains?: ID_Input;
+  id_starts_with?: ID_Input;
+  id_not_starts_with?: ID_Input;
+  id_ends_with?: ID_Input;
+  id_not_ends_with?: ID_Input;
+  name?: String;
+  name_not?: String;
+  name_in?: String[] | String;
+  name_not_in?: String[] | String;
+  name_lt?: String;
+  name_lte?: String;
+  name_gt?: String;
+  name_gte?: String;
+  name_contains?: String;
+  name_not_contains?: String;
+  name_starts_with?: String;
+  name_not_starts_with?: String;
+  name_ends_with?: String;
+  name_not_ends_with?: String;
+  coursesPassed_every?: CourseWhereInput;
+  coursesPassed_some?: CourseWhereInput;
+  coursesPassed_none?: CourseWhereInput;
+  enrolledDegree?: DegreeWhereInput;
+  AND?: StudentWhereInput[] | StudentWhereInput;
+  OR?: StudentWhereInput[] | StudentWhereInput;
+  NOT?: StudentWhereInput[] | StudentWhereInput;
+}
+
+export interface CourseUpsertNestedInput {
+  update: CourseUpdateDataInput;
+  create: CourseCreateInput;
+}
+
+export interface StudentCreateInput {
+  name?: String;
+  coursesPassed?: CourseCreateManyInput;
+  enrolledDegree?: DegreeCreateOneInput;
+}
+
+export interface DegreeUpsertNestedInput {
+  update: DegreeUpdateDataInput;
+  create: DegreeCreateInput;
+}
+
+export interface DepartmentSubscriptionWhereInput {
+  mutation_in?: MutationType[] | MutationType;
+  updatedFields_contains?: String;
+  updatedFields_contains_every?: String[] | String;
+  updatedFields_contains_some?: String[] | String;
+  node?: DepartmentWhereInput;
+  AND?: DepartmentSubscriptionWhereInput[] | DepartmentSubscriptionWhereInput;
+  OR?: DepartmentSubscriptionWhereInput[] | DepartmentSubscriptionWhereInput;
+  NOT?: DepartmentSubscriptionWhereInput[] | DepartmentSubscriptionWhereInput;
+}
+
+export interface CourseUpdateOneInput {
+  create?: CourseCreateInput;
+  update?: CourseUpdateDataInput;
+  upsert?: CourseUpsertNestedInput;
+  delete?: Boolean;
+  disconnect?: Boolean;
+  connect?: CourseWhereUniqueInput;
+}
+
+export interface DepartmentUpsertNestedInput {
+  update: DepartmentUpdateDataInput;
+  create: DepartmentCreateInput;
+}
+
+export interface DepartmentUpdateDataInput {
+  name?: String;
+}
+
+export interface DepartmentUpdateOneInput {
+  create?: DepartmentCreateInput;
+  update?: DepartmentUpdateDataInput;
+  upsert?: DepartmentUpsertNestedInput;
+  delete?: Boolean;
+  disconnect?: Boolean;
+  connect?: DepartmentWhereUniqueInput;
+}
+
+export interface SubjectUpdateManyMutationInput {
+  name?: String;
+}
+
+export interface DepartmentUpdateManyMutationInput {
+  name?: String;
+}
+
+export interface StudentUpdateInput {
+  name?: String;
+  coursesPassed?: CourseUpdateManyInput;
+  enrolledDegree?: DegreeUpdateOneInput;
+}
+
+export type StudentWhereUniqueInput = AtLeastOne<{
+  id: ID_Input;
+}>;
+
+export interface CourseUpdateManyDataInput {
+  name?: String;
+  number?: String;
+  level?: Int;
+  credits?: Int;
+}
 
 export interface NodeNode {
   id: ID_Output;
 }
 
-export interface UserPreviousValues {
+export interface SubjectPreviousValues {
   id: ID_Output;
-  email: String;
-  name?: String;
+  name: String;
 }
 
-export interface UserPreviousValuesPromise
-  extends Promise<UserPreviousValues>,
+export interface SubjectPreviousValuesPromise
+  extends Promise<SubjectPreviousValues>,
     Fragmentable {
   id: () => Promise<ID_Output>;
-  email: () => Promise<String>;
   name: () => Promise<String>;
 }
 
-export interface UserPreviousValuesSubscription
-  extends Promise<AsyncIterator<UserPreviousValues>>,
+export interface SubjectPreviousValuesSubscription
+  extends Promise<AsyncIterator<SubjectPreviousValues>>,
     Fragmentable {
   id: () => Promise<AsyncIterator<ID_Output>>;
-  email: () => Promise<AsyncIterator<String>>;
   name: () => Promise<AsyncIterator<String>>;
 }
 
-export interface PostPreviousValues {
-  id: ID_Output;
-  createdAt: DateTimeOutput;
-  updatedAt: DateTimeOutput;
-  published: Boolean;
-  title: String;
-  content?: String;
+export interface DegreeEdge {
+  node: Degree;
+  cursor: String;
 }
 
-export interface PostPreviousValuesPromise
-  extends Promise<PostPreviousValues>,
+export interface DegreeEdgePromise extends Promise<DegreeEdge>, Fragmentable {
+  node: <T = DegreePromise>() => T;
+  cursor: () => Promise<String>;
+}
+
+export interface DegreeEdgeSubscription
+  extends Promise<AsyncIterator<DegreeEdge>>,
     Fragmentable {
-  id: () => Promise<ID_Output>;
-  createdAt: () => Promise<DateTimeOutput>;
-  updatedAt: () => Promise<DateTimeOutput>;
-  published: () => Promise<Boolean>;
-  title: () => Promise<String>;
-  content: () => Promise<String>;
+  node: <T = DegreeSubscription>() => T;
+  cursor: () => Promise<AsyncIterator<String>>;
 }
 
-export interface PostPreviousValuesSubscription
-  extends Promise<AsyncIterator<PostPreviousValues>>,
+export interface Department {
+  id: ID_Output;
+  name: String;
+}
+
+export interface DepartmentPromise extends Promise<Department>, Fragmentable {
+  id: () => Promise<ID_Output>;
+  name: () => Promise<String>;
+}
+
+export interface DepartmentSubscription
+  extends Promise<AsyncIterator<Department>>,
     Fragmentable {
   id: () => Promise<AsyncIterator<ID_Output>>;
-  createdAt: () => Promise<AsyncIterator<DateTimeOutput>>;
-  updatedAt: () => Promise<AsyncIterator<DateTimeOutput>>;
-  published: () => Promise<AsyncIterator<Boolean>>;
-  title: () => Promise<AsyncIterator<String>>;
-  content: () => Promise<AsyncIterator<String>>;
+  name: () => Promise<AsyncIterator<String>>;
 }
 
-export interface Post {
+export interface DegreeConnection {
+  pageInfo: PageInfo;
+  edges: DegreeEdge[];
+}
+
+export interface DegreeConnectionPromise
+  extends Promise<DegreeConnection>,
+    Fragmentable {
+  pageInfo: <T = PageInfoPromise>() => T;
+  edges: <T = FragmentableArray<DegreeEdge>>() => T;
+  aggregate: <T = AggregateDegreePromise>() => T;
+}
+
+export interface DegreeConnectionSubscription
+  extends Promise<AsyncIterator<DegreeConnection>>,
+    Fragmentable {
+  pageInfo: <T = PageInfoSubscription>() => T;
+  edges: <T = Promise<AsyncIterator<DegreeEdgeSubscription>>>() => T;
+  aggregate: <T = AggregateDegreeSubscription>() => T;
+}
+
+export interface CourseConnection {
+  pageInfo: PageInfo;
+  edges: CourseEdge[];
+}
+
+export interface CourseConnectionPromise
+  extends Promise<CourseConnection>,
+    Fragmentable {
+  pageInfo: <T = PageInfoPromise>() => T;
+  edges: <T = FragmentableArray<CourseEdge>>() => T;
+  aggregate: <T = AggregateCoursePromise>() => T;
+}
+
+export interface CourseConnectionSubscription
+  extends Promise<AsyncIterator<CourseConnection>>,
+    Fragmentable {
+  pageInfo: <T = PageInfoSubscription>() => T;
+  edges: <T = Promise<AsyncIterator<CourseEdgeSubscription>>>() => T;
+  aggregate: <T = AggregateCourseSubscription>() => T;
+}
+
+export interface Degree {
   id: ID_Output;
-  createdAt: DateTimeOutput;
-  updatedAt: DateTimeOutput;
-  published: Boolean;
-  title: String;
-  content?: String;
+  name: String;
+  requiredCredits: Int;
 }
 
-export interface PostPromise extends Promise<Post>, Fragmentable {
+export interface DegreePromise extends Promise<Degree>, Fragmentable {
   id: () => Promise<ID_Output>;
-  createdAt: () => Promise<DateTimeOutput>;
-  updatedAt: () => Promise<DateTimeOutput>;
-  published: () => Promise<Boolean>;
-  title: () => Promise<String>;
-  content: () => Promise<String>;
-  author: <T = UserPromise>() => T;
+  name: () => Promise<String>;
+  requiredCredits: () => Promise<Int>;
 }
 
-export interface PostSubscription
-  extends Promise<AsyncIterator<Post>>,
+export interface DegreeSubscription
+  extends Promise<AsyncIterator<Degree>>,
     Fragmentable {
   id: () => Promise<AsyncIterator<ID_Output>>;
-  createdAt: () => Promise<AsyncIterator<DateTimeOutput>>;
-  updatedAt: () => Promise<AsyncIterator<DateTimeOutput>>;
-  published: () => Promise<AsyncIterator<Boolean>>;
-  title: () => Promise<AsyncIterator<String>>;
-  content: () => Promise<AsyncIterator<String>>;
-  author: <T = UserSubscription>() => T;
+  name: () => Promise<AsyncIterator<String>>;
+  requiredCredits: () => Promise<AsyncIterator<Int>>;
 }
 
-export interface AggregatePost {
+export interface BatchPayload {
+  count: Long;
+}
+
+export interface BatchPayloadPromise
+  extends Promise<BatchPayload>,
+    Fragmentable {
+  count: () => Promise<Long>;
+}
+
+export interface BatchPayloadSubscription
+  extends Promise<AsyncIterator<BatchPayload>>,
+    Fragmentable {
+  count: () => Promise<AsyncIterator<Long>>;
+}
+
+export interface Course {
+  id: ID_Output;
+  name: String;
+  number: String;
+  level: Int;
+  credits: Int;
+}
+
+export interface CoursePromise extends Promise<Course>, Fragmentable {
+  id: () => Promise<ID_Output>;
+  name: () => Promise<String>;
+  number: () => Promise<String>;
+  level: () => Promise<Int>;
+  credits: () => Promise<Int>;
+  subject: <T = SubjectPromise>() => T;
+  degree: <T = DegreePromise>() => T;
+  department: <T = DepartmentPromise>() => T;
+  prerequisite: <T = CoursePromise>() => T;
+}
+
+export interface CourseSubscription
+  extends Promise<AsyncIterator<Course>>,
+    Fragmentable {
+  id: () => Promise<AsyncIterator<ID_Output>>;
+  name: () => Promise<AsyncIterator<String>>;
+  number: () => Promise<AsyncIterator<String>>;
+  level: () => Promise<AsyncIterator<Int>>;
+  credits: () => Promise<AsyncIterator<Int>>;
+  subject: <T = SubjectSubscription>() => T;
+  degree: <T = DegreeSubscription>() => T;
+  department: <T = DepartmentSubscription>() => T;
+  prerequisite: <T = CourseSubscription>() => T;
+}
+
+export interface AggregateSubject {
   count: Int;
 }
 
-export interface AggregatePostPromise
-  extends Promise<AggregatePost>,
+export interface AggregateSubjectPromise
+  extends Promise<AggregateSubject>,
     Fragmentable {
   count: () => Promise<Int>;
 }
 
-export interface AggregatePostSubscription
-  extends Promise<AsyncIterator<AggregatePost>>,
+export interface AggregateSubjectSubscription
+  extends Promise<AsyncIterator<AggregateSubject>>,
     Fragmentable {
   count: () => Promise<AsyncIterator<Int>>;
 }
 
-export interface PostEdge {
-  node: Post;
+export interface CourseSubscriptionPayload {
+  mutation: MutationType;
+  node: Course;
+  updatedFields: String[];
+  previousValues: CoursePreviousValues;
+}
+
+export interface CourseSubscriptionPayloadPromise
+  extends Promise<CourseSubscriptionPayload>,
+    Fragmentable {
+  mutation: () => Promise<MutationType>;
+  node: <T = CoursePromise>() => T;
+  updatedFields: () => Promise<String[]>;
+  previousValues: <T = CoursePreviousValuesPromise>() => T;
+}
+
+export interface CourseSubscriptionPayloadSubscription
+  extends Promise<AsyncIterator<CourseSubscriptionPayload>>,
+    Fragmentable {
+  mutation: () => Promise<AsyncIterator<MutationType>>;
+  node: <T = CourseSubscription>() => T;
+  updatedFields: () => Promise<AsyncIterator<String[]>>;
+  previousValues: <T = CoursePreviousValuesSubscription>() => T;
+}
+
+export interface SubjectConnection {
+  pageInfo: PageInfo;
+  edges: SubjectEdge[];
+}
+
+export interface SubjectConnectionPromise
+  extends Promise<SubjectConnection>,
+    Fragmentable {
+  pageInfo: <T = PageInfoPromise>() => T;
+  edges: <T = FragmentableArray<SubjectEdge>>() => T;
+  aggregate: <T = AggregateSubjectPromise>() => T;
+}
+
+export interface SubjectConnectionSubscription
+  extends Promise<AsyncIterator<SubjectConnection>>,
+    Fragmentable {
+  pageInfo: <T = PageInfoSubscription>() => T;
+  edges: <T = Promise<AsyncIterator<SubjectEdgeSubscription>>>() => T;
+  aggregate: <T = AggregateSubjectSubscription>() => T;
+}
+
+export interface CoursePreviousValues {
+  id: ID_Output;
+  name: String;
+  number: String;
+  level: Int;
+  credits: Int;
+}
+
+export interface CoursePreviousValuesPromise
+  extends Promise<CoursePreviousValues>,
+    Fragmentable {
+  id: () => Promise<ID_Output>;
+  name: () => Promise<String>;
+  number: () => Promise<String>;
+  level: () => Promise<Int>;
+  credits: () => Promise<Int>;
+}
+
+export interface CoursePreviousValuesSubscription
+  extends Promise<AsyncIterator<CoursePreviousValues>>,
+    Fragmentable {
+  id: () => Promise<AsyncIterator<ID_Output>>;
+  name: () => Promise<AsyncIterator<String>>;
+  number: () => Promise<AsyncIterator<String>>;
+  level: () => Promise<AsyncIterator<Int>>;
+  credits: () => Promise<AsyncIterator<Int>>;
+}
+
+export interface AggregateStudent {
+  count: Int;
+}
+
+export interface AggregateStudentPromise
+  extends Promise<AggregateStudent>,
+    Fragmentable {
+  count: () => Promise<Int>;
+}
+
+export interface AggregateStudentSubscription
+  extends Promise<AsyncIterator<AggregateStudent>>,
+    Fragmentable {
+  count: () => Promise<AsyncIterator<Int>>;
+}
+
+export interface AggregateCourse {
+  count: Int;
+}
+
+export interface AggregateCoursePromise
+  extends Promise<AggregateCourse>,
+    Fragmentable {
+  count: () => Promise<Int>;
+}
+
+export interface AggregateCourseSubscription
+  extends Promise<AsyncIterator<AggregateCourse>>,
+    Fragmentable {
+  count: () => Promise<AsyncIterator<Int>>;
+}
+
+export interface StudentConnection {
+  pageInfo: PageInfo;
+  edges: StudentEdge[];
+}
+
+export interface StudentConnectionPromise
+  extends Promise<StudentConnection>,
+    Fragmentable {
+  pageInfo: <T = PageInfoPromise>() => T;
+  edges: <T = FragmentableArray<StudentEdge>>() => T;
+  aggregate: <T = AggregateStudentPromise>() => T;
+}
+
+export interface StudentConnectionSubscription
+  extends Promise<AsyncIterator<StudentConnection>>,
+    Fragmentable {
+  pageInfo: <T = PageInfoSubscription>() => T;
+  edges: <T = Promise<AsyncIterator<StudentEdgeSubscription>>>() => T;
+  aggregate: <T = AggregateStudentSubscription>() => T;
+}
+
+export interface DegreeSubscriptionPayload {
+  mutation: MutationType;
+  node: Degree;
+  updatedFields: String[];
+  previousValues: DegreePreviousValues;
+}
+
+export interface DegreeSubscriptionPayloadPromise
+  extends Promise<DegreeSubscriptionPayload>,
+    Fragmentable {
+  mutation: () => Promise<MutationType>;
+  node: <T = DegreePromise>() => T;
+  updatedFields: () => Promise<String[]>;
+  previousValues: <T = DegreePreviousValuesPromise>() => T;
+}
+
+export interface DegreeSubscriptionPayloadSubscription
+  extends Promise<AsyncIterator<DegreeSubscriptionPayload>>,
+    Fragmentable {
+  mutation: () => Promise<AsyncIterator<MutationType>>;
+  node: <T = DegreeSubscription>() => T;
+  updatedFields: () => Promise<AsyncIterator<String[]>>;
+  previousValues: <T = DegreePreviousValuesSubscription>() => T;
+}
+
+export interface Student {
+  id: ID_Output;
+  name?: String;
+}
+
+export interface StudentPromise extends Promise<Student>, Fragmentable {
+  id: () => Promise<ID_Output>;
+  name: () => Promise<String>;
+  coursesPassed: <T = FragmentableArray<Course>>(
+    args?: {
+      where?: CourseWhereInput;
+      orderBy?: CourseOrderByInput;
+      skip?: Int;
+      after?: String;
+      before?: String;
+      first?: Int;
+      last?: Int;
+    }
+  ) => T;
+  enrolledDegree: <T = DegreePromise>() => T;
+}
+
+export interface StudentSubscription
+  extends Promise<AsyncIterator<Student>>,
+    Fragmentable {
+  id: () => Promise<AsyncIterator<ID_Output>>;
+  name: () => Promise<AsyncIterator<String>>;
+  coursesPassed: <T = Promise<AsyncIterator<CourseSubscription>>>(
+    args?: {
+      where?: CourseWhereInput;
+      orderBy?: CourseOrderByInput;
+      skip?: Int;
+      after?: String;
+      before?: String;
+      first?: Int;
+      last?: Int;
+    }
+  ) => T;
+  enrolledDegree: <T = DegreeSubscription>() => T;
+}
+
+export interface DegreePreviousValues {
+  id: ID_Output;
+  name: String;
+  requiredCredits: Int;
+}
+
+export interface DegreePreviousValuesPromise
+  extends Promise<DegreePreviousValues>,
+    Fragmentable {
+  id: () => Promise<ID_Output>;
+  name: () => Promise<String>;
+  requiredCredits: () => Promise<Int>;
+}
+
+export interface DegreePreviousValuesSubscription
+  extends Promise<AsyncIterator<DegreePreviousValues>>,
+    Fragmentable {
+  id: () => Promise<AsyncIterator<ID_Output>>;
+  name: () => Promise<AsyncIterator<String>>;
+  requiredCredits: () => Promise<AsyncIterator<Int>>;
+}
+
+export interface DepartmentEdge {
+  node: Department;
   cursor: String;
 }
 
-export interface PostEdgePromise extends Promise<PostEdge>, Fragmentable {
-  node: <T = PostPromise>() => T;
+export interface DepartmentEdgePromise
+  extends Promise<DepartmentEdge>,
+    Fragmentable {
+  node: <T = DepartmentPromise>() => T;
   cursor: () => Promise<String>;
 }
 
-export interface PostEdgeSubscription
-  extends Promise<AsyncIterator<PostEdge>>,
+export interface DepartmentEdgeSubscription
+  extends Promise<AsyncIterator<DepartmentEdge>>,
     Fragmentable {
-  node: <T = PostSubscription>() => T;
+  node: <T = DepartmentSubscription>() => T;
   cursor: () => Promise<AsyncIterator<String>>;
 }
 
-export interface UserSubscriptionPayload {
-  mutation: MutationType;
-  node: User;
-  updatedFields: String[];
-  previousValues: UserPreviousValues;
+export interface CourseEdge {
+  node: Course;
+  cursor: String;
 }
 
-export interface UserSubscriptionPayloadPromise
-  extends Promise<UserSubscriptionPayload>,
+export interface CourseEdgePromise extends Promise<CourseEdge>, Fragmentable {
+  node: <T = CoursePromise>() => T;
+  cursor: () => Promise<String>;
+}
+
+export interface CourseEdgeSubscription
+  extends Promise<AsyncIterator<CourseEdge>>,
+    Fragmentable {
+  node: <T = CourseSubscription>() => T;
+  cursor: () => Promise<AsyncIterator<String>>;
+}
+
+export interface Subject {
+  id: ID_Output;
+  name: String;
+}
+
+export interface SubjectPromise extends Promise<Subject>, Fragmentable {
+  id: () => Promise<ID_Output>;
+  name: () => Promise<String>;
+}
+
+export interface SubjectSubscription
+  extends Promise<AsyncIterator<Subject>>,
+    Fragmentable {
+  id: () => Promise<AsyncIterator<ID_Output>>;
+  name: () => Promise<AsyncIterator<String>>;
+}
+
+export interface DepartmentSubscriptionPayload {
+  mutation: MutationType;
+  node: Department;
+  updatedFields: String[];
+  previousValues: DepartmentPreviousValues;
+}
+
+export interface DepartmentSubscriptionPayloadPromise
+  extends Promise<DepartmentSubscriptionPayload>,
     Fragmentable {
   mutation: () => Promise<MutationType>;
-  node: <T = UserPromise>() => T;
+  node: <T = DepartmentPromise>() => T;
   updatedFields: () => Promise<String[]>;
-  previousValues: <T = UserPreviousValuesPromise>() => T;
+  previousValues: <T = DepartmentPreviousValuesPromise>() => T;
 }
 
-export interface UserSubscriptionPayloadSubscription
-  extends Promise<AsyncIterator<UserSubscriptionPayload>>,
+export interface DepartmentSubscriptionPayloadSubscription
+  extends Promise<AsyncIterator<DepartmentSubscriptionPayload>>,
     Fragmentable {
   mutation: () => Promise<AsyncIterator<MutationType>>;
-  node: <T = UserSubscription>() => T;
+  node: <T = DepartmentSubscription>() => T;
   updatedFields: () => Promise<AsyncIterator<String[]>>;
-  previousValues: <T = UserPreviousValuesSubscription>() => T;
+  previousValues: <T = DepartmentPreviousValuesSubscription>() => T;
 }
 
-export interface PostSubscriptionPayload {
+export interface SubjectEdge {
+  node: Subject;
+  cursor: String;
+}
+
+export interface SubjectEdgePromise extends Promise<SubjectEdge>, Fragmentable {
+  node: <T = SubjectPromise>() => T;
+  cursor: () => Promise<String>;
+}
+
+export interface SubjectEdgeSubscription
+  extends Promise<AsyncIterator<SubjectEdge>>,
+    Fragmentable {
+  node: <T = SubjectSubscription>() => T;
+  cursor: () => Promise<AsyncIterator<String>>;
+}
+
+export interface DepartmentPreviousValues {
+  id: ID_Output;
+  name: String;
+}
+
+export interface DepartmentPreviousValuesPromise
+  extends Promise<DepartmentPreviousValues>,
+    Fragmentable {
+  id: () => Promise<ID_Output>;
+  name: () => Promise<String>;
+}
+
+export interface DepartmentPreviousValuesSubscription
+  extends Promise<AsyncIterator<DepartmentPreviousValues>>,
+    Fragmentable {
+  id: () => Promise<AsyncIterator<ID_Output>>;
+  name: () => Promise<AsyncIterator<String>>;
+}
+
+export interface StudentEdge {
+  node: Student;
+  cursor: String;
+}
+
+export interface StudentEdgePromise extends Promise<StudentEdge>, Fragmentable {
+  node: <T = StudentPromise>() => T;
+  cursor: () => Promise<String>;
+}
+
+export interface StudentEdgeSubscription
+  extends Promise<AsyncIterator<StudentEdge>>,
+    Fragmentable {
+  node: <T = StudentSubscription>() => T;
+  cursor: () => Promise<AsyncIterator<String>>;
+}
+
+export interface StudentSubscriptionPayload {
   mutation: MutationType;
-  node: Post;
+  node: Student;
   updatedFields: String[];
-  previousValues: PostPreviousValues;
+  previousValues: StudentPreviousValues;
 }
 
-export interface PostSubscriptionPayloadPromise
-  extends Promise<PostSubscriptionPayload>,
+export interface StudentSubscriptionPayloadPromise
+  extends Promise<StudentSubscriptionPayload>,
     Fragmentable {
   mutation: () => Promise<MutationType>;
-  node: <T = PostPromise>() => T;
+  node: <T = StudentPromise>() => T;
   updatedFields: () => Promise<String[]>;
-  previousValues: <T = PostPreviousValuesPromise>() => T;
+  previousValues: <T = StudentPreviousValuesPromise>() => T;
 }
 
-export interface PostSubscriptionPayloadSubscription
-  extends Promise<AsyncIterator<PostSubscriptionPayload>>,
+export interface StudentSubscriptionPayloadSubscription
+  extends Promise<AsyncIterator<StudentSubscriptionPayload>>,
     Fragmentable {
   mutation: () => Promise<AsyncIterator<MutationType>>;
-  node: <T = PostSubscription>() => T;
+  node: <T = StudentSubscription>() => T;
   updatedFields: () => Promise<AsyncIterator<String[]>>;
-  previousValues: <T = PostPreviousValuesSubscription>() => T;
+  previousValues: <T = StudentPreviousValuesSubscription>() => T;
 }
 
-export interface PostConnection {
+export interface DepartmentConnection {
   pageInfo: PageInfo;
-  edges: PostEdge[];
+  edges: DepartmentEdge[];
 }
 
-export interface PostConnectionPromise
-  extends Promise<PostConnection>,
+export interface DepartmentConnectionPromise
+  extends Promise<DepartmentConnection>,
     Fragmentable {
   pageInfo: <T = PageInfoPromise>() => T;
-  edges: <T = FragmentableArray<PostEdge>>() => T;
-  aggregate: <T = AggregatePostPromise>() => T;
+  edges: <T = FragmentableArray<DepartmentEdge>>() => T;
+  aggregate: <T = AggregateDepartmentPromise>() => T;
 }
 
-export interface PostConnectionSubscription
-  extends Promise<AsyncIterator<PostConnection>>,
+export interface DepartmentConnectionSubscription
+  extends Promise<AsyncIterator<DepartmentConnection>>,
     Fragmentable {
   pageInfo: <T = PageInfoSubscription>() => T;
-  edges: <T = Promise<AsyncIterator<PostEdgeSubscription>>>() => T;
-  aggregate: <T = AggregatePostSubscription>() => T;
+  edges: <T = Promise<AsyncIterator<DepartmentEdgeSubscription>>>() => T;
+  aggregate: <T = AggregateDepartmentSubscription>() => T;
+}
+
+export interface StudentPreviousValues {
+  id: ID_Output;
+  name?: String;
+}
+
+export interface StudentPreviousValuesPromise
+  extends Promise<StudentPreviousValues>,
+    Fragmentable {
+  id: () => Promise<ID_Output>;
+  name: () => Promise<String>;
+}
+
+export interface StudentPreviousValuesSubscription
+  extends Promise<AsyncIterator<StudentPreviousValues>>,
+    Fragmentable {
+  id: () => Promise<AsyncIterator<ID_Output>>;
+  name: () => Promise<AsyncIterator<String>>;
 }
 
 export interface PageInfo {
@@ -725,130 +1542,62 @@ export interface PageInfoSubscription
   endCursor: () => Promise<AsyncIterator<String>>;
 }
 
-export interface BatchPayload {
-  count: Long;
+export interface SubjectSubscriptionPayload {
+  mutation: MutationType;
+  node: Subject;
+  updatedFields: String[];
+  previousValues: SubjectPreviousValues;
 }
 
-export interface BatchPayloadPromise
-  extends Promise<BatchPayload>,
+export interface SubjectSubscriptionPayloadPromise
+  extends Promise<SubjectSubscriptionPayload>,
     Fragmentable {
-  count: () => Promise<Long>;
+  mutation: () => Promise<MutationType>;
+  node: <T = SubjectPromise>() => T;
+  updatedFields: () => Promise<String[]>;
+  previousValues: <T = SubjectPreviousValuesPromise>() => T;
 }
 
-export interface BatchPayloadSubscription
-  extends Promise<AsyncIterator<BatchPayload>>,
+export interface SubjectSubscriptionPayloadSubscription
+  extends Promise<AsyncIterator<SubjectSubscriptionPayload>>,
     Fragmentable {
-  count: () => Promise<AsyncIterator<Long>>;
+  mutation: () => Promise<AsyncIterator<MutationType>>;
+  node: <T = SubjectSubscription>() => T;
+  updatedFields: () => Promise<AsyncIterator<String[]>>;
+  previousValues: <T = SubjectPreviousValuesSubscription>() => T;
 }
 
-export interface AggregateUser {
+export interface AggregateDegree {
   count: Int;
 }
 
-export interface AggregateUserPromise
-  extends Promise<AggregateUser>,
+export interface AggregateDegreePromise
+  extends Promise<AggregateDegree>,
     Fragmentable {
   count: () => Promise<Int>;
 }
 
-export interface AggregateUserSubscription
-  extends Promise<AsyncIterator<AggregateUser>>,
+export interface AggregateDegreeSubscription
+  extends Promise<AsyncIterator<AggregateDegree>>,
     Fragmentable {
   count: () => Promise<AsyncIterator<Int>>;
 }
 
-export interface User {
-  id: ID_Output;
-  email: String;
-  name?: String;
+export interface AggregateDepartment {
+  count: Int;
 }
 
-export interface UserPromise extends Promise<User>, Fragmentable {
-  id: () => Promise<ID_Output>;
-  email: () => Promise<String>;
-  name: () => Promise<String>;
-  posts: <T = FragmentableArray<Post>>(
-    args?: {
-      where?: PostWhereInput;
-      orderBy?: PostOrderByInput;
-      skip?: Int;
-      after?: String;
-      before?: String;
-      first?: Int;
-      last?: Int;
-    }
-  ) => T;
-}
-
-export interface UserSubscription
-  extends Promise<AsyncIterator<User>>,
+export interface AggregateDepartmentPromise
+  extends Promise<AggregateDepartment>,
     Fragmentable {
-  id: () => Promise<AsyncIterator<ID_Output>>;
-  email: () => Promise<AsyncIterator<String>>;
-  name: () => Promise<AsyncIterator<String>>;
-  posts: <T = Promise<AsyncIterator<PostSubscription>>>(
-    args?: {
-      where?: PostWhereInput;
-      orderBy?: PostOrderByInput;
-      skip?: Int;
-      after?: String;
-      before?: String;
-      first?: Int;
-      last?: Int;
-    }
-  ) => T;
+  count: () => Promise<Int>;
 }
 
-export interface UserConnection {
-  pageInfo: PageInfo;
-  edges: UserEdge[];
-}
-
-export interface UserConnectionPromise
-  extends Promise<UserConnection>,
+export interface AggregateDepartmentSubscription
+  extends Promise<AsyncIterator<AggregateDepartment>>,
     Fragmentable {
-  pageInfo: <T = PageInfoPromise>() => T;
-  edges: <T = FragmentableArray<UserEdge>>() => T;
-  aggregate: <T = AggregateUserPromise>() => T;
+  count: () => Promise<AsyncIterator<Int>>;
 }
-
-export interface UserConnectionSubscription
-  extends Promise<AsyncIterator<UserConnection>>,
-    Fragmentable {
-  pageInfo: <T = PageInfoSubscription>() => T;
-  edges: <T = Promise<AsyncIterator<UserEdgeSubscription>>>() => T;
-  aggregate: <T = AggregateUserSubscription>() => T;
-}
-
-export interface UserEdge {
-  node: User;
-  cursor: String;
-}
-
-export interface UserEdgePromise extends Promise<UserEdge>, Fragmentable {
-  node: <T = UserPromise>() => T;
-  cursor: () => Promise<String>;
-}
-
-export interface UserEdgeSubscription
-  extends Promise<AsyncIterator<UserEdge>>,
-    Fragmentable {
-  node: <T = UserSubscription>() => T;
-  cursor: () => Promise<AsyncIterator<String>>;
-}
-
-/*
-The `String` scalar type represents textual data, represented as UTF-8 character sequences. The String type is most often used by GraphQL to represent free-form human-readable text.
-*/
-export type String = string;
-
-export type Long = string;
-
-/*
-The `ID` scalar type represents a unique identifier, often used to refetch an object or as key for a cache. The ID type appears in a JSON response as a String; however, it is not intended to be human-readable. When expected as an input type, any string (such as `"4"`) or integer (such as `4`) input value will be accepted as an ID.
-*/
-export type ID_Input = string | number;
-export type ID_Output = string;
 
 /*
 The `Boolean` scalar type represents `true` or `false`.
@@ -856,14 +1605,17 @@ The `Boolean` scalar type represents `true` or `false`.
 export type Boolean = boolean;
 
 /*
-DateTime scalar input type, allowing Date
+The `ID` scalar type represents a unique identifier, often used to refetch an object or as key for a cache. The ID type appears in a JSON response as a String; however, it is not intended to be human-readable. When expected as an input type, any string (such as `"4"`) or integer (such as `4`) input value will be accepted as an ID.
 */
-export type DateTimeInput = Date | string;
+export type ID_Input = string | number;
+export type ID_Output = string;
+
+export type Long = string;
 
 /*
-DateTime scalar output type, which is always a string
+The `String` scalar type represents textual data, represented as UTF-8 character sequences. The String type is most often used by GraphQL to represent free-form human-readable text.
 */
-export type DateTimeOutput = string;
+export type String = string;
 
 /*
 The `Int` scalar type represents non-fractional signed whole numeric values. Int can represent values between -(2^31) and 2^31 - 1. 
@@ -876,11 +1628,23 @@ export type Int = number;
 
 export const models: Model[] = [
   {
-    name: "User",
+    name: "Student",
     embedded: false
   },
   {
-    name: "Post",
+    name: "Subject",
+    embedded: false
+  },
+  {
+    name: "Degree",
+    embedded: false
+  },
+  {
+    name: "Department",
+    embedded: false
+  },
+  {
+    name: "Course",
     embedded: false
   }
 ];
@@ -892,6 +1656,6 @@ export const models: Model[] = [
 export const Prisma = makePrismaClientClass<ClientConstructor<Prisma>>({
   typeDefs,
   models,
-  endpoint: `https://us1.prisma.sh/peter-a05fc7/course-calc-api/dev`
+  endpoint: `https://us1.prisma.sh/peter-a05fc7/course-calc/dev`
 });
 export const prisma = new Prisma();

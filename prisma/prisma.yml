@@ -1,10 +1,21 @@
-endpoint: https://us1.prisma.sh/peter-a05fc7/course-calc-api/dev
-datamodel: datamodel.prisma
-hooks:
-  post-deploy:
-    - prisma generate
-    - npx nexus-prisma-generate --output="./src/generated/nexus-prisma"
+# Specifies the HTTP endpoint of your Prisma API.
+#endpoint: ''
+endpoint: https://us1.prisma.sh/peter-a05fc7/course-calc/dev
 
+# Defines your models, each model is mapped to the database as a table.
+datamodel: datamodel.prisma
+
+# Specifies the language and directory for the generated Prisma client.
 generate:
   - generator: typescript-client
     output: ../src/generated/prisma-client/
+
+# Ensures Prisma client is re-generated after a datamodel change.
+hooks:
+  post-deploy:
+    - prisma generate
+    - npx nexus-prisma-generate --client ./src/generated/prisma-client --output ./src/generated/nexus-prisma # Runs the codegen tool from nexus-prisma.
+
+# Defines how to seed data to the database upon the initial deploy.
+seed:
+  run: node ./prisma/seed.js

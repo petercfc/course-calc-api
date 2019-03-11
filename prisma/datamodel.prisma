@@ -1,16 +1,34 @@
-type User {
+type Student {
   id: ID! @unique
-  email: String! @unique
   name: String
-  posts: [Post!]!
+  coursesPassed: [Course]
+  enrolledDegree:Degree
 }
 
-type Post {
+type Subject {
   id: ID! @unique
-  createdAt: DateTime!
-  updatedAt: DateTime!
-  published: Boolean! @default(value: "false")
-  title: String!
-  content: String
-  author: User!
+  name: String!
+}
+
+type Degree {
+  id: ID! @unique
+  name: String!
+  requiredCredits: Int!
+}
+
+type Department {
+  id: ID! @unique
+  name: String!
+}
+
+type Course {
+  id: ID! @unique
+  name: String!
+  number:String!
+  level: Int!
+  credits: Int!
+  subject: Subject
+  degree: Degree
+  department: Department
+  prerequisite:Course
 }

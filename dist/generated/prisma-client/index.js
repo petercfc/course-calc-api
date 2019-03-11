@@ -10,11 +10,23 @@ var prisma_schema_1 = require("./prisma-schema");
  */
 exports.models = [
     {
-        name: "User",
+        name: "Student",
         embedded: false
     },
     {
-        name: "Post",
+        name: "Subject",
+        embedded: false
+    },
+    {
+        name: "Degree",
+        embedded: false
+    },
+    {
+        name: "Department",
+        embedded: false
+    },
+    {
+        name: "Course",
         embedded: false
     }
 ];
@@ -24,7 +36,7 @@ exports.models = [
 exports.Prisma = prisma_client_lib_1.makePrismaClientClass({
     typeDefs: prisma_schema_1.typeDefs,
     models: exports.models,
-    endpoint: "https://us1.prisma.sh/peter-a05fc7/course-calc-api/dev"
+    endpoint: "https://us1.prisma.sh/peter-a05fc7/course-calc/dev"
 });
 exports.prisma = new exports.Prisma();
 //# sourceMappingURL=index.js.map
