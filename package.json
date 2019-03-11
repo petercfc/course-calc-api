@@ -6,8 +6,8 @@
     "build-ts": "tsc",
     "build": "npm run build-ts",
     "start": "npm run serve",
-    "serve": "node dist/server.js",
-    "watch-node": "nodemon dist/server.js",
+    "serve": "node dist/index.js",
+    "watch-node": "nodemon dist/index.js",
     "watch-ts": "tsc -w",
     "start:dev": "ts-node-dev --no-notify --respawn --transpileOnly ./src"
   },
