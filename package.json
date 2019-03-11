@@ -4,12 +4,13 @@
   "license": "MIT",
   "scripts": {
     "build-ts": "tsc",
-    "build": "npm run build-ts",
+    "lint": "tslint -c tslint.json 'src/**/*.ts'",
+    "postinstall": "npm run build-ts",
     "start": "npm run serve",
     "serve": "node dist/index.js",
+    "test": "jest src",
     "watch-node": "nodemon dist/index.js",
-    "watch-ts": "tsc -w",
-    "start:dev": "ts-node-dev --no-notify --respawn --transpileOnly ./src"
+    "watch-ts": "tsc -w"
   },
   "dependencies": {
     "graphql": "14.1.1",
