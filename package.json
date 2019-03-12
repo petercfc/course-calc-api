@@ -3,9 +3,8 @@
   "version": "0.0.0",
   "license": "MIT",
   "scripts": {
-    "build-ts": "tsc",
+    "build": "tsc",
     "lint": "tslint -c tslint.json 'src/**/*.ts'",
-    "postinstall": "npm run build-ts",
     "start": "npm run serve",
     "serve": "node dist/index.js",
     "test": "jest src",
