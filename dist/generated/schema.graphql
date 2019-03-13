@@ -551,6 +551,10 @@ type Mutation {
   upsertSubject(create: SubjectCreateInput!, update: SubjectUpdateInput!, where: SubjectWhereUniqueInput!): Subject!
 }
 
+interface Node {
+  id: ID!
+}
+
 type PageInfo {
   endCursor: String
   hasNextPage: Boolean!
@@ -568,6 +572,7 @@ type Query {
   department(where: DepartmentWhereUniqueInput!): Department
   departments(after: String, before: String, first: Int, last: Int, orderBy: DepartmentOrderByInput, skip: Int, where: DepartmentWhereInput): [Department!]!
   departmentsConnection(after: String, before: String, first: Int, last: Int, orderBy: DepartmentOrderByInput, skip: Int, where: DepartmentWhereInput): DepartmentConnection!
+  node(id: ID!): Node
   student(where: StudentWhereUniqueInput!): Student
   students(after: String, before: String, first: Int, last: Int, orderBy: StudentOrderByInput, skip: Int, where: StudentWhereInput): [Student!]!
   studentsConnection(after: String, before: String, first: Int, last: Int, orderBy: StudentOrderByInput, skip: Int, where: StudentWhereInput): StudentConnection!

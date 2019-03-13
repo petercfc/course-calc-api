@@ -1,1 +1,1 @@
-{"version":3,"file":"Mutation.js","sourceRoot":"","sources":["../../src/resolvers/Mutation.ts"],"names":[],"mappings":";;AACA,6CAA+C;AAElC,QAAA,QAAQ,GAAG,+BAAgB,CAAC;IACvC,IAAI,EAAE,UAAU;IAChB,UAAU,YAAC,CAAC;QACV,CAAC,CAAC,YAAY,CAAC,CAAC,GAAG,CAAC,CAAC,CAAA;IACvB,CAAC;CACF,CAAC,CAAA"}
+{"version":3,"file":"Mutation.js","sourceRoot":"","sources":["../../src/resolvers/Mutation.ts"],"names":[],"mappings":";;AAAA,6CAA+C;AAElC,QAAA,QAAQ,GAAG,+BAAgB,CAAC;IACvC,IAAI,EAAE,UAAU;IAChB,UAAU,YAAC,CAAC;QACV,CAAC,CAAC,YAAY,CAAC,CAAC,GAAG,CAAC,CAAC,CAAA;IACvB,CAAC;CACF,CAAC,CAAA"}

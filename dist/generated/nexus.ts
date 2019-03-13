@@ -588,6 +588,7 @@ export interface NexusGenRootTypes {
     cursor: string; // String!
     node: NexusGenRootTypes['Subject']; // Subject!
   }
+  Node: any;
   String: string;
   Int: number;
   Float: number;
@@ -766,6 +767,7 @@ export interface NexusGenFieldTypes {
     department: NexusGenRootTypes['Department'] | null; // Department
     departments: NexusGenRootTypes['Department'][]; // [Department!]!
     departmentsConnection: NexusGenRootTypes['DepartmentConnection']; // DepartmentConnection!
+    node: NexusGenRootTypes['Node'] | null; // Node
     student: NexusGenRootTypes['Student'] | null; // Student
     students: NexusGenRootTypes['Student'][]; // [Student!]!
     studentsConnection: NexusGenRootTypes['StudentConnection']; // StudentConnection!
@@ -800,6 +802,9 @@ export interface NexusGenFieldTypes {
   SubjectEdge: { // field return type
     cursor: string; // String!
     node: NexusGenRootTypes['Subject']; // Subject!
+  }
+  Node: { // field return type
+    id: string; // ID!
   }
 }
 
@@ -980,6 +985,9 @@ export interface NexusGenArgTypes {
       skip?: number | null; // Int
       where?: NexusGenInputs['DepartmentWhereInput'] | null; // DepartmentWhereInput
     }
+    node: { // args
+      id: string; // ID!
+    }
     student: { // args
       where: NexusGenInputs['StudentWhereUniqueInput']; // StudentWhereUniqueInput!
     }
@@ -1047,7 +1055,7 @@ export type NexusGenInputNames = "CourseCreateInput" | "CourseCreateManyInput" |
 
 export type NexusGenEnumNames = "CourseOrderByInput" | "DegreeOrderByInput" | "DepartmentOrderByInput" | "StudentOrderByInput" | "SubjectOrderByInput";
 
-export type NexusGenInterfaceNames = never;
+export type NexusGenInterfaceNames = "Node";
 
 export type NexusGenScalarNames = "Boolean" | "Float" | "ID" | "Int" | "Long" | "String";
 
